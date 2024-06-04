@@ -3,7 +3,7 @@
     background-color: #3a86ff;
 }
 
-#projects{
+#projects {
     height: 100vh;
 }
 
@@ -83,7 +83,7 @@ header .midLinks {
 }
 
 header .midLinks h1 {
-    font-size: 69px;
+    font-size: 90px;
 }
 
 header .midLinks h1,
@@ -122,7 +122,7 @@ header .midLinks p {
     align-items: center;
     z-index: 1000;
     opacity: 1;
-    transition: opacity 0.5s ease-in-out; /* Suavização da transição */
+    transition: opacity 0.5s ease-in-out;
 }
 
 .arrow-down::before {
@@ -137,6 +137,7 @@ header .midLinks p {
 .arrow-down.hidden {
     opacity: 0;
 }
+
 @keyframes arrow-animation {
 
     0%,

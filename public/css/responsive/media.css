@@ -1,16 +1,36 @@
-@media (max-width: 730px){
-    .nav{
+@media (max-width: 730px) {
+    .nav {
         flex-direction: column;
-        padding: 0%;
+        padding: 0;
+        position: relative;
     }
 
-    .nav, .linksNav{
-        padding: 0%;
-        margin: 0%;
+    .nav, .linksNav {
+        padding: 0;
+        margin: 0;
     }
 
     .HLink, .SLink, .PLink {
-        padding: 0%;
-        margin: 0%;
+        padding: 0;
+        margin: 0;
+    }
+
+    header .midLinks h1 {
+        font-size: 70px;
+    }
+
+    header .midLinks p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1140px) {
+    header .midLinks h1 {
+        font-size: calc(2rem + 2vw); 
+        text-align: center; 
+    }
+
+    header .midLinks p {
+        display: none;
     }
 }
