@@ -145,6 +145,7 @@ header .midLinks p {
     z-index: 1000;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
+    animation: arrow-animation 1.5s infinite;
 }
 
 .arrow-down::before {
@@ -154,14 +155,15 @@ header .midLinks p {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 15px solid white;
+    
 }
 
 .arrow-down.hidden {
     opacity: 0;
 }
 
-@keyframes arrow-animation {
 
+@keyframes arrow-animation {
     0%,
     100% {
         transform: translateY(0);
