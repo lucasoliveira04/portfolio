@@ -9,12 +9,18 @@
     align-items: center;
     padding: 14px 10px;
     height: 5vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #3a86ff;
+    z-index: 1000;
 }
 
 .nav,
 .linksNav {
     display: flex;
     gap: 20px;
+    margin-right: 20px;
 }
 
 .nav .nav-link {
