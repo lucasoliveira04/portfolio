@@ -40,6 +40,10 @@
     header .midLinks p {
         font-size: 18px;
     }
+
+    #container{
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 1140px) and (min-width: 200px) {

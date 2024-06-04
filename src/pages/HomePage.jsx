@@ -3,12 +3,13 @@ import "../../public/css/style.css";
 import "../../public/css/responsive/media.css";
 import { useEffect, useState, useRef } from "react";
 import { Link as ScrollLink, Element } from "react-scroll";
+import { ProjectComponent } from "../components/ProjetosComponents";
 
 export const HomePage = () => {
   const [showArrow, setShowArrow] = useState(true);
-  const [showArrowClicked, setShowArrowClicked] = useState(false); 
-  const projectsRef = useRef(null); 
-  const homeRef = useRef(null); 
+  const [showArrowClicked, setShowArrowClicked] = useState(false);
+  const projectsRef = useRef(null);
+  const homeRef = useRef(null);
 
   useEffect(() => {
     document.title = "Lucas Oliveira";
@@ -20,9 +21,9 @@ export const HomePage = () => {
       const projectsTop = projectsSection ? projectsSection.offsetTop : 0;
       const currentScroll = window.scrollY;
 
-      console.log('Current Scroll:', currentScroll);
-      console.log('Home Height:', homeHeight);
-      console.log('Projects Top:', projectsTop);
+      console.log("Current Scroll:", currentScroll);
+      console.log("Home Height:", homeHeight);
+      console.log("Projects Top:", projectsTop);
 
       if (currentScroll < homeHeight * 0.02) {
         setShowArrow(true);
@@ -35,10 +36,10 @@ export const HomePage = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -70,10 +71,20 @@ export const HomePage = () => {
             <Nav.Link as={ScrollLink} to="home" smooth={true} className="HLink">
               Home
             </Nav.Link>
-            <Nav.Link as={ScrollLink} to="sobre" smooth={true} className="SLink">
+            <Nav.Link
+              as={ScrollLink}
+              to="sobre"
+              smooth={true}
+              className="SLink"
+            >
               Sobre Mim
             </Nav.Link>
-            <Nav.Link as={ScrollLink} to="projects" smooth={true} className="PLink">
+            <Nav.Link
+              as={ScrollLink}
+              to="projects"
+              smooth={true}
+              className="PLink"
+            >
               Projetos
             </Nav.Link>
           </div>
@@ -125,13 +136,40 @@ export const HomePage = () => {
           </div>
         </header>
         {showArrow && (
-          <div className={`arrow-down ${(!showArrow || showArrowClicked) ? 'hidden' : ''}`} id="arrow" onClick={handleArrowClick}></div>
+          <div
+            className={`arrow-down ${
+              !showArrow || showArrowClicked ? "hidden" : ""
+            }`}
+            id="arrow"
+            onClick={handleArrowClick}
+          ></div>
         )}
       </Container>
 
       <Element name="projects" id="projects">
-        <Container ref={projectsRef}>
-          Projetos
+        <Container ref={projectsRef} id="containerProjetos">
+          <div className="containerProjetos">
+            <h2
+              style={{
+                textAlign: "center",
+                fontSize: "34px",
+                fontFamily: '"Concert One", sans-serif',
+                fontWeight: "900",
+                color: "white",
+                textShadow: `
+                    0 0 5px rgba(0, 0, 255, 0.8), /* Sombra central mais forte */
+                    0 0 10px rgba(0, 0, 255, 0.6), /* Sombra média */
+                    0 0 20px rgba(0, 0, 255, 0.4), /* Sombra mais distante */
+                    0 0 40px rgba(0, 0, 255, 0.2) /* Sombra distante mais fraca */
+                `
+              }}
+              className="projetosH2"
+            >
+              PROJETOS
+            </h2>
+          </div>
+
+          <ProjectComponent />
         </Container>
       </Element>
     </div>

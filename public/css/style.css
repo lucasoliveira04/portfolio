@@ -35,7 +35,6 @@
     align-items: center;
     padding: 14px 10px;
     height: 5vh;
-    position: fixed;
     top: 0;
     width: 100%;
     background-color: #3a86ff;
@@ -172,4 +171,20 @@ header .midLinks p {
     50% {
         transform: translateY(10px);
     }
+}
+
+.containerProjetos {
+    align-content: center;
+    /* background-size: 800px 600px; 
+    background-position: center;
+    background-image: url('../../img/CAPA-Artigo-O-que-e-Tecnologia-da-Informacao-TI-768x450.jpg'); */
+    background-color: #3a86ff;
+    margin: 0%;
+    padding: 0%;
+    border: 1px solid #113b80;
+}
+
+.projetosH2::selection {
+    color: transparent; 
+    -webkit-text-stroke: transparent 1px; 
 }
