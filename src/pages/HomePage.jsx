@@ -1,8 +1,13 @@
 import { Container, Nav } from "react-bootstrap";
 import "../../public/css/style.css";
 import "../../public/css/responsive/media.css";
+import { useEffect } from "react";
 
 export const HomePage = () => {
+    useEffect(() => {
+        document.title = "Lucas Oliveira"
+    })
+
   return (
     <Container id="home">
       <Nav className="nav">
