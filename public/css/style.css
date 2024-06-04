@@ -3,6 +3,10 @@
     background-color: #3a86ff;
 }
 
+#projects{
+    height: 100vh;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -116,6 +120,9 @@ header .midLinks p {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out; /* Suavização da transição */
 }
 
 .arrow-down::before {
@@ -127,10 +134,9 @@ header .midLinks p {
     border-top: 15px solid white;
 }
 
-.arrow-down{
-    animation: arrow-animation 2s infinite;
+.arrow-down.hidden {
+    opacity: 0;
 }
-
 @keyframes arrow-animation {
 
     0%,
