@@ -58,12 +58,14 @@ export const HomePage = () => {
     <div className="container-geral">
       <Container id="home" ref={homeRef}>
         <Nav className="nav">
-          <h2
+          <ScrollLink
+            to="home"
+            smooth={true}
             className="fw-bold"
             style={{ cursor: "pointer", fontSize: "45px", color: "white" }}
           >
             Lucas Oliveira
-          </h2>
+          </ScrollLink>
           <div className="linksNav">
             <Nav.Link as={ScrollLink} to="home" smooth={true} className="HLink">
               Home
