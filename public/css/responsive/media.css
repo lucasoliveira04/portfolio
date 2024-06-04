@@ -1,0 +1,16 @@
+@media (max-width: 730px){
+    .nav{
+        flex-direction: column;
+        padding: 0%;
+    }
+
+    .nav, .linksNav{
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .HLink, .SLink, .PLink {
+        padding: 0%;
+        margin: 0%;
+    }
+}
