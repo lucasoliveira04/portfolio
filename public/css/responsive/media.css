@@ -24,10 +24,13 @@
     }
 }
 
-@media (max-width: 1140px) {
+@media (max-width: 1140px) and (min-width: 200px) {
     header .midLinks h1 {
         font-size: calc(2rem + 2vw); 
         text-align: center; 
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     header .midLinks p {
