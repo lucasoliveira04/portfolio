@@ -14,24 +14,31 @@ import java from "../../public/img/java (1).png";
 import spring from "../../public/img/icons8-spring-boot-96.png";
 import python from "../../public/img/python (1).png";
 
-const Card = ({ title, description, github, languagem, framework }) => {
-  
-  let url = "https://github.com/lucasoliveira04/"
+const Card = ({ title, description, github, languagem, framework, type }) => {
+  let url = "https://github.com/lucasoliveira04/";
 
   return (
-    <Container className="card-container">
+    <Container className={`card-container ${type}`}>
       <CardBody className="card-body">
         <CardHeader className="card-header">
-          <CardText style={{
-            fontSize: "24px",
-            fontWeight: "bold",
-            fontFamily: "Roboto, sans-serif"
-          }}>{title}</CardText>
+          <CardText
+            style={{
+              fontSize: "24px",
+              fontWeight: "bold",
+              fontFamily: "Roboto, sans-serif"
+            }}
+          >
+            {title}
+          </CardText>
         </CardHeader>
-        <CardText style={{
-          fontSize: "18px",
-          fontFamily: "Roboto, sans-serif"
-        }}>{description}</CardText>
+        <CardText
+          style={{
+            fontSize: "18px",
+            fontFamily: "Roboto, sans-serif"
+          }}
+        >
+          {description}
+        </CardText>
         <CardFooter className="card-footer">
           <div>
             <Link to={url + github} style={{ marginRight: '10px' }}>Github</Link>
@@ -53,16 +60,34 @@ export const ProjectComponent = () => {
       description: "Este projeto implementa login com JWT e PostgreSQL, hospedando a API e o banco de dados na Render. Oferece autenticação segura e escalável, simplificando a implementação do login em aplicações",
       languagem: java,
       framework: spring,
-      github: "api_login_jwt"
+      github: "api_login_jwt",
+      type: "backend"
     },
     {
       title: "Github Desktop Viewer",
       description: "O Visualizador de Repositórios do GitHub é uma aplicação Python que simplifica a interação com repositórios hospedados no GitHub. Os usuários podem buscar, clonar e abrir repositórios, além de visualizar uma lista de usuários recentes.",
       languagem: python,
-      github: "github_repository_viewer"
+      github: "github_repository_viewer",
+      type: "backend"
     },
   ];
-  const projectsFrontEnd = [];
+  const projectsFrontEnd = [
+    {
+      title: "Api de Login",
+      description: "Este projeto implementa login com JWT e PostgreSQL, hospedando a API e o banco de dados na Render. Oferece autenticação segura e escalável, simplificando a implementação do login em aplicações",
+      languagem: java,
+      framework: spring,
+      github: "api_login_jwt",
+      type: "backend"
+    },
+    {
+      title: "Github Desktop Viewer",
+      description: "O Visualizador de Repositórios do GitHub é uma aplicação Python que simplifica a interação com repositórios hospedados no GitHub. Os usuários podem buscar, clonar e abrir repositórios, além de visualizar uma lista de usuários recentes.",
+      languagem: python,
+      github: "github_repository_viewer",
+      type: "backend"
+    },
+  ];
 
   return (
     <div className="container-project">
@@ -75,6 +100,7 @@ export const ProjectComponent = () => {
             languagem={project.languagem}
             framework={project.framework}
             github={project.github}
+            type="backend"
           />
         ))}
       </div>
@@ -87,6 +113,7 @@ export const ProjectComponent = () => {
             languagem={project.languagem}
             framework={project.framework}
             github={project.github}
+            type="frontend"
           />
         ))}
       </div>
