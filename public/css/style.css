@@ -5,19 +5,19 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: #3a86ff; 
+    background: #000000; 
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #3a86ff; 
+    background-color: #000000; 
     border-radius: 2px; 
-    border: 3px solid #3a86ff; 
+    border: 3px solid #000000; 
 }
 
 /* Estilizando a barra de rolagem para Firefox */
 * {
     scrollbar-width: thin; 
-    scrollbar-color: #ffffff #3a86ff; 
+    scrollbar-color: #000000 #000000; 
 }
 
 #home {

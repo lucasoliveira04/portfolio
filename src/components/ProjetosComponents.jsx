@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "../../public/css/responsive/media.css";
 import "../../public/css/projetos/style.css";
 import {
@@ -9,64 +10,64 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const Card = ({ title, description, languagem, framework, github }) => {
-  const urlDefault = "https://github.com/lucasoliveira04/";
+import java from "../../public/img/java (1).png";
+import spring from "../../public/img/icons8-spring-boot-96.png";
+import python from "../../public/img/python (1).png";
+
+const Card = ({ title, description, github, languagem, framework }) => {
+  
+  let url = "https://github.com/lucasoliveira04/"
 
   return (
     <Container className="card-container">
       <CardBody className="card-body">
         <CardHeader className="card-header">
-          <CardText>{title}</CardText>
+          <CardText style={{
+            fontSize: "24px",
+            fontWeight: "bold",
+            fontFamily: "Roboto, sans-serif"
+          }}>{title}</CardText>
         </CardHeader>
-        <CardText>{description}</CardText>
+        <CardText style={{
+          fontSize: "18px",
+          fontFamily: "Roboto, sans-serif"
+        }}>{description}</CardText>
         <CardFooter className="card-footer">
-          <Link to={urlDefault + github}>Github</Link>
           <div>
-            <img src={languagem} alt="Linguagem" />
-            <img src={framework} alt="Framework" />
+            <Link to={url + github} style={{ marginRight: '10px' }}>Github</Link>
+          </div>
+          <div>
+            <img src={languagem} alt="Linguagem" style={{ marginRight: '5px' }} width="50px" />
+            {framework && <img src={framework} alt="Framework" width="50px" />}
           </div>
         </CardFooter>
       </CardBody>
     </Container>
   );
-};
+}
 
 export const ProjectComponent = () => {
-  const projects = [
+  const projectsBackEnd = [
     {
-      title: "Projeto 1",
-      description: "Descrição do projeto 1",
-      languagem: "https://via.placeholder.com/24/0000FF/FFFFFF?text=JS",
-      framework: "https://via.placeholder.com/24/0000FF/FFFFFF?text=React",
-      github: "projeto1"
+      title: "Api de Login",
+      description: "Este projeto implementa login com JWT e PostgreSQL, hospedando a API e o banco de dados na Render. Oferece autenticação segura e escalável, simplificando a implementação do login em aplicações",
+      languagem: java,
+      framework: spring,
+      github: "api_login_jwt"
     },
     {
-      title: "Projeto 2",
-      description: "Descrição do projeto 2",
-      languagem: "https://via.placeholder.com/24/0000FF/FFFFFF?text=PY",
-      framework: "https://via.placeholder.com/24/0000FF/FFFFFF?text=Django",
-      github: "projeto2"
+      title: "Github Desktop Viewer",
+      description: "O Visualizador de Repositórios do GitHub é uma aplicação Python que simplifica a interação com repositórios hospedados no GitHub. Os usuários podem buscar, clonar e abrir repositórios, além de visualizar uma lista de usuários recentes.",
+      languagem: python,
+      github: "github_repository_viewer"
     },
-    {
-      title: "Projeto 3",
-      description: "Descrição do projeto 3",
-      languagem: "https://via.placeholder.com/24/0000FF/FFFFFF?text=HTML",
-      framework: "https://via.placeholder.com/24/0000FF/FFFFFF?text=CSS",
-      github: "projeto3"
-    },
-    {
-      title: "Projeto 3",
-      description: "Descrição do projeto 3",
-      languagem: "https://via.placeholder.com/24/0000FF/FFFFFF?text=HTML",
-      framework: "https://via.placeholder.com/24/0000FF/FFFFFF?text=CSS",
-      github: "projeto3"
-    }
   ];
+  const projectsFrontEnd = [];
 
   return (
     <div className="container-project">
       <div className="container-back">
-        {projects.map((project, index) => (
+        {projectsBackEnd.map((project, index) => (
           <Card
             key={index}
             title={project.title}
@@ -78,7 +79,7 @@ export const ProjectComponent = () => {
         ))}
       </div>
       <div className="container-front">
-        {projects.map((project, index) => (
+        {projectsFrontEnd.map((project, index) => (
           <Card
             key={index}
             title={project.title}

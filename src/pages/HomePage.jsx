@@ -9,6 +9,7 @@ import { Helmet } from "react-helmet";
 export const HomePage = () => {
   const [showArrow, setShowArrow] = useState(true);
   const [showArrowClicked, setShowArrowClicked] = useState(false);
+  const [counter, setCounter] = useState(0);
   const projectsRef = useRef(null);
   const homeRef = useRef(null);
 
@@ -42,6 +43,16 @@ export const HomePage = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCounter(prevCounter => prevCounter + 1);
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   const scrollToProjects = () => {
     if (projectsRef.current) {
       projectsRef.current.scrollIntoView({ behavior: "smooth" });
@@ -57,7 +68,7 @@ export const HomePage = () => {
   return (
     <div className="container-geral">
       <Helmet>
-        <title>Lucas Oliveira</title>
+        <title>Lucas Oliveira ({String(counter)})</title>
         <link rel="icon" href="../../public/img/development_desktop_device_screen_technology_computer_programming_coding_code_icon_212634.ico" type="image/x-icon" />
       </Helmet>
       <Container id="home" ref={homeRef}>
