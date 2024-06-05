@@ -4,6 +4,7 @@ import "../../public/css/responsive/media.css";
 import { useEffect, useState, useRef } from "react";
 import { Link as ScrollLink, Element } from "react-scroll";
 import { ProjectComponent } from "../components/ProjetosComponents";
+import { Helmet } from "react-helmet";
 
 export const HomePage = () => {
   const [showArrow, setShowArrow] = useState(true);
@@ -12,8 +13,6 @@ export const HomePage = () => {
   const homeRef = useRef(null);
 
   useEffect(() => {
-    document.title = "Lucas Oliveira";
-
     const handleScroll = () => {
       const homeSection = homeRef.current;
       const projectsSection = projectsRef.current;
@@ -57,6 +56,10 @@ export const HomePage = () => {
 
   return (
     <div className="container-geral">
+      <Helmet>
+        <title>Lucas Oliveira</title>
+        <link rel="icon" href="../../public/img/development_desktop_device_screen_technology_computer_programming_coding_code_icon_212634.ico" type="image/x-icon" />
+      </Helmet>
       <Container id="home" ref={homeRef}>
         <Nav className="nav">
           <ScrollLink
@@ -157,11 +160,12 @@ export const HomePage = () => {
                 fontWeight: "900",
                 color: "white",
                 textShadow: `
-                    0 0 5px rgba(0, 0, 255, 0.8), /* Sombra central mais forte */
-                    0 0 10px rgba(0, 0, 255, 0.6), /* Sombra média */
-                    0 0 20px rgba(0, 0, 255, 0.4), /* Sombra mais distante */
-                    0 0 40px rgba(0, 0, 255, 0.2) /* Sombra distante mais fraca */
-                `
+                  0 0 5px rgba(255, 255, 0, 0.8), /* Sombra central mais forte */
+                  0 0 10px rgba(255, 255, 0, 0.6), /* Sombra média */
+                  0 0 20px rgba(255, 255, 0, 0.4), /* Sombra mais distante */
+                  0 0 40px rgba(255, 255, 0, 0.2) /* Sombra distante mais fraca */
+              `,
+              letterSpacing: '10px'
               }}
               className="projetosH2"
             >
