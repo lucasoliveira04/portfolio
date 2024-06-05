@@ -1,18 +1,20 @@
-#container{
-    display: flex;
-    width: 100%;
-    margin: 0%;
-    padding: 0%;
-    height: 100vh;
-    border: 1px solid red;
+.container-project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center
 }
 
-.container-front, .container-back{
+.container-back, .container-front {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     justify-content: center;
-    width: 100%;
-    margin: 0%;
-    padding: 0%;
-    height: 100vh;
-    border: 1px solid rgb(165, 42, 11);
+}
+
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
 }
