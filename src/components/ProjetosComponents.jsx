@@ -64,6 +64,22 @@ export const ProjectComponent = () => {
       type: "backend"
     },
     {
+      title: "Api de Enviar Email",
+      description: "A API de Envio de E-mails desenvolvida com Spring Boot oferece uma solução eficiente para enviar mensagens programaticamente. Utilizando JavaMailSender do Spring e MimeMessageHelper, a API é capaz de enviar e-mails de forma confiável. Com funcionalidades como tratamento de contatos anônimos e personalização das mensagens, é uma escolha sólida para integrar em projetos web que requerem envio de e-mails automatizado e seguro.",
+      languagem: java,
+      framework: spring,
+      github: "api_send_email",
+      type: "backend"
+    },
+    {
+      title: "Api de mascara URLs",
+      description: "API de máscara de URLs, desenvolvida em Java com Spring Boot. Oferece uma solução simples e eficiente para encurtar URLs longas, permitindo redirecionamentos rápidos e transparentes para suas versões originais.",
+      languagem: java,
+      framework: spring,
+      github: "api-url-masker",
+      type: "backend"
+    },
+    {
       title: "Github Desktop Viewer",
       description: "O Visualizador de Repositórios do GitHub é uma aplicação Python que simplifica a interação com repositórios hospedados no GitHub. Os usuários podem buscar, clonar e abrir repositórios, além de visualizar uma lista de usuários recentes.",
       languagem: python,
