@@ -8,13 +8,12 @@ import {
   CardText,
   Container
 } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 import java from "../../public/img/java (1).png";
 import spring from "../../public/img/icons8-spring-boot-96.png";
 import python from "../../public/img/python (1).png";
 
-const Card = ({ title, description, github, languagem, framework, type }) => {
+const Card = ({ title, description, github, languagem, framework, documentacao, type }) => {
   let url = "https://github.com/lucasoliveira04/";
 
   return (
@@ -41,7 +40,8 @@ const Card = ({ title, description, github, languagem, framework, type }) => {
         </CardText>
         <CardFooter className="card-footer">
           <div>
-            <Link to={url + github} style={{ marginRight: '10px' }}>Github</Link>
+            <a href={url + github} target="_blank" rel="noopener noreferrer" style={{ marginRight: '10px' }}>Github</a>
+            {documentacao && <a href={documentacao} target="_blank" rel="noopener noreferrer">Documentação</a>}
           </div>
           <div>
             <img src={languagem} alt="Linguagem" style={{ marginRight: '5px' }} width="50px" />
