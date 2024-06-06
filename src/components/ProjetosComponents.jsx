@@ -82,36 +82,22 @@ export const ProjectComponent = () => {
       github: "api_send_email",
       type: "backend"
     },
+    
+  ];
+  const projectsFrontEnd = [
+    {
+      title: "Github Desktop Viewer",
+      description: "O Visualizador de Repositórios do GitHub é uma aplicação Python que simplifica a interação com repositórios hospedados no GitHub. Os usuários podem buscar, clonar e abrir repositórios, além de visualizar uma lista de usuários recentes.",
+      languagem: python,
+      github: "github_repository_viewer",
+      type: "backend"
+    },
     {
       title: "Api de mascara URLs",
       description: "API de máscara de URLs, desenvolvida em Java com Spring Boot. Oferece uma solução simples e eficiente para encurtar URLs longas, permitindo redirecionamentos rápidos e transparentes para suas versões originais.",
       languagem: java,
       framework: spring,
       github: "api-url-masker",
-      type: "backend"
-    },
-    {
-      title: "Github Desktop Viewer",
-      description: "O Visualizador de Repositórios do GitHub é uma aplicação Python que simplifica a interação com repositórios hospedados no GitHub. Os usuários podem buscar, clonar e abrir repositórios, além de visualizar uma lista de usuários recentes.",
-      languagem: python,
-      github: "github_repository_viewer",
-      type: "backend"
-    },
-  ];
-  const projectsFrontEnd = [
-    {
-      title: "Api de Login",
-      description: "Este projeto implementa login com JWT e PostgreSQL, hospedando a API e o banco de dados na Render. Oferece autenticação segura e escalável, simplificando a implementação do login em aplicações",
-      languagem: java,
-      framework: spring,
-      github: "api_login_jwt",
-      type: "backend"
-    },
-    {
-      title: "Github Desktop Viewer",
-      description: "O Visualizador de Repositórios do GitHub é uma aplicação Python que simplifica a interação com repositórios hospedados no GitHub. Os usuários podem buscar, clonar e abrir repositórios, além de visualizar uma lista de usuários recentes.",
-      languagem: python,
-      github: "github_repository_viewer",
       type: "backend"
     },
   ];
