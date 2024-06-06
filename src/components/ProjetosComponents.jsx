@@ -13,8 +13,20 @@ import java from "../../public/img/java (1).png";
 import spring from "../../public/img/icons8-spring-boot-96.png";
 import python from "../../public/img/python (1).png";
 
+const highlightWords = (text, wordsToHighlight) => {
+  let highlightedText = text;
+  wordsToHighlight.forEach(word => {
+    const regex = new RegExp(`(${word})`, 'gi');
+    highlightedText = highlightedText.replace(regex, '<strong>$1</strong>');
+  });
+  return highlightedText;
+};
+
 const Card = ({ title, description, github, languagem, framework, documentacao, type }) => {
   let url = "https://github.com/lucasoliveira04/";
+
+  const wordsToHighlight = ["JWT", "PostgreSQL", "Spring Boot", "JavaMailSender", "MimeMessageHelper", "API", "automatizado", "seguro", "Python", "Render"];
+  const highlightedDescription = highlightWords(description, wordsToHighlight);
 
   return (
     <Container className={`card-container ${type}`}>
@@ -35,9 +47,8 @@ const Card = ({ title, description, github, languagem, framework, documentacao, 
             fontSize: "18px",
             fontFamily: "Roboto, sans-serif"
           }}
-        >
-          {description}
-        </CardText>
+          dangerouslySetInnerHTML={{ __html: highlightedDescription }}
+        />
         <CardFooter className="card-footer">
           <div>
             <a href={url + github} target="_blank" rel="noopener noreferrer" style={{ marginRight: '10px' }}>Github</a>
