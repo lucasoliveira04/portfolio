@@ -45,7 +45,7 @@ export const HomePage = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCounter(prevCounter => prevCounter + 1);
+      setCounter((prevCounter) => prevCounter + 1);
     }, 1000);
 
     return () => {
@@ -66,127 +66,138 @@ export const HomePage = () => {
   };
 
   return (
-    <div className="container-geral">
-      <Helmet>
-        <title>Lucas Oliveira ({String(counter)})</title>
-        <link rel="icon" href="../../public/img/development_desktop_device_screen_technology_computer_programming_coding_code_icon_212634.ico" type="image/x-icon" />
-      </Helmet>
-      <Container id="home" ref={homeRef}>
-        <Nav className="nav">
-          <ScrollLink
-            to="home"
-            smooth={true}
-            className="fw-bold"
-            style={{ cursor: "pointer", fontSize: "45px", color: "white" }}
-          >
-            Lucas Oliveira
-          </ScrollLink>
-          <div className="linksNav">
-            <Nav.Link as={ScrollLink} to="home" smooth={true} className="HLink">
-              Home
-            </Nav.Link>
-            <Nav.Link
-              as={ScrollLink}
-              to="sobre"
+    <div style={{display: 'flex', flexDirection: 'column'}}>
+      <div className="container-geral">
+        <Helmet>
+          <title>Lucas Oliveira ({String(counter)})</title>
+          <link
+            rel="icon"
+            href="../../public/img/development_desktop_device_screen_technology_computer_programming_coding_code_icon_212634.ico"
+            type="image/x-icon"
+          />
+        </Helmet>
+        <Container id="home" ref={homeRef}>
+          <Nav className="nav">
+            <ScrollLink
+              to="home"
               smooth={true}
-              className="SLink"
+              className="fw-bold"
+              style={{ cursor: "pointer", fontSize: "45px", color: "white" }}
             >
-              Sobre Mim
-            </Nav.Link>
-            <Nav.Link
-              as={ScrollLink}
-              to="projects"
-              smooth={true}
-              className="PLink"
-            >
-              Projetos
-            </Nav.Link>
-          </div>
-        </Nav>
-        <header>
-          <div className="midLinks">
-            <h1 style={{ color: "white" }}>Lucas Oliveira</h1>
-            <div className="subTitle">
-              <p style={{ color: "white" }}>Desenvolvedor Back End</p>
-              <div className="redesSociais">
-                <a
-                  href="https://www.instagram.com/lucasoliveira.04_/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white"
-                    alt="Instagram"
-                    height="30px"
-                    width="80px"
-                  />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/lucas-oliveira-08334a264/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"
-                    alt="Linkedin"
-                    height="30px"
-                    width="80px"
-                  />
-                </a>
-                <a
-                  href="https://www.github.com/lucasoliveira04"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"
-                    alt="Github"
-                    height="30px"
-                    width="80px"
-                  />
-                </a>
+              Lucas Oliveira
+            </ScrollLink>
+            <div className="linksNav">
+              <Nav.Link
+                as={ScrollLink}
+                to="home"
+                smooth={true}
+                className="HLink"
+              >
+                Home
+              </Nav.Link>
+              <Nav.Link
+                as={ScrollLink}
+                to="sobre"
+                smooth={true}
+                className="SLink"
+              >
+                Sobre Mim
+              </Nav.Link>
+              <Nav.Link
+                as={ScrollLink}
+                to="projects"
+                smooth={true}
+                className="PLink"
+              >
+                Projetos
+              </Nav.Link>
+            </div>
+          </Nav>
+          <header>
+            <div className="midLinks">
+              <h1 style={{ color: "white" }}>Lucas Oliveira</h1>
+              <div className="subTitle">
+                <p style={{ color: "white" }}>Desenvolvedor Back End</p>
+                <div className="redesSociais">
+                  <a
+                    href="https://www.instagram.com/lucasoliveira.04_/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white"
+                      alt="Instagram"
+                      height="30px"
+                      width="80px"
+                    />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/lucas-oliveira-08334a264/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"
+                      alt="Linkedin"
+                      height="30px"
+                      width="80px"
+                    />
+                  </a>
+                  <a
+                    href="https://www.github.com/lucasoliveira04"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"
+                      alt="Github"
+                      height="30px"
+                      width="80px"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        </header>
-        {showArrow && (
-          <div
-            className={`arrow-down ${
-              !showArrow || showArrowClicked ? "hidden" : ""
-            }`}
-            id="arrow"
-            onClick={handleArrowClick}
-          ></div>
-        )}
-      </Container>
+          </header>
+          {showArrow && (
+            <div
+              className={`arrow-down ${
+                !showArrow || showArrowClicked ? "hidden" : ""
+              }`}
+              id="arrow"
+              onClick={handleArrowClick}
+            ></div>
+          )}
+        </Container>
 
-      <Element name="projects" id="projects">
-        <Container ref={projectsRef} id="containerProjetos">
-          <div className="containerProjetos">
-            <h2
-              style={{
-                textAlign: "center",
-                fontSize: "34px",
-                fontFamily: '"Concert One", sans-serif',
-                fontWeight: "900",
-                color: "white",
-                textShadow: `
+        <Element name="projects" id="projects">
+          <Container ref={projectsRef} id="containerProjetos">
+            <div className="containerProjetos">
+              <h2
+                style={{
+                  textAlign: "center",
+                  fontSize: "34px",
+                  fontFamily: '"Concert One", sans-serif',
+                  fontWeight: "900",
+                  color: "white",
+                  textShadow: `
                   0 0 5px rgba(255, 255, 0, 0.8), /* Sombra central mais forte */
                   0 0 10px rgba(255, 255, 0, 0.6), /* Sombra média */
                   0 0 20px rgba(255, 255, 0, 0.4), /* Sombra mais distante */
                   0 0 40px rgba(255, 255, 0, 0.2) /* Sombra distante mais fraca */
               `,
-              letterSpacing: '10px'
-              }}
-              className="projetosH2"
-            >
-              PROJETOS
-            </h2>
-          </div>
+                  letterSpacing: "10px"
+                }}
+                className="projetosH2"
+              >
+                PROJETOS
+              </h2>
+            </div>
 
-          <ProjectComponent />
-        </Container>
-      </Element>
+            <ProjectComponent />
+          </Container>
+        </Element>
+      </div>
     </div>
   );
 };

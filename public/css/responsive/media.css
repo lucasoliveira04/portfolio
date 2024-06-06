@@ -1,3 +1,17 @@
+@media (max-width: 411px){
+    .card-footer{
+        gap: 20px;
+    }
+
+    .imgs-footer-project{
+        display: flex;
+    }
+
+    .midLinks{
+        width: 100% !important;
+    }
+}
+
 @media (max-width: 730px) {
     .nav {
         flex-direction: column;
@@ -45,7 +59,13 @@
         margin-top: 10px;
         align-items: center;
     }
+    .container-aboutme{
+        width: 99% !important;
+        flex-direction: column !important;
+        
+    }
 }
+
 
 @media (max-width: 1140px) and (min-width: 200px) {
     header .midLinks h1 {
@@ -58,5 +78,22 @@
 
     header .midLinks p {
         display: none;
+    }
+
+    .container-aboutme{
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .card-left-about, .card-right-about{
+        width: 100%;
+        flex-direction: column;
+    }
+    .container-aboutme{
+        flex-direction: column !important;
+        width: 100%;
+    }
+    .card-left-about, .card-right-about{
+        width: 97% !important;
     }
 }
