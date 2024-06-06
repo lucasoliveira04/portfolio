@@ -13,11 +13,11 @@ import java from "../../public/img/java (1).png";
 import spring from "../../public/img/icons8-spring-boot-96.png";
 import python from "../../public/img/python (1).png";
 
-const highlightWords = (text, wordsToHighlight) => {
+const highlightWords = (text, wordsToHighlight, color) => {
   let highlightedText = text;
   wordsToHighlight.forEach(word => {
     const regex = new RegExp(`(${word})`, 'gi');
-    highlightedText = highlightedText.replace(regex, '<strong>$1</strong>');
+    highlightedText = highlightedText.replace(regex, `<strong style="color:${color}">$1</strong>`);
   });
   return highlightedText;
 };
@@ -26,7 +26,8 @@ const Card = ({ title, description, github, languagem, framework, documentacao, 
   let url = "https://github.com/lucasoliveira04/";
 
   const wordsToHighlight = ["JWT", "PostgreSQL", "Spring Boot", "JavaMailSender", "MimeMessageHelper", "API", "automatizado", "seguro", "Python", "Render"];
-  const highlightedDescription = highlightWords(description, wordsToHighlight);
+  const highlightColor = type === "backend" ? "blue" : "green";
+  const highlightedDescription = highlightWords(description, wordsToHighlight, highlightColor);
 
   return (
     <Container className={`card-container ${type}`}>
@@ -72,7 +73,8 @@ export const ProjectComponent = () => {
       languagem: java,
       framework: spring,
       github: "api_login_jwt",
-      type: "backend"
+      type: "backend",
+      documentacao: "https://documentation-for-all-projects.vercel.app"
     },
     {
       title: "Api de Enviar Email",
@@ -80,6 +82,7 @@ export const ProjectComponent = () => {
       languagem: java,
       framework: spring,
       github: "api_send_email",
+      documentacao: "https://documentation-for-all-projects.vercel.app",
       type: "backend"
     },
     
@@ -90,6 +93,7 @@ export const ProjectComponent = () => {
       description: "O Visualizador de Repositórios do GitHub é uma aplicação Python que simplifica a interação com repositórios hospedados no GitHub. Os usuários podem buscar, clonar e abrir repositórios, além de visualizar uma lista de usuários recentes.",
       languagem: python,
       github: "github_repository_viewer",
+      documentacao: "https://documentation-for-all-projects.vercel.app",
       type: "backend"
     },
     {
@@ -98,6 +102,7 @@ export const ProjectComponent = () => {
       languagem: java,
       framework: spring,
       github: "api-url-masker",
+      documentacao: "https://documentation-for-all-projects.vercel.app",
       type: "backend"
     },
   ];
@@ -113,6 +118,7 @@ export const ProjectComponent = () => {
             languagem={project.languagem}
             framework={project.framework}
             github={project.github}
+            documentacao={project.documentacao}
             type="backend"
           />
         ))}
@@ -126,6 +132,7 @@ export const ProjectComponent = () => {
             languagem={project.languagem}
             framework={project.framework}
             github={project.github}
+            documentacao={project.documentacao}
             type="frontend"
           />
         ))}
