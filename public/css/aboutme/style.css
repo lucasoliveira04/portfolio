@@ -24,3 +24,7 @@
     width: 100%;
     height: 20vh;
 }
+
+.sobremim.c, .objetivo.c, .projetos.c, .skills.c {
+    flex: 1;
+}

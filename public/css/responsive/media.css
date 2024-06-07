@@ -18,6 +18,9 @@
     .midLinks{
         width: 100% !important;
     }
+    .containerProjetos{
+        overflow-y: hidden !important;
+    }
 }
 
 @media (max-width: 730px) {
