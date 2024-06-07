@@ -12,6 +12,7 @@ export const HomePage = () => {
   const [counter, setCounter] = useState(0);
   const projectsRef = useRef(null);
   const homeRef = useRef(null);
+  
 
   useEffect(() => {
     const handleScroll = () => {

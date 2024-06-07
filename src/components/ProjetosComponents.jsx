@@ -8,11 +8,12 @@ import {
   CardText,
   Container
 } from "react-bootstrap";
-
+import { useRef } from "react";
 import java from "../../public/img/java (1).png";
 import spring from "../../public/img/icons8-spring-boot-96.png";
 import python from "../../public/img/python (1).png";
 import { AbouMeComponent } from "./AboutMe";
+import { Element } from "react-scroll";
 
 const highlightWords = (text, wordsToHighlight, color) => {
   let highlightedText = text;
@@ -109,6 +110,8 @@ const Card = ({
 };
 
 export const ProjectComponent = () => {
+  const aboutRef = useRef(null);
+
   const projectsBackEnd = [
     {
       title: "Api de Login",
@@ -185,8 +188,12 @@ export const ProjectComponent = () => {
           ))}
         </div>
       </div>
-  
-      <AbouMeComponent />
+      <hr />
+      <Element name="sobre" id="sobre">
+        <Container ref={aboutRef}>
+          <AbouMeComponent id={"sobre"} />
+        </Container>
+      </Element>
     </div>
   );
 };
