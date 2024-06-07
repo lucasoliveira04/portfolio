@@ -1,6 +1,10 @@
-@media (max-width: 411px){
+@media (max-width: 415px){
     .card-footer{
         gap: 20px;
+    }
+
+    .card-footer a{
+        font-size: 13px;
     }
 
     .imgs-footer-project{
