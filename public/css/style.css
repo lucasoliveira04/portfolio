@@ -25,10 +25,6 @@
     background-color: #3a86ff;
 }
 
-#projects {
-    height: 100vh;
-}
-
 .nav {
     display: flex;
     justify-content: space-between;

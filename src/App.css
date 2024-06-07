@@ -8,3 +8,7 @@ body{
   box-sizing: border-box;
   overflow-x: hidden;
 }
+
+.containerProjetos{
+  overflow-y: hidden !important;
+}
