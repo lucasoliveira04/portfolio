@@ -18,8 +18,23 @@ export const AbouMeComponent = () => {
     return age;
   };
 
+
+  const calculateSemester = (startYear, startMonth) => {
+    const today = new Date();
+    const currentYear = today.getFullYear();
+    const currentMonth = today.getMonth() + 1; // getMonth() retorna o mês de 0 a 11
+
+    const totalMonths = (currentYear - startYear) * 12 + (currentMonth - startMonth);
+    const semester = Math.ceil(totalMonths / 6); // Cada semestre tem 6 meses
+
+    return semester;
+  };
+
   const birthDate = "2004-06-29";
   const age = calculateAge(birthDate);
+  const startYear = 2023; // Ano de início do curso
+  const startMonth = 1; // Mês de início do curso (Janeiro)
+  const currentSemester = calculateSemester(startYear, startMonth);
 
   return (
     <div className="container-aboutme">
@@ -29,7 +44,7 @@ export const AbouMeComponent = () => {
             <h3 style={{textAlign: 'center'}}>Sobre Mim</h3>
           </div>
           <p style={{fontWeight: 'bold'}}>
-            Olá! Meu nome é Lucas Oliveira e tenho {age} anos. Atualmente estou no 3º semestre do curso de Ciências da Computação, com previsão de conclusão em dezembro de 2027. Estou em busca de oportunidades para estágio ou uma posição como Desenvolvedor Júnior Back End. Sou uma pessoa dedicada e apaixonada por tecnologia, sempre buscando aprender e me desenvolver na área de desenvolvimento de software. 
+            Olá! Meu nome é Lucas Oliveira e tenho {age} anos. Atualmente estou no {currentSemester}º semestre do curso de Ciências da Computação, com previsão de conclusão em dezembro de 2027. Estou em busca de oportunidades para estágio ou uma posição como Desenvolvedor Júnior Back End. Sou uma pessoa dedicada e apaixonada por tecnologia, sempre buscando aprender e me desenvolver na área de desenvolvimento de software. 
             <br/><br/>
             Atualmente, estou focando meus estudos em conteúdos relacionados ao desenvolvimento Back End, incluindo microserviços, uso de design patterns, e outras tecnologias essenciais para a construção de sistemas escaláveis e eficientes.
           </p>
