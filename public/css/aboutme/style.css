@@ -1,30 +1,50 @@
-.container-aboutme{
+.container-aboutme {
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
     padding: 14px 10px;
     gap: 10px;
 }
 
-.card-left-about{
+.card-left-about {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
     gap: 10px;
 }
 
-.card-right-about{
+.card-right-about {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 50%;
+    width: 100%;
 }
 
-.c{
+.c {
     width: 100%;
     height: 20vh;
+    font-family: "Bebas Neue", sans-serif;
+    overflow-y: hidden;
 }
 
-.sobremim.c, .objetivo.c, .projetos.c, .skills.c {
+.sobremim.c,
+.objetivo.c,
+.projetos.c,
+.skills.c {
     flex: 1;
 }
+
+.sobremim {
+    padding: 14px;
+}
+
+h3 {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.sobremim p {
+    font-size: 20px;
+}
+
