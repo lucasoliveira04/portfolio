@@ -17,8 +17,7 @@ export const AbouMeComponent = () => {
 
     return age;
   };
-
-
+  
   const calculateSemester = (startYear, startMonth) => {
     const today = new Date();
     const currentYear = today.getFullYear();
