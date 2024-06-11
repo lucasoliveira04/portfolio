@@ -4,6 +4,7 @@ import java from "../../public/img/java (1).png"
 import python from "../../public/img/python (1).png"
 import js from "../../public/img/js.png"
 import sql from "../../public/img/servidor-sql.png"
+import reactjs from "../../public/img/biblioteca.png"
 
 export const AbouMeComponent = () => {
   const calculateAge = (birthDate) => {
@@ -69,6 +70,7 @@ export const AbouMeComponent = () => {
             <img src={python} alt="" width={"70px"} height={"70px"} className="skill-icon"/>
             <img src={js} alt="" width={"70px"} height={"70px"} className="skill-icon"/>
             <img src={sql} alt="" width={"70px"} height={"70px"} className="skill-icon"/>
+            <img src={reactjs} alt="" width={"70px"} height={"70px"} className="skill-icon"/>
           </p>
           </div>
           
