@@ -48,7 +48,8 @@ const Card = ({
     "automatizado",
     "seguro",
     "Python",
-    "Render"
+    "Render",
+    "urls"
   ];
   const highlightColor = type === "backend" ? "blue" : "green";
   const highlightedDescription = highlightWords(
