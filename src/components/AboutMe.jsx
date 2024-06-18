@@ -4,9 +4,12 @@ import java from "../../public/img/java (1).png"
 import python from "../../public/img/python (1).png"
 import js from "../../public/img/js.png"
 import sql from "../../public/img/servidor-sql.png"
-import reactjs from "../../public/img/biblioteca.png"
+import { useState } from "react";
 
 export const AbouMeComponent = () => {
+  const [contacts, setContacts] = useState("");
+  const [feedback, setFeedback] = useState("");
+
   const calculateAge = (birthDate) => {
     const today = new Date();
     const birthDateObj = new Date(birthDate);
@@ -36,6 +39,42 @@ export const AbouMeComponent = () => {
   const startYear = 2023; // Ano de início do curso
   const startMonth = 1; // Mês de início do curso (Janeiro)
   const currentSemester = calculateSemester(startYear, startMonth);
+
+  const handleSendResponse = async () => {
+    const emailRequest = {
+      configurationMail: {
+        host: "smtp.gmail.com",
+        port: "587",
+        username: "camposdlucasoli@gmail.com",
+        password: "kwqjsnlelyhchkzp",
+        supportMail: "camposdlucasoli@gmail.com",
+      },
+      emailRequest: {
+        message: feedback,
+        contacts: contacts,
+      },
+    };
+
+    try{
+      const response = await fetch(
+        "https://api-send-email-46gw.onrender.com/api/send/email/send",
+        {
+          method: "POST",
+          headers:{
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(emailRequest)
+        }
+      )
+
+      if (response.ok){
+        setFeedback("")
+        setContacts("")
+      }
+    } catch (error){
+      alert(error)
+    }
+  }
 
   return (
     <div className="container-aboutme">
@@ -70,11 +109,29 @@ export const AbouMeComponent = () => {
             <img src={python} alt="" width={"70px"} height={"70px"} className="skill-icon"/>
             <img src={js} alt="" width={"70px"} height={"70px"} className="skill-icon"/>
             <img src={sql} alt="" width={"70px"} height={"70px"} className="skill-icon"/>
-            <img src={reactjs} alt="" width={"70px"} height={"70px"} className="skill-icon"/>
           </p>
           </div>
           
         </div>
+
+        <div className="feedback-container">
+          <h4 className="feedback-title">Deixe seu feedback</h4>
+            <textarea
+              className="feedback-textarea"
+              rows="5"
+              value={feedback}
+              onChange={(e) => setFeedback(e.target.value)}
+            ></textarea>
+
+            <input
+              type="text"
+              className="feedback-input"
+              placeholder="Contato ( Opcional )"
+              value={contacts}
+              onChange={(e) => setContacts(e.target.value)}
+            />
+            <button className="feedback-button" onClick={handleSendResponse}>Enviar</button>
+          </div>
       </div>
     </div>
   );

@@ -37,3 +37,48 @@ h3 {
     font-family: "Concert One", sans-serif;
 }
 
+.feedback-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc; 
+    padding: 20px; 
+    margin: 20px; 
+    border-radius: 10px; 
+    background-color: #f9f9f9; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.feedback-title {
+    font-size: 1.5em;
+    margin-bottom: 10px; 
+}
+
+.feedback-textarea, .feedback-input {
+    width: 100%; 
+    max-width: 500px;
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    font-size: 1em; 
+}
+
+.feedback-textarea {
+    resize: vertical; 
+}
+
+.feedback-button {
+    padding: 10px 20px;
+    font-size: 1em; 
+    color: #fff;
+    background-color: #007bff; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+.feedback-button:hover {
+    background-color: #0056b3; 
+}
