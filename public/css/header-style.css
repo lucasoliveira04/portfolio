@@ -1,28 +1,23 @@
-header{
+header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #000000;
 }
 
-.group-itens-container{
-    display: flex;
-    gap: 20px;
-}
-
 .group-itens-container p {
-    position: relative; 
+    position: relative;
     color: white;
 }
 
-h2, p{
+h2, h1, p {
     color: white;
     font-family: "Playwrite CU", cursive;
     cursor: pointer;
 }
 
-.group-itens-container p::before{
+.group-itens-container p::before {
     content: '';
     position: absolute;
     left: 0;
@@ -34,7 +29,8 @@ h2, p{
     transition: width 0.3s ease;
 }
 
-.group-itens-container p:hover::before{
+.group-itens-container p:hover::before {
     width: 100%;
     color: white;
 }
+

@@ -117,7 +117,7 @@ export const ProjectComponent = () => {
     {
       title: "Api de Login",
       description:
-        "Este projeto implementa loginn com JWT e PostgreSQL, hospedando a API e o banco de dados na Render. Oferece autenticação segura e escalável, simplificando a implementação do login em aplicações",
+        "Este projeto implementa login com JWT e PostgreSQL, hospedando a API e o banco de dados na Render. Oferece autenticação segura e escalável, simplificando a implementação do login em aplicações",
       languagem: java,
       framework: spring,
       github: "api_login_jwt",
