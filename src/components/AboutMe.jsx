@@ -50,8 +50,11 @@ export const AbouMeComponent = () => {
         supportMail: "camposdlucasoli@gmail.com",
       },
       emailRequest: {
+        title: "Feedback Portfolio", 
         message: feedback,
         contacts: contacts,
+        subject: "Blog | Lucas", 
+        nameProjectOrNameBusiness: "Portfolio",
       },
     };
 
@@ -70,9 +73,11 @@ export const AbouMeComponent = () => {
       if (response.ok){
         setFeedback("")
         setContacts("")
+        console.log("Foi enviado")
       }
     } catch (error){
       alert(error)
+      console.log(error)
     }
   }
 
