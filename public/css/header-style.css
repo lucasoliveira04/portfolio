@@ -1,0 +1,40 @@
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #000000;
+}
+
+.group-itens-container{
+    display: flex;
+    gap: 20px;
+}
+
+.group-itens-container p {
+    position: relative; 
+    color: white;
+}
+
+h2, p{
+    color: white;
+    font-family: "Playwrite CU", cursive;
+    cursor: pointer;
+}
+
+.group-itens-container p::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    color: white;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.group-itens-container p:hover::before{
+    width: 100%;
+    color: white;
+}
