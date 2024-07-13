@@ -13,6 +13,7 @@ export const HomePage = () => {
   const projectsRef = useRef(null);
   const homeRef = useRef(null);
   
+  // sss
 
   useEffect(() => {
     const handleScroll = () => {
