@@ -1,0 +1,136 @@
+@keyframes borderBackEnd {
+  0% {
+    border-color: #007bff; /* Azul */
+  }
+  25% {
+    border-color: #0056b3; /* Azul Escuro */
+  }
+  50% {
+    border-color: #6c757d; /* Cinza */
+  }
+  75% {
+    border-color: #343a40; /* Cinza Escuro */
+  }
+  100% {
+    border-color: #007bff; /* Azul */
+  }
+}
+
+@keyframes borderFrontEnd {
+  0% {
+    border-color: #28a745; /* Verde */
+  }
+  25% {
+    border-color: #218838; /* Verde Escuro */
+  }
+  50% {
+    border-color: #e8f5e9; /* Verde Claro */
+  }
+  75% {
+    border-color: #155724; /* Verde Mais Escuro */
+  }
+  100% {
+    border-color: #28a745; /* Verde */
+  }
+}
+
+.container-project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 20px; 
+  padding: 20px; 
+  flex: 1;
+}
+
+.container-back{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.container-front{
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.card-header {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  margin-bottom: 10px;
+}
+
+.card-footer {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-footer img {
+  border-radius: 4px;
+}
+
+.card-footer a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.card-footer a:hover {
+  color: #0056b3;
+}
+
+/* Estilo específico para os cards de back-end */
+.card-container.backend {
+  background-color: #f8f9fa;
+  border-left-width: 5px;
+  border-left-style: solid; 
+  animation: borderBackEnd 5s linear infinite; 
+}
+
+.card-container.backend .card-header {
+  color: #007bff; 
+}
+
+/* Estilo específico para os cards de front-end */
+.card-container.frontend {
+  background-color: #e8f5e9; 
+  border-left-width: 5px;   
+  border-left-style: solid; 
+  animation: borderFrontEnd 5s linear infinite; 
+}
+
+.card-container.frontend .card-header {
+  color: #28a745; 
+}

@@ -1,0 +1,127 @@
+@media (max-width: 415px) {
+    .card-footer {
+      gap: 20px;
+    }
+  
+    .card-footer a {
+      font-size: 13px;
+    }
+  
+    .imgs-footer-project {
+      display: flex;
+    }
+  
+    .imgs-footer-project img {
+      width: 30px;
+    }
+  
+    .midLinks {
+      width: 100% !important;
+    }
+  
+    .containerProjetos {
+      overflow-y: hidden !important;
+      flex: 1 !important;
+    }
+  }
+  
+  @media (max-width: 730px) {
+    .nav {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      position: relative;
+      height: auto;
+    }
+  
+    h2 {
+      padding: 0;
+      margin: 0;
+    }
+  
+    .nav,
+    .linksNav {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .HLink,
+    .SLink,
+    .PLink {
+      padding: 0;
+      margin: 0;
+    }
+  
+    .linksNav {
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    header .midLinks h1 {
+      font-size: 70px;
+    }
+  
+    header .midLinks p {
+      font-size: 18px;
+    }
+  
+    .container-project {
+      grid-template-columns: 1fr !important;
+      flex: 1 !important;
+      overflow-y: hidden !important;
+    }
+  
+    .container-front {
+      margin-top: 10px;
+      align-items: center;
+    }
+  
+    .container-aboutme {
+      width: 99% !important;
+      flex-direction: column !important;
+    }
+  }
+  
+  @media (max-width: 1140px) and (min-width: 200px) {
+    header .midLinks h1 {
+      font-size: calc(2rem + 2vw);
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  
+    header .midLinks p {
+      display: none;
+    }
+  
+    .container-aboutme {
+      width: 100%;
+      flex-direction: row;
+    }
+  
+    .card-left-about,
+    .card-right-about {
+      width: 100%;
+      flex-direction: column;
+    }
+  
+    .container-aboutme {
+      flex-direction: column !important;
+      width: 100%;
+    }
+  
+    .card-left-about,
+    .card-right-about {
+      width: 97% !important;
+    }
+  
+    .containerProjetos {
+      overflow-y: hidden !important;
+      flex: 1;
+    }
+  }
+  
