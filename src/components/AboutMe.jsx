@@ -89,7 +89,7 @@ export const AbouMeComponent = () => {
             <h3 style={{textAlign: 'center', fontWeight: '900'}}>Sobre Mim</h3>
           </div>
           <p style={{fontWeight: '500'}}>
-            Olá! Meu nome é Lucas Oliveira e tenho {age} anos. Atualmente estou no <strong>{currentSemester}º semestre</strong> do curso de <strong>Ciências da Computação</strong>, com <strong>previsão de conclusão em dezembro de 2027</strong>. Estou em busca de oportunidades para <strong>estágio</strong> ou uma posição como <strong>Desenvolvedor Júnior Back End</strong>. Sou uma pessoa dedicada e apaixonada por tecnologia, sempre buscando aprender e me desenvolver na área de desenvolvimento de software. 
+            Olá! Meu nome é Lucas Oliveira e tenho {age} anos. Atualmente estou no <strong>{currentSemester}º semestre</strong> do curso de <strong>Ciências da Computação</strong>, com <strong>previsão de conclusão em dezembro de 2026</strong>. Estou em busca de oportunidades para <strong>estágio</strong> ou uma posição como <strong>Desenvolvedor Júnior Back End</strong>. Sou uma pessoa dedicada e apaixonada por tecnologia, sempre buscando aprender e me desenvolver na área de desenvolvimento de software. 
             <br/><br/>
             Atualmente, estou focando meus estudos em conteúdos relacionados ao desenvolvimento Back End, incluindo <strong>microserviços</strong>, uso de <strong>design patterns</strong>, e outras tecnologias essenciais para a construção de sistemas escaláveis e eficientes.
           </p>
