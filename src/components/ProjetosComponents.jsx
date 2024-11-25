@@ -12,6 +12,8 @@ import { useRef } from "react";
 import java from "../../public/img/java (1).png";
 import spring from "../../public/img/icons8-spring-boot-96.png";
 import python from "../../public/img/python (1).png";
+import unity from "../../public/img/unity.png";
+import csharp from "../../public/img/csharp.png";
 import { AbouMeComponent } from "./AboutMe";
 import { Element } from "react-scroll";
 
@@ -36,8 +38,6 @@ const Card = ({
   documentacao,
   type
 }) => {
-  let url = "https://github.com/lucasoliveira04/";
-
   const wordsToHighlight = [
     "JWT",
     "PostgreSQL",
@@ -82,7 +82,7 @@ const Card = ({
         <CardFooter className="card-footer">
           <div>
             <a
-              href={url + github}
+              href={github}
               target="_blank"
               rel="noopener noreferrer"
               style={{ marginRight: "10px" }}
@@ -120,7 +120,7 @@ export const ProjectComponent = () => {
         "Este projeto implementa loginn com JWT e PostgreSQL, hospedando a API e o banco de dados na Render. Oferece autenticação segura e escalável, simplificando a implementação do login em aplicações",
       languagem: java,
       framework: spring,
-      github: "api_login_jwt",
+      github: "https://github.com/lucasoliveira04/api_login_jwt",
       type: "backend",
       documentacao: "https://documentation-for-all-projects.vercel.app"
     },
@@ -130,20 +130,31 @@ export const ProjectComponent = () => {
         "A API de Envio de E-mails desenvolvida com Spring Boot oferece uma solução eficiente para enviar mensagens programaticamente. Utilizando JavaMailSender do Spring e MimeMessageHelper, a API é capaz de enviar e-mails de forma confiável. Com funcionalidades como tratamento de contatos anônimos e personalização das mensagens, é uma escolha sólida para integrar em projetos web que requerem envio de e-mails automatizado e seguro.",
       languagem: java,
       framework: spring,
-      github: "api_send_email",
+      github: "https://github.com/lucasoliveira04/api_send_email",
+      documentacao: "https://documentation-for-all-projects.vercel.app",
+      type: "backend"
+    },
+    {
+      title: "Nosso Mar : Salve os Patinhos",
+      description:
+        "O jogo Nosso Mar : Salve os Patinhos",
+      languagem: csharp,
+      framework: unity,
+      github: "https://github.com/CC-SI/NossoMarTheOriginalGame.git",
       documentacao: "https://documentation-for-all-projects.vercel.app",
       type: "backend"
     }
   ];
+
   const projectsFrontEnd = [
     {
       title: "Github Desktop Viewer",
       description:
         "O Visualizador de Repositórios do GitHub é uma aplicação Python que simplifica a interação com repositórios hospedados no GitHub. Os usuários podem buscar, clonar e abrir repositórios, além de visualizar uma lista de usuários recentes.",
       languagem: python,
-      github: "github_repository_viewer",
+      github: "https://github.com/lucasoliveira04/github_repository_viewer",
       documentacao: "https://documentation-for-all-projects.vercel.app",
-      type: "backend"
+      type: "frontend"
     },
     {
       title: "Api de mascara URLs",
@@ -151,9 +162,9 @@ export const ProjectComponent = () => {
         "API de máscara de URLs, desenvolvida em Java com Spring Boot. Oferece uma solução simples e eficiente para encurtar URLs longas, permitindo redirecionamentos rápidos e transparentes para suas versões originais.",
       languagem: java,
       framework: spring,
-      github: "api-url-masker",
+      github: "https://github.com/lucasoliveira04/api-url-masker",
       documentacao: "https://documentation-for-all-projects.vercel.app",
-      type: "backend"
+      type: "frontend"
     }
   ];
 

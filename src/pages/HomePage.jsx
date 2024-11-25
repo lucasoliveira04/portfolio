@@ -12,8 +12,7 @@ export const HomePage = () => {
   const [counter, setCounter] = useState(0);
   const projectsRef = useRef(null);
   const homeRef = useRef(null);
-  
-  // sss
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,10 +21,6 @@ export const HomePage = () => {
       const homeHeight = homeSection ? homeSection.clientHeight : 0;
       const projectsTop = projectsSection ? projectsSection.offsetTop : 0;
       const currentScroll = window.scrollY;
-
-      console.log("Current Scroll:", currentScroll);
-      console.log("Home Height:", homeHeight);
-      console.log("Projects Top:", projectsTop);
 
       if (currentScroll < homeHeight * 0.02) {
         setShowArrow(true);
@@ -45,16 +40,6 @@ export const HomePage = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCounter((prevCounter) => prevCounter + 1);
-    }, 1000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
   const scrollToProjects = () => {
     if (projectsRef.current) {
       projectsRef.current.scrollIntoView({ behavior: "smooth" });
@@ -71,7 +56,7 @@ export const HomePage = () => {
     <div style={{display: 'flex', flexDirection: 'column'}}>
       <div className="container-geral">
         <Helmet>
-          <title>Lucas Oliveira ({String(counter)})</title>
+          <title>Lucas Oliveira</title>
           <link
             rel="icon"
             href="../../public/img/development_desktop_device_screen_technology_computer_programming_coding_code_icon_212634.ico"
