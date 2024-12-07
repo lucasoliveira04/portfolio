@@ -9,14 +9,30 @@ import {
   Container
 } from "react-bootstrap";
 import { useRef } from "react";
+import { Element } from "react-scroll";
 import java from "../../public/img/java (1).png";
 import spring from "../../public/img/icons8-spring-boot-96.png";
 import python from "../../public/img/python (1).png";
 import unity from "../../public/img/unity.png";
 import csharp from "../../public/img/csharp.png";
 import { AbouMeComponent } from "./AboutMe";
-import { Element } from "react-scroll";
 
+// Constants
+const wordsToHighlight = [
+  "JWT",
+  "PostgreSQL",
+  "Spring Boot",
+  "JavaMailSender",
+  "MimeMessageHelper",
+  "API",
+  "automatizado",
+  "seguro",
+  "Python",
+  "Render",
+  "urls"
+];
+
+// Helper Functions
 const highlightWords = (text, wordsToHighlight, color) => {
   let highlightedText = text;
   wordsToHighlight.forEach((word) => {
@@ -29,28 +45,16 @@ const highlightWords = (text, wordsToHighlight, color) => {
   return highlightedText;
 };
 
+// Components
 const Card = ({
   title,
   description,
   github,
+  playLink,
   languagem,
   framework,
-  documentacao,
   type
 }) => {
-  const wordsToHighlight = [
-    "JWT",
-    "PostgreSQL",
-    "Spring Boot",
-    "JavaMailSender",
-    "MimeMessageHelper",
-    "API",
-    "automatizado",
-    "seguro",
-    "Python",
-    "Render",
-    "urls"
-  ];
   const highlightColor = type === "backend" ? "blue" : "green";
   const highlightedDescription = highlightWords(
     description,
@@ -81,17 +85,23 @@ const Card = ({
         />
         <CardFooter className="card-footer">
           <div>
-            <a
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ marginRight: "10px" }}
-            >
-              Github
-            </a>
-            {documentacao && (
-              <a href={documentacao} target="_blank" rel="noopener noreferrer">
-                Documentação
+            {playLink ? (
+              <a
+                href={playLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ marginRight: "10px" }}
+              >
+                Jogar
+              </a>
+            ) : (
+              <a
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ marginRight: "10px" }}
+              >
+                GitHub
               </a>
             )}
           </div>
@@ -122,26 +132,14 @@ export const ProjectComponent = () => {
       framework: spring,
       github: "https://github.com/lucasoliveira04/api_login_jwt",
       type: "backend",
-      documentacao: "https://documentation-for-all-projects.vercel.app"
-    },
-    {
-      title: "Api de Enviar Email",
-      description:
-        "A API de Envio de E-mails desenvolvida com Spring Boot oferece uma solução eficiente para enviar mensagens programaticamente. Utilizando JavaMailSender do Spring e MimeMessageHelper, a API é capaz de enviar e-mails de forma confiável. Com funcionalidades como tratamento de contatos anônimos e personalização das mensagens, é uma escolha sólida para integrar em projetos web que requerem envio de e-mails automatizado e seguro.",
-      languagem: java,
-      framework: spring,
-      github: "https://github.com/lucasoliveira04/api_send_email",
-      documentacao: "https://documentation-for-all-projects.vercel.app",
-      type: "backend"
     },
     {
       title: "Nosso Mar : Salve os Patinhos",
       description:
-        "O jogo Nosso Mar : Salve os Patinhos",
+        "Jogo, desenvolvido com valor comercial, que tem como objetivo conscientizar crianças sobre a importância de preservar o meio ambiente. O jogo foi desenvolvido em Unity e C#, e futuramente será lançado na Play Store.",
       languagem: csharp,
       framework: unity,
-      github: "https://github.com/CC-SI/NossoMarTheOriginalGame.git",
-      documentacao: "https://documentation-for-all-projects.vercel.app",
+      playLink: "https://mtgroup.itch.io/nosso-mar-salve-os-patinhos",
       type: "backend"
     }
   ];
@@ -152,8 +150,7 @@ export const ProjectComponent = () => {
       description:
         "O Visualizador de Repositórios do GitHub é uma aplicação Python que simplifica a interação com repositórios hospedados no GitHub. Os usuários podem buscar, clonar e abrir repositórios, além de visualizar uma lista de usuários recentes.",
       languagem: python,
-      github: "https://github.com/lucasoliveira04/github_repository_viewer",
-      documentacao: "https://documentation-for-all-projects.vercel.app",
+      github: "https://github.com/lucasoliveira04/github-desktop-viewer",
       type: "frontend"
     },
     {
@@ -163,7 +160,6 @@ export const ProjectComponent = () => {
       languagem: java,
       framework: spring,
       github: "https://github.com/lucasoliveira04/api-url-masker",
-      documentacao: "https://documentation-for-all-projects.vercel.app",
       type: "frontend"
     }
   ];
@@ -180,7 +176,7 @@ export const ProjectComponent = () => {
               languagem={project.languagem}
               framework={project.framework}
               github={project.github}
-              documentacao={project.documentacao}
+              playLink={project.playLink}
               type="backend"
             />
           ))}
@@ -194,7 +190,7 @@ export const ProjectComponent = () => {
               languagem={project.languagem}
               framework={project.framework}
               github={project.github}
-              documentacao={project.documentacao}
+              playLink={project.playLink}
               type="frontend"
             />
           ))}
