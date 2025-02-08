@@ -1,11 +1,12 @@
+
 import './App.css'
-import { Routers } from './routers'
+import {Routers} from './routers'
 
 function App() {
 
   return (
     <>
-      <Routers/>
+        <Routers/>
     </>
   )
 }

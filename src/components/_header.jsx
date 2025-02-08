@@ -1,33 +1,22 @@
-import { useEffect, useState } from "react"
-import brasil from "../../public/img/brasil.png"
-import eua from "../../public/img/eua.png"
-import messages from "../../public/json/messages.json"
+import "../../public/css/header.css";
 
 export const HeaderComponent = () => {
-    const [currentFlag, setCurrentFlag] = useState(brasil)
 
-    useEffect(() => {
-        const language = currentFlag === brasil ? 'ptbr' : 'en';
-        console.log(messages[language].about_me);
-        console.log(messages[language].projects);
-        console.log(messages[language].home);
-    }, [currentFlag])
+    return (
+        <div className={`container-header`}>
+            <div>
+                <h2 id={"#container-header"}>Lucas Oliveira Campos</h2>
+            </div>
 
-    const toggleFlag = () => {
-        setCurrentFlag(prevFlag => (prevFlag === brasil ? eua : brasil))
-    }
-
-    return(
-        <header>
-            <p style={{textAlign: 'end', marginRight: '10px'}}>
-                <img
-                    src={currentFlag}
-                    alt="flag"
-                    onClick={toggleFlag}
-                    style={{cursor: 'pointer'}}
-                    width={"50px"}
-                />
-            </p>
-        </header>
-    )
-}
+            <div>
+                <nav>
+                    <ul>
+                        <li>Projetos</li>
+                        <li>Sobre Mim</li>
+                        <li>Contatos</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    );
+};
