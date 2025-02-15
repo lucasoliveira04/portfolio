@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaSearch, FaArrowDown } from "react-icons/fa";
 import eu from "../../public/img/i.jpg";
 
 function MainFirstPage({ language }) {
@@ -50,7 +50,8 @@ function MainFirstPage({ language }) {
     };
 
     return ( 
-        <div className="h-[99.99vh] bg-[#111316] flex justify-center text-white pt-[70px]">
+        <div>
+            <div className="h-[95vh] bg-[#111316] flex justify-center text-white pt-[70px]">
             <div className="w-[600px] bg-[#111316] p-8 rounded-lg cursor-default">
                 <div className="flex items-center gap-6">
                     <div className="w-48 h-48 rounded-full bg-gray-500 flex items-center justify-center">
@@ -85,7 +86,16 @@ function MainFirstPage({ language }) {
                     </a>
                 </div>
             </div>
+
+            
+
+            
         </div>
+
+        <div className="h-[5vh] bg-[#111316] flex justify-center text-white cursor-pointer">
+            <FaArrowDown className="animate-bounce text-3xl" />
+        </div>
+    </div>
     );
 }
 

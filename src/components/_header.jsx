@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function HeaderComponent({ setLanguage }) {
+function HeaderComponent({ setLanguage, setTheme }) {
     const texts = {
         pt: {
             projects: "Projetos",
