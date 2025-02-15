@@ -1,0 +1,15 @@
+@keyframes lineAnimation {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.line-animation {
+    width: 100%;
+    border-top: 1px solid #e5dddd;
+    animation: lineAnimation 1s ease-out;
+}
