@@ -24,7 +24,7 @@ export const HomePage = () => {
       <MainFirstPage language={language} scrollToProjects={scrollToProjects} />
 
       <div ref={projectsRef}>
-        <Projects />
+        <Projects language={language}/>
       </div>
     </div>
   );

@@ -4,24 +4,75 @@ const highlightedWords = {
         field: "Ciências da Computação",
         skills: "tecnologias",
         growth: "desafios",
-
-        header:{
+        header: {
             projects: "Projetos",
             aboutMe: "Sobre Mim",
             contactsMe: "Entre em contato",
-        }
+        },
+        projects: [
+            {
+                id: 1,
+                title: "Projeto de Imagem",
+                description: "Este é um projeto com uma imagem de exemplo.",
+                use: "Usar",
+                using: "Usando",
+                visit: "Visitar"
+            },
+            {
+                id: 2,
+                title: "ChatBot AI",
+                description: "Este projeto consiste em um ChatBot inteligente desenvolvido utilizando ReactJS, com estilização em Tailwind. Ele é capaz de interagir com os usuários, oferecendo respostas automatizadas baseadas em inteligência artificial.",
+                use: "Usar",
+                using: "Usando",
+                visit: "Visitar"
+            },
+            {
+                id: 3,
+                title: "Projeto Interativo",
+                description: "Assista ao vídeo e comece a jogar ou usar o aplicativo interativo.",
+                use: "Usar",
+                using: "Usando",
+                visit: "Visitar"
+            },
+        ],
     },
     en: {
         developer: "Back-End Developer",
         field: "Computer Science",
         skills: "technologies",
         growth: "challenges",
-
-        header:{
+        header: {
             projects: "Projects",
             aboutMe: "About Me",
-            contactsMe: "Contact Me"
-        }
+            contactsMe: "Contact Me",
+        },
+        projects: [
+            {
+                id: 1,
+                title: "Image Project",
+                description: "This is a sample project with an image.",
+                use: "Use",
+                using: "Using",
+                visit: "View Site"
+            },
+            {
+                id: 2,
+                title: "ChatBot AI",
+                description: "This project consists of an intelligent ChatBot developed using ReactJS, with styling in Tailwind. It is capable of interacting with users, providing automated responses based on artificial intelligence.",
+                use: "Use",
+                using: "Using",
+                visit: "View Site"
+            },
+            {
+                id: 3,
+                title: "Interactive Project",
+                description: "Watch the video and start playing or using the interactive app.",
+                use: "Use",
+                using: "Using",
+                visit: "View Site"
+            },
+        ],
+        visitSite: "View Site"
     },
 };
 
@@ -42,7 +93,8 @@ export const getTexts = (language) => {
             ),
             alt: "Foto de Lucas Oliveira",
             titlePhoto: "Foto de Lucas Oliveira",
-            header: highlightedWords.pt.header
+            header: highlightedWords.pt.header,
+            projects: highlightedWords.pt.projects,
         },
         en: {
             role: "Back-End Developer",
@@ -55,7 +107,8 @@ export const getTexts = (language) => {
             ),
             alt: "Photo of Lucas Oliveira",
             titlePhoto: "Photo of Lucas Oliveira",
-            header: highlightedWords.en.header
+            header: highlightedWords.en.header,
+            projects: highlightedWords.en.projects,
         },
     }[language];
 };
