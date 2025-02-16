@@ -1,53 +1,29 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaSearch, FaArrowDown } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown } from "react-icons/fa";
 import eu from "../../public/img/i.jpg";
+import { useEffect, useState } from "react";
+import { getTexts } from "../data/text";
 
 function MainFirstPage({ language, scrollToProjects }) {
-    const currentMonth = new Date().getMonth() + 1;
-    const startSemester = 5;
-    const semester = startSemester + Math.floor((currentMonth - 1) / 6);
+    const [showArrow, setShowArrow] = useState(true);
+    const [fade, setFade] = useState(false);
+    const [currentText, setCurrentText] = useState(getTexts(language));
 
-    // Palavras destacadas
-    const highlightedWords = {
-        pt: {
-            developer: "Desenvolvedor Back-End",
-            field: "Ciências da Computação",
-            skills: "tecnologias",
-            growth: "desafios",
-        },
-        en: {
-            developer: "Back-End Developer",
-            field: "Computer Science",
-            skills: "technologies",
-            growth: "challenges",
-        },
-    };
+    useEffect(() => {
+        const handleScroll = () => {
+            setShowArrow(window.scrollY <= 77);
+        };
 
-    const texts = {
-        pt: {
-            role: "Desenvolvedor Back-End",
-            pronouns: "Ele/Dele",
-            age: "20 Anos",
-            description: (
-                <>
-                    Sou um <span className="font-bold">{highlightedWords.pt.developer}</span>. Atualmente, estou no {semester}º semestre da minha formação em <span className="font-bold">{highlightedWords.pt.field}</span>, onde adquiro conhecimentos que complementam minha prática profissional. Estou sempre aberto a aprender novas <span className="font-bold">{highlightedWords.pt.skills}</span> e enfrentar <span className="font-bold">{highlightedWords.pt.growth}</span> que possam me ajudar a crescer como profissional.
-                </>
-            ),
-            alt: "Foto de Lucas Oliveira",
-            titlePhoto: "Foto de Lucas Oliveira",
-        },
-        en: {
-            role: "Back-End Developer",
-            pronouns: "He/Him",
-            age: "20 Years",
-            description: (
-                <>
-                    I am a <span className="font-bold">{highlightedWords.en.developer}</span>. Currently, I am in the {semester}th semester of my studies in <span className="font-bold">{highlightedWords.en.field}</span>, where I acquire knowledge that complements my professional practice. I am always open to learning new <span className="font-bold">{highlightedWords.en.skills}</span> and facing <span className="font-bold">{highlightedWords.en.growth}</span> that can help me grow as a professional.
-                </>
-            ),
-            alt: "Photo of Lucas Oliveira",
-            titlePhoto: "Photo of Lucas Oliveira",
-        },
-    };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    useEffect(() => {
+        setFade(true);
+        setTimeout(() => {
+            setCurrentText(getTexts(language));
+            setFade(false);
+        }, 300); 
+    }, [language]);
 
     return (
         <div>
@@ -58,21 +34,23 @@ function MainFirstPage({ language, scrollToProjects }) {
                             <span>
                                 <img
                                     src={eu}
-                                    alt={texts[language].alt}
-                                    title={texts[language].titlePhoto}
+                                    alt={currentText.alt}
+                                    title={currentText.titlePhoto}
                                     className="object-cover w-48 h-48 rounded-full"
                                 />
                             </span>
                         </div>
-                        <div>
+                        <div className={`transition-transform duration-500 ${fade ? "scale-90 opacity-50" : "scale-100 opacity-100"}`}>
                             <h1 className="text-3xl font-bold">Lucas Oliveira</h1>
                             <div className="line-animation"></div>
-                            <p className="text-lg text-gray-400">{texts[language].role}</p>
-                            <p className="text-gray-500">{texts[language].pronouns}, {texts[language].age}</p>
+                            <p className="text-lg text-gray-400">{currentText.role}</p>
+                            <p className="text-gray-500">{currentText.pronouns}, {currentText.age}</p>
                         </div>
                     </div>
 
-                    <p className="mt-4 text-gray-300 leading-relaxed">{texts[language].description}</p>
+                    <p className={`mt-4 text-gray-300 leading-relaxed transition-opacity duration-500 ${fade ? "opacity-50" : "opacity-100"}`}>
+                        {currentText.description}
+                    </p>
 
                     <div className="mt-6 flex gap-4 justify-center">
                         <a href="mailto:camposdlucasoli@gmail.com" target="_blank" rel="noopener noreferrer">
@@ -88,9 +66,11 @@ function MainFirstPage({ language, scrollToProjects }) {
                 </div>
             </div>
 
-            <div className="h-[5vh] bg-[#111316] flex justify-center text-white cursor-pointer" onClick={scrollToProjects}>
-                <FaArrowDown className="animate-bounce text-3xl" />
-            </div>
+            {showArrow && (
+                <div className="h-[5vh] bg-[#111316] flex justify-center text-white cursor-pointer" onClick={scrollToProjects}>
+                    <FaArrowDown className="animate-bounce text-3xl" />
+                </div>
+            )}
         </div>
     );
 }
