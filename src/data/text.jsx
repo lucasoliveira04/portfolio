@@ -12,8 +12,8 @@ const highlightedWords = {
         projects: [
             {
                 id: 1,
-                title: "Projeto de Imagem",
-                description: "Este é um projeto com uma imagem de exemplo.",
+                title: "Github Desktop Viewer",
+                description: "O Github Desktop Viewer é uma aplicação Python que simplifica a interação com repositórios hospedados no GitHub. Os usuários podem buscar, clonar e abrir repositórios, além de visualizar uma lista de usuários recentes.",
                 use: "Usar",
                 using: "Usando",
                 visit: "Visitar"
@@ -29,7 +29,7 @@ const highlightedWords = {
             {
                 id: 3,
                 title: "Nosso Mar Salve os Patinhos 🦆",
-                description: "Nosso Mar: Salve os Patinhos é um jogo educativo desenvolvido em Unity para conscientizar sobre a poluição marinha, inspirado no incidente real de 1992, quando milhares de patinhos de borracha caíram no oceano. Criado para o Colégio Emílio de Rousseau, o jogo desafia os jogadores a resgatarem 20 patinhos enquanto aprendem sobre preservação ambiental. Utiliza C#, PixelArt para GameArt.",
+                description: "Nosso Mar: Salve os Patinhos é um jogo educativo desenvolvido em Unity para o Colégio Emílio de Rousseau. O jogo, que utiliza C# e PixelArt, tem o objetivo de conscientizar sobre a poluição marinha, inspirando-se no incidente de 1992 quando patinhos de borracha caíram no oceano.",
                 use: "Usar",
                 using: "Usando",
                 visit: "Visitar"
@@ -49,8 +49,8 @@ const highlightedWords = {
         projects: [
             {
                 id: 1,
-                title: "Image Project",
-                description: "This is a sample project with an image.",
+                title: "Github Desktop Viewer",
+                description: "The Github Desktop Viewer is a Python application that simplifies interaction with repositories hosted on GitHub. Users can search, clone, and open repositories, as well as view a list of recent users.",
                 use: "Use",
                 using: "Using",
                 visit: "View Site"
@@ -66,7 +66,7 @@ const highlightedWords = {
             {
                 id: 3,
                 title: "Our Sea: Save the Ducklings 🦆",
-                description: "Our Sea: Save the Ducklings is an educational game developed in Unity to raise awareness about marine pollution, inspired by the real-life 1992 incident when thousands of rubber ducklings fell into the ocean. Created for Colégio Emílio de Rousseau, the game challenges players to rescue 20 ducklings while learning about environmental conservation. It uses C#, PixelArt for GameArt.",
+                description: "Our Sea: Save the Ducklings is an educational game developed in Unity for Colégio Emílio de Rousseau. The game, built with C# and PixelArt, aims to raise awareness about marine pollution, inspired by the 1992 incident when rubber ducklings fell into the ocean.",
                 use: "Use",
                 using: "Using",
                 visit: "View Site"

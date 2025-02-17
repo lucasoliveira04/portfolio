@@ -6,8 +6,13 @@ import reactjsx from "../../public/img/reactjsx.png";
 import tailwind from "../../public/img/tailwind.png";
 import unity from "../../public/img/unity.png";
 import csharp from "../../public/img/csharp.png";
+import python from "../../public/img/python.png";
+
+import github_dektop_viewer from "../../public/img/projects/github-dektop-viewer.png"
+
 import { FaCog, FaRobot } from "react-icons/fa";
 import { getTexts } from "../data/text";
+import { highlightWords } from "../data/highlightWords";
 
 export function Projects({ language }) {
     const [showInteractive, setShowInteractive] = useState(false);
@@ -15,37 +20,6 @@ export function Projects({ language }) {
 
     const handleStartGame = () => {
         setShowInteractive(true);
-    };
-
-    const highlightWords = {
-        pt: {
-            "ChatBot": "text-yellow-400 font-bold",
-            "ReactJS": "text-blue-400 font-bold",
-            "Tailwind": "text-teal-400 font-bold",
-            "JavaScript": "text-yellow-300 font-bold",
-            "interativo": "text-red-400 font-bold",
-            "inteligência artificial": "text-purple-400 font-bold",
-            "Unity": "text-green-100 font-bold",
-            "C#": "text-yellow-400 font-bold",
-            "PixelArt": "text-red-200 font-bold",
-            "GameArt": "text-yellow-200 font-bold",
-            "Nosso Mar: Salve os Patinhos": "text-blue-200 font-bold",
-            "Criado para o Colégio Emílio de Rousseau": "text-whitesmoke-200 font-bold"
-        },
-        en: {
-            "ChatBot": "text-yellow-400 font-bold",
-            "ReactJS": "text-blue-400 font-bold",
-            "Tailwind": "text-teal-400 font-bold",
-            "JavaScript": "text-yellow-300 font-bold",
-            "interactive": "text-red-400 font-bold",
-            "artificial intelligence": "text-purple-400 font-bold",
-            "Unity": "text-green-100 font-bold",
-            "C#": "text-yellow-100 font-bold",
-            "PixelArt": "text-red-200 font-bold",
-            "GameArt": "text-yellow-200 font-bold",
-            "Our Sea: Save the Ducklings": "text-blue-200 font-bold",
-            "Created for Colégio Emílio de Rousseau": "text-whitesmoke-200 font-bold"
-        }
     };
 
     const highlightDescription = (text, language) => {
@@ -78,11 +52,11 @@ export function Projects({ language }) {
             id: 1,
             title: text.projects[0].title,
             description: text.projects[0].description,
-            imageUrl: "https://via.placeholder.com/300x200",
+            imageUrl: github_dektop_viewer,
             videoUrl: null,
             siteUrl: "https://example.com/project1",
             isInteractive: false,
-            technologies: [{ src: js, alt: "JavaScript" }],
+            technologies: [{ src: python, alt: "Python" }],
             visitSite: false,
             textVisitSite: text.projects[0].visit
         },
@@ -140,8 +114,8 @@ export function Projects({ language }) {
                 {sortedProjects.map((project) => (
                     <div
                         key={project.id}
-                        className="project-card p-4 rounded-lg border h-[90vh] shadow-lg hover:shadow-xl transition duration-300 ease-in-out w-full max-w-xs 
-                        sm:max-w-md h-[105vh] 
+                        className="project-card p-4 rounded-lg border h-[89vh] shadow-lg hover:shadow-xl transition duration-300 ease-in-out w-full max-w-xs 
+                        sm:max-w-md h-[110vh] 
                         lg:max-w-lg xl:max-w-xl 
                         flex flex-col"
                     >
