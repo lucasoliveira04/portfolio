@@ -4,6 +4,8 @@ import "../../public/css/project.css";
 import js from "../../public/img/js.png";
 import reactjsx from "../../public/img/reactjsx.png";
 import tailwind from "../../public/img/tailwind.png";
+import unity from "../../public/img/unity.png";
+import csharp from "../../public/img/csharp.png";
 import { FaCog, FaRobot } from "react-icons/fa";
 import { getTexts } from "../data/text";
 
@@ -23,9 +25,12 @@ export function Projects({ language }) {
             "JavaScript": "text-yellow-300 font-bold",
             "interativo": "text-red-400 font-bold",
             "inteligência artificial": "text-purple-400 font-bold",
-            "Usar": "text-green-400 font-bold",
-            "Usando": "text-gray-500 font-bold",
-            "Visitar": "text-blue-400 font-bold"
+            "Unity": "text-green-100 font-bold",
+            "C#": "text-yellow-400 font-bold",
+            "PixelArt": "text-red-200 font-bold",
+            "GameArt": "text-yellow-200 font-bold",
+            "Nosso Mar: Salve os Patinhos": "text-blue-200 font-bold",
+            "Criado para o Colégio Emílio de Rousseau": "text-whitesmoke-200 font-bold"
         },
         en: {
             "ChatBot": "text-yellow-400 font-bold",
@@ -34,27 +39,39 @@ export function Projects({ language }) {
             "JavaScript": "text-yellow-300 font-bold",
             "interactive": "text-red-400 font-bold",
             "artificial intelligence": "text-purple-400 font-bold",
-            "Use": "text-green-400 font-bold",
-            "Using": "text-gray-500 font-bold",
-            "View Site": "text-blue-400 font-bold"
+            "Unity": "text-green-100 font-bold",
+            "C#": "text-yellow-100 font-bold",
+            "PixelArt": "text-red-200 font-bold",
+            "GameArt": "text-yellow-200 font-bold",
+            "Our Sea: Save the Ducklings": "text-blue-200 font-bold",
+            "Created for Colégio Emílio de Rousseau": "text-whitesmoke-200 font-bold"
         }
     };
 
     const highlightDescription = (text, language) => {
         let updatedText = text;
-
+    
         const wordsToHighlight = highlightWords[language];
-
+    
         Object.entries(wordsToHighlight).forEach(([word, className]) => {
-            const regex = new RegExp(`\\b${word}\\b`, "gi");
-            updatedText = updatedText.replace(
-                regex,
-                (match) => `<span class="${className}">${match}</span>`
-            );
+            if (word !== "C#") {
+                const regex = new RegExp(`\\b${word}\\b`, "gi");
+                updatedText = updatedText.replace(
+                    regex,
+                    (match) => `<span class="${className}">${match}</span>`
+                );
+            }
         });
-
+    
+        // Aplicando a estilização para "C#" separadamente
+        updatedText = updatedText.replace(
+            /C#/g,
+            `<span class="${wordsToHighlight["C#"]}">C#</span>`
+        );
+    
         return <span dangerouslySetInnerHTML={{ __html: updatedText }} />;
     };
+    
 
     const projects = [
         {
@@ -63,7 +80,7 @@ export function Projects({ language }) {
             description: text.projects[0].description,
             imageUrl: "https://via.placeholder.com/300x200",
             videoUrl: null,
-            siteUrl: "https://example.com/project1", 
+            siteUrl: "https://example.com/project1",
             isInteractive: false,
             technologies: [{ src: js, alt: "JavaScript" }],
             visitSite: false,
@@ -74,13 +91,13 @@ export function Projects({ language }) {
             title: (
                 <div className="flex items-center">
                     <span>{text.projects[1].title}</span>
-                    <FaRobot className="ml-2" size={20}/>
+                    <FaRobot className="ml-2" size={20} />
                 </div>
             ),
             description: text.projects[1].description,
             imageUrl: null,
-            videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-            siteUrl: "https://chatbot-js-xi.vercel.app/", 
+            videoUrl: "https://www.youtube.com/embed/t2eYsNFGEQE?start=2",
+            siteUrl: "https://chatbot-js-xi.vercel.app/",
             isInteractive: false,
             technologies: [
                 { src: reactjsx, alt: "ReactJSX" },
@@ -94,10 +111,13 @@ export function Projects({ language }) {
             title: text.projects[2].title,
             description: text.projects[2].description,
             imageUrl: null,
-            videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            videoUrl: "https://www.youtube.com/embed/zkRL5I0OamY?si=c54NDbq8hLkLA5ws",
             siteUrl: "https://example.com/project3",
             isInteractive: true,
-            technologies: [{ src: js, alt: "JavaScript" }],
+            technologies: [
+                { src: csharp, alt: "C#" },
+                { src: unity, alt: "Unity" },
+            ],
             visitSite: false,
             textVisitSite: text.projects[2].visit
         },
@@ -116,11 +136,14 @@ export function Projects({ language }) {
                 <h2 className="text-white text-3xl font-semibold">{text.header.projects}</h2>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-center items-center justify-items-center gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 justify-center items-center justify-items-center gap-6">
                 {sortedProjects.map((project) => (
                     <div
                         key={project.id}
-                        className="project-card p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out w-full max-w-md lg:max-w-lg xl:max-w-xl flex flex-col"
+                        className="project-card p-4 rounded-lg border h-[90vh] shadow-lg hover:shadow-xl transition duration-300 ease-in-out w-full max-w-xs 
+                        sm:max-w-md h-[105vh] 
+                        lg:max-w-lg xl:max-w-xl 
+                        flex flex-col"
                     >
                         <div className="project-content flex-grow mt-4">
                             {project.imageUrl && (
@@ -176,7 +199,7 @@ export function Projects({ language }) {
                                 )}
                                 {project.visitSite && project.siteUrl && (
                                     <a
-                                        href={project.siteUrl} 
+                                        href={project.siteUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-white font-bold cursor-pointer hover:font-normal"
@@ -196,7 +219,7 @@ export function Projects({ language }) {
                                     key={index}
                                     src={tech.src}
                                     alt={tech.alt}
-                                    className="w-8 h-8 object-contain"
+                                    className="w-8 h-8 object-contain hover:scale-110 transition-transform duration-200"
                                 />
                             ))}
                         </div>
@@ -204,5 +227,6 @@ export function Projects({ language }) {
                 ))}
             </div>
         </div>
+
     );
 }

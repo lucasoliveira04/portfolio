@@ -28,8 +28,8 @@ const highlightedWords = {
             },
             {
                 id: 3,
-                title: "Projeto Interativo",
-                description: "Assista ao vídeo e comece a jogar ou usar o aplicativo interativo.",
+                title: "Nosso Mar Salve os Patinhos 🦆",
+                description: "Nosso Mar: Salve os Patinhos é um jogo educativo desenvolvido em Unity para conscientizar sobre a poluição marinha, inspirado no incidente real de 1992, quando milhares de patinhos de borracha caíram no oceano. Criado para o Colégio Emílio de Rousseau, o jogo desafia os jogadores a resgatarem 20 patinhos enquanto aprendem sobre preservação ambiental. Utiliza C#, PixelArt para GameArt.",
                 use: "Usar",
                 using: "Usando",
                 visit: "Visitar"
@@ -65,14 +65,13 @@ const highlightedWords = {
             },
             {
                 id: 3,
-                title: "Interactive Project",
-                description: "Watch the video and start playing or using the interactive app.",
+                title: "Our Sea: Save the Ducklings 🦆",
+                description: "Our Sea: Save the Ducklings is an educational game developed in Unity to raise awareness about marine pollution, inspired by the real-life 1992 incident when thousands of rubber ducklings fell into the ocean. Created for Colégio Emílio de Rousseau, the game challenges players to rescue 20 ducklings while learning about environmental conservation. It uses C#, PixelArt for GameArt.",
                 use: "Use",
                 using: "Using",
                 visit: "View Site"
             },
         ],
-        visitSite: "View Site"
     },
 };
 
