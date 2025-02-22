@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { getTexts } from "../data/text";
 import { useScreenSize } from "../context/ScreenSizeProvider";
 
-function HeaderComponent({ setLanguage }) {
+function HeaderComponent({ setLanguage, scrollToProjects }) {
     const [fade, setFade] = useState(false);
     const [language, setLangState] = useState(() => localStorage.getItem("language") || "pt");
     const text = getTexts(language);
@@ -32,13 +32,13 @@ function HeaderComponent({ setLanguage }) {
             {/* Cabeçalho para PC */}
             {isPC && (
                 <div className={`flex gap-6 transition-opacity duration-500 ${fade ? "opacity-50" : "opacity-100"} font-sans`}>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300">
+                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white" onClick={scrollToProjects}>
                         {text.header.projects}
                     </p>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300">
+                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white">
                         {text.header.aboutMe}
                     </p>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300">
+                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white">
                         {text.header.contactsMe}
                     </p>
                 </div>
@@ -47,13 +47,13 @@ function HeaderComponent({ setLanguage }) {
             {/* Cabeçalho para Notebook */}
             {isNotebook && (
                 <div className={`flex gap-6 duration-500 ${fade ? "opacity-50" : "opacity-100"} font-sans`}>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300">
+                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white" onClick={scrollToProjects}>
                         {text.header.projects}
                     </p>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300">
+                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white">
                         {text.header.aboutMe}
                     </p>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300">
+                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white">
                         {text.header.contactsMe}
                     </p>
                 </div>
@@ -62,13 +62,13 @@ function HeaderComponent({ setLanguage }) {
             {/* Cabeçalho para Celular Grande */}
             {isLargeMobile && (
                 <div className={`flex gap-6  duration-500 ${fade ? "opacity-50" : "opacity-100"} font-sans`}>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300">
+                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white" onClick={scrollToProjects}>
                         {text.header.projects}
                     </p>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300">
+                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white">
                         {text.header.aboutMe}
                     </p>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300">
+                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white">
                         {text.header.contactsMe}
                     </p>
                 </div>
@@ -77,13 +77,13 @@ function HeaderComponent({ setLanguage }) {
             {/* Cabeçalho para Celular Pequeno */}
             {isSmallMobile && (
                 <div className={`flex gap-3 text-[13px] duration-500 ${fade ? "opacity-50" : "opacity-100"} font-sans`}>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300">
+                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white" onClick={scrollToProjects}>
                         {text.header.projects}
                     </p>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300">
+                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white">
                         {text.header.aboutMe}
                     </p>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300">
+                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white">
                         {text.header.contactsMe}
                     </p>
                 </div>

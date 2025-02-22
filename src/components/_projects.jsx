@@ -8,7 +8,7 @@ import unity from "../../public/img/unity.png";
 import csharp from "../../public/img/csharp.png";
 import python from "../../public/img/python.png";
 
-import github_dektop_viewer from "../../public/img/projects/github-dektop-viewer.png"
+import github_dektop_viewer from "../../public/img/projects/github-dektop-viewer.png";
 
 import { FaCog, FaRobot } from "react-icons/fa";
 import { getTexts } from "../data/text";
@@ -24,9 +24,9 @@ export function Projects({ language }) {
 
     const highlightDescription = (text, language) => {
         let updatedText = text;
-    
+
         const wordsToHighlight = highlightWords[language];
-    
+
         Object.entries(wordsToHighlight).forEach(([word, className]) => {
             if (word !== "C#") {
                 const regex = new RegExp(`\\b${word}\\b`, "gi");
@@ -36,16 +36,15 @@ export function Projects({ language }) {
                 );
             }
         });
-    
+
         // Aplicando a estilização para "C#" separadamente
         updatedText = updatedText.replace(
             /C#/g,
             `<span class="${wordsToHighlight["C#"]}">C#</span>`
         );
-    
+
         return <span dangerouslySetInnerHTML={{ __html: updatedText }} />;
     };
-    
 
     const projects = [
         {
@@ -110,14 +109,20 @@ export function Projects({ language }) {
                 <h2 className="text-white text-3xl font-semibold">{text.header.projects}</h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 justify-center items-center justify-items-center gap-6">
+            <div className="grid grid-cols-1 justify-center items-center justify-items-center gap-6 
+            sm:grid-cols-1 
+            md:grid-cols-1 
+            lg:grid-cols-2 
+            xl:grid-cols-3
+            ">
                 {sortedProjects.map((project) => (
                     <div
                         key={project.id}
-                        className="project-card p-4 rounded-lg border h-[89vh] shadow-lg hover:shadow-xl transition duration-300 ease-in-out w-full max-w-xs 
-                        sm:max-w-md h-[110vh] 
-                        lg:max-w-lg xl:max-w-xl 
-                        flex flex-col"
+                        className="project-card p-4 rounded-lg shadow-lg hover:shadow-xl hover:translate-y-1 transition duration-300 ease-in-out w-full max-w-xs flex flex-col min-h-[400px] 
+                        sm:max-w-md sm:h-[650px]
+                        lg:max-w-lg 
+                        xl:max-w-xl 
+                        "
                     >
                         <div className="project-content flex-grow mt-4">
                             {project.imageUrl && (
@@ -201,6 +206,5 @@ export function Projects({ language }) {
                 ))}
             </div>
         </div>
-
     );
 }

@@ -20,10 +20,12 @@ export const HomePage = () => {
 
   return (
     <div className="App">
-      <HeaderComponent setLanguage={setLanguage} />
+      <HeaderComponent setLanguage={setLanguage} scrollToProjects={scrollToProjects}/>
       <MainFirstPage language={language} scrollToProjects={scrollToProjects} />
 
-      <div ref={projectsRef}>
+      <div className="secao" ref={projectsRef}></div>
+
+      <div>
         <Projects language={language}/>
       </div>
     </div>
