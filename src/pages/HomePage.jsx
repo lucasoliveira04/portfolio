@@ -5,6 +5,7 @@ import "../../public/css/animation.css";
 import "../../public/css/scrool.css";
 
 import { Projects } from "../components/_projects";
+import FeedBackComponent from "../components/_feedback";
 
 export const HomePage = () => {
   const [language, setLanguage] = useState(localStorage.getItem("language") || "pt");
@@ -28,6 +29,11 @@ export const HomePage = () => {
       <div>
         <Projects language={language}/>
       </div>
+
+      <div className="secao-1"></div>
+
+      <FeedBackComponent language={language}/>
+
     </div>
   );
 };

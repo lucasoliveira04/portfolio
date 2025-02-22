@@ -9,6 +9,11 @@ const highlightedWords = {
             aboutMe: "Sobre Mim",
             contactsMe: "Entre em contato",
         },
+
+        feedback: "Deixe seu feedback",
+        leaveContact: "Contato (Opcional)",
+        sendFeedback: "Enviar",
+
         projects: [
             {
                 id: 1,
@@ -46,6 +51,11 @@ const highlightedWords = {
             aboutMe: "About Me",
             contactsMe: "Contact Me",
         },
+
+        feedback: "Leave your feedback",
+        leaveContact: "Contact (Optional)",
+        sendFeedback: "Send",
+
         projects: [
             {
                 id: 1,
@@ -94,6 +104,9 @@ export const getTexts = (language) => {
             titlePhoto: "Foto de Lucas Oliveira",
             header: highlightedWords.pt.header,
             projects: highlightedWords.pt.projects,
+            feedback: highlightedWords.pt.feedback,
+            leaveContact: highlightedWords.pt.leaveContact,
+            sendFeedback: highlightedWords.pt.sendFeedback
         },
         en: {
             role: "Back-End Developer",
@@ -108,6 +121,10 @@ export const getTexts = (language) => {
             titlePhoto: "Photo of Lucas Oliveira",
             header: highlightedWords.en.header,
             projects: highlightedWords.en.projects,
+            feedback: highlightedWords.en.feedback,
+            leaveContact: highlightedWords.en.leaveContact,
+            sendFeedback: highlightedWords.en.sendFeedback
+            
         },
     }[language];
 };
