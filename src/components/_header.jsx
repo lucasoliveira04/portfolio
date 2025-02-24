@@ -23,7 +23,7 @@ function HeaderComponent({ setLanguage, scrollToProjects }) {
     };
 
     const isSmallMobile = screenWidth < 400;
-    const textSize = isSmallMobile ? "text-[13px] gap-2" : "text-base";
+    const textSize = isSmallMobile ? "text-[12px] gap-2" : "text-base";
     
     return (
         <div className="w-full p-[23px] bg-[#111316] flex justify-between items-center fixed z-10">
