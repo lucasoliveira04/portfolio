@@ -1,14 +1,20 @@
-*{
-  overflow-x: hidden;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sigmar&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-font: "Inter", sans-serif;
+  --secondary-font: "Cabin", sans-serif;
+  --tertiary-font: "Sigmar", sans-serif;
 }
 
-body{
-  margin: 0%;
-  padding: 0%;
+body {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-}
-
-.containerProjetos{
-  overflow-y: hidden !important;
 }

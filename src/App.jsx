@@ -1,11 +1,15 @@
+
 import './App.css'
-import { Routers } from './routers'
+import { ScreenSizeProvider } from './context/ScreenSizeProvider'
+import {Routers} from './routers'
 
 function App() {
 
   return (
     <>
-      <Routers/>
+      <ScreenSizeProvider>
+        <Routers/>
+      </ScreenSizeProvider>   
     </>
   )
 }

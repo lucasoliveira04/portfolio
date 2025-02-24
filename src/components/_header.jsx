@@ -1,33 +1,72 @@
-import { useEffect, useState } from "react"
-import brasil from "../../public/img/brasil.png"
-import eua from "../../public/img/eua.png"
-import messages from "../../public/json/messages.json"
+import { useState, useEffect } from "react";
+import { getTexts } from "../data/text";
+import { useScreenSize } from "../context/ScreenSizeProvider";
 
-export const HeaderComponent = () => {
-    const [currentFlag, setCurrentFlag] = useState(brasil)
+function HeaderComponent({ setLanguage, scrollToProjects }) {
+    const [fade, setFade] = useState(false);
+    const [language, setLangState] = useState(() => localStorage.getItem("language") || "pt");
+    const text = getTexts(language);
+    const { screenWidth } = useScreenSize();
 
     useEffect(() => {
-        const language = currentFlag === brasil ? 'ptbr' : 'en';
-        console.log(messages[language].about_me);
-        console.log(messages[language].projects);
-        console.log(messages[language].home);
-    }, [currentFlag])
+        setFade(true);
+        const timeout = setTimeout(() => setFade(false), 300);
+        
+        localStorage.setItem("language", language);
+        setLanguage(language);
 
-    const toggleFlag = () => {
-        setCurrentFlag(prevFlag => (prevFlag === brasil ? eua : brasil))
-    }
+        return () => clearTimeout(timeout);
+    }, [language, setLanguage]);
 
-    return(
-        <header>
-            <p style={{textAlign: 'end', marginRight: '10px'}}>
+    const toggleLanguage = () => {
+        setLangState((prevLang) => (prevLang === "en" ? "pt" : "en"));
+    };
+
+    const isSmallMobile = screenWidth < 400;
+    const textSize = isSmallMobile ? "text-[13px]" : "text-base";
+    
+    return (
+        <div className="w-full p-[23px] bg-[#111316] flex justify-between items-center fixed z-10">
+            <div className={`flex gap-6 ${textSize} duration-500 ${fade ? "opacity-50" : "opacity-100"} font-sans`}>
+                <div className="relative group">
+                    <p
+                        className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300"
+                        onClick={scrollToProjects}
+                    >
+                        {text.header.projects}
+                    </p>
+                    <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></div>
+                </div>
+
+                <div className="relative group">
+                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300">
+                        {text.header.aboutMe}
+                    </p>
+                    <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></div>
+                </div>
+
+                <div className="relative group">
+                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300">
+                        {text.header.contactsMe}
+                    </p>
+                    <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></div>
+                </div>
+            </div>
+            
+            <button
+                onClick={toggleLanguage}
+                className="text-white text-2xl transform transition-transform duration-200 ease-in-out hover:scale-110"
+            >
                 <img
-                    src={currentFlag}
-                    alt="flag"
-                    onClick={toggleFlag}
-                    style={{cursor: 'pointer'}}
-                    width={"50px"}
+                    src={language === "en" ? "/img/eua.png" : "/img/brasil.png"}
+                    alt="Bandeira"
+                    width={36}
+                    height={24}
+                    className="rounded shadow-lg"
                 />
-            </p>
-        </header>
-    )
+            </button>
+        </div>
+    );
 }
+
+export default HeaderComponent;
