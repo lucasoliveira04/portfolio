@@ -1,9 +1,14 @@
 import { Star } from "lucide-react";
 import { useState } from "react";
 
-function StarRating({ totalStars = 5 }) {
-    const [rating, setRating] = useState(0);
+function StarRating({ totalStars = 5, setRating }) {
+    const [rating, setLocalRating] = useState(0);
     const [hover, setHover] = useState(0);
+
+    const handleClick = (starValue) => {
+        setLocalRating(starValue);
+        setRating(starValue); 
+    };
 
     return (
         <div 
@@ -20,7 +25,7 @@ function StarRating({ totalStars = 5 }) {
                         fill={starValue <= (hover || rating) ? "#FFD700" : "none"}
                         stroke={starValue <= (hover || rating) ? "#FFD700" : "#666"}
                         strokeWidth={2}
-                        onClick={() => setRating(starValue)}
+                        onClick={() => handleClick(starValue)} 
                         onMouseEnter={() => setHover(starValue)}
                     />
                 );

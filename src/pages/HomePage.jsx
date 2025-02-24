@@ -6,6 +6,7 @@ import "../../public/css/scrool.css";
 
 import { Projects } from "../components/_projects";
 import FeedBackComponent from "../components/_feedback";
+import FooterComponent from "../components/_footer";
 
 export const HomePage = () => {
   const [language, setLanguage] = useState(localStorage.getItem("language") || "pt");
@@ -21,7 +22,8 @@ export const HomePage = () => {
 
   return (
     <div className="App">
-      <HeaderComponent setLanguage={setLanguage} scrollToProjects={scrollToProjects}/>
+      <HeaderComponent setLanguage={setLanguage} scrollToProjects={scrollToProjects} />
+
       <MainFirstPage language={language} scrollToProjects={scrollToProjects} />
 
       <div className="secao" ref={projectsRef}></div>
@@ -33,6 +35,8 @@ export const HomePage = () => {
       <div className="secao-1"></div>
 
       <FeedBackComponent language={language}/>
+
+      <FooterComponent language={language}/>
 
     </div>
   );

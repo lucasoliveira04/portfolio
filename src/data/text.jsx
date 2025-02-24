@@ -89,6 +89,7 @@ export const getTexts = (language) => {
     const currentMonth = new Date().getMonth() + 1;
     const startSemester = 5;
     const semester = startSemester + Math.floor((currentMonth - 1) / 6);
+    const currentYear = new Date().getFullYear()
 
     return {
         pt: {
@@ -106,7 +107,8 @@ export const getTexts = (language) => {
             projects: highlightedWords.pt.projects,
             feedback: highlightedWords.pt.feedback,
             leaveContact: highlightedWords.pt.leaveContact,
-            sendFeedback: highlightedWords.pt.sendFeedback
+            sendFeedback: highlightedWords.pt.sendFeedback,
+            footer: `© ${currentYear} Desenvolvido por Lucas`
         },
         en: {
             role: "Back-End Developer",
@@ -123,7 +125,8 @@ export const getTexts = (language) => {
             projects: highlightedWords.en.projects,
             feedback: highlightedWords.en.feedback,
             leaveContact: highlightedWords.en.leaveContact,
-            sendFeedback: highlightedWords.en.sendFeedback
+            sendFeedback: highlightedWords.en.sendFeedback,
+            footer: `© ${currentYear} Developed by Lucas`
             
         },
     }[language];

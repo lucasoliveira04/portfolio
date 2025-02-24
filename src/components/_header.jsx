@@ -11,7 +11,7 @@ function HeaderComponent({ setLanguage, scrollToProjects }) {
     useEffect(() => {
         setFade(true);
         const timeout = setTimeout(() => setFade(false), 300);
-
+        
         localStorage.setItem("language", language);
         setLanguage(language);
 
@@ -22,73 +22,37 @@ function HeaderComponent({ setLanguage, scrollToProjects }) {
         setLangState((prevLang) => (prevLang === "en" ? "pt" : "en"));
     };
 
-    const isPC = screenWidth >= 1024;
-    const isNotebook = screenWidth >= 768 && screenWidth < 1024;
-    const isLargeMobile = screenWidth >= 400 && screenWidth < 768;
     const isSmallMobile = screenWidth < 400;
-
+    const textSize = isSmallMobile ? "text-[13px]" : "text-base";
+    
     return (
         <div className="w-full p-[23px] bg-[#111316] flex justify-between items-center fixed z-10">
-            {/* Cabeçalho para PC */}
-            {isPC && (
-                <div className={`flex gap-6 transition-opacity duration-500 ${fade ? "opacity-50" : "opacity-100"} font-sans`}>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white" onClick={scrollToProjects}>
+            <div className={`flex gap-6 ${textSize} duration-500 ${fade ? "opacity-50" : "opacity-100"} font-sans`}>
+                <div className="relative group">
+                    <p
+                        className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300"
+                        onClick={scrollToProjects}
+                    >
                         {text.header.projects}
                     </p>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white">
+                    <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></div>
+                </div>
+
+                <div className="relative group">
+                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300">
                         {text.header.aboutMe}
                     </p>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white">
+                    <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></div>
+                </div>
+
+                <div className="relative group">
+                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300">
                         {text.header.contactsMe}
                     </p>
+                    <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></div>
                 </div>
-            )}
-
-            {/* Cabeçalho para Notebook */}
-            {isNotebook && (
-                <div className={`flex gap-6 duration-500 ${fade ? "opacity-50" : "opacity-100"} font-sans`}>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white" onClick={scrollToProjects}>
-                        {text.header.projects}
-                    </p>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white">
-                        {text.header.aboutMe}
-                    </p>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white">
-                        {text.header.contactsMe}
-                    </p>
-                </div>
-            )}
-
-            {/* Cabeçalho para Celular Grande */}
-            {isLargeMobile && (
-                <div className={`flex gap-6  duration-500 ${fade ? "opacity-50" : "opacity-100"} font-sans`}>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white" onClick={scrollToProjects}>
-                        {text.header.projects}
-                    </p>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white">
-                        {text.header.aboutMe}
-                    </p>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white">
-                        {text.header.contactsMe}
-                    </p>
-                </div>
-            )}
-
-            {/* Cabeçalho para Celular Pequeno */}
-            {isSmallMobile && (
-                <div className={`flex gap-3 text-[13px] duration-500 ${fade ? "opacity-50" : "opacity-100"} font-sans`}>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white" onClick={scrollToProjects}>
-                        {text.header.projects}
-                    </p>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white">
-                        {text.header.aboutMe}
-                    </p>
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 hover:border-b-2 hover:border-white">
-                        {text.header.contactsMe}
-                    </p>
-                </div>
-            )}
-
+            </div>
+            
             <button
                 onClick={toggleLanguage}
                 className="text-white text-2xl transform transition-transform duration-200 ease-in-out hover:scale-110"
@@ -101,8 +65,7 @@ function HeaderComponent({ setLanguage, scrollToProjects }) {
                     className="rounded shadow-lg"
                 />
             </button>
-
-        </div>  
+        </div>
     );
 }
 
