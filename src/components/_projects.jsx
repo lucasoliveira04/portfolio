@@ -13,6 +13,7 @@ import github_dektop_viewer from "../../public/img/projects/github-dektop-viewer
 import { FaCog, FaRobot } from "react-icons/fa";
 import { getTexts } from "../data/text";
 import { highlightWords } from "../data/highlightWords";
+import CarrouselComponet from "./carrousel";
 
 export function Projects({ language }) {
     const [showInteractive, setShowInteractive] = useState(false);
@@ -51,8 +52,7 @@ export function Projects({ language }) {
             id: 1,
             title: text.projects[0].title,
             description: text.projects[0].description,
-            imageUrl: github_dektop_viewer,
-            videoUrl: null,
+            media: [{ type: "image", src: github_dektop_viewer },{ type: "video", src: "https://www.youtube.com/embed/t2eYsNFGEQE?start=2" } ],
             siteUrl: "https://example.com/project1",
             isInteractive: false,
             technologies: [{ src: python, alt: "Python" }],
@@ -68,8 +68,7 @@ export function Projects({ language }) {
                 </div>
             ),
             description: text.projects[1].description,
-            imageUrl: null,
-            videoUrl: "https://www.youtube.com/embed/t2eYsNFGEQE?start=2",
+            media: [{ type: "video", src: "https://www.youtube.com/embed/t2eYsNFGEQE?start=2" }],
             siteUrl: "https://chatbot-js-xi.vercel.app/",
             isInteractive: false,
             technologies: [
@@ -83,8 +82,7 @@ export function Projects({ language }) {
             id: 3,
             title: text.projects[2].title,
             description: text.projects[2].description,
-            imageUrl: null,
-            videoUrl: "https://www.youtube.com/embed/zkRL5I0OamY?si=c54NDbq8hLkLA5ws",
+            media: [{ type: "video", src: "https://www.youtube.com/embed/zkRL5I0OamY?si=c54NDbq8hLkLA5ws" }],
             siteUrl: "https://example.com/project3",
             isInteractive: true,
             technologies: [
@@ -125,47 +123,7 @@ export function Projects({ language }) {
                         "
                     >
                         <div className="project-content flex-grow mt-4">
-                            {project.imageUrl && (
-                                <div className="project-image">
-                                    <img
-                                        src={project.imageUrl}
-                                        alt={project.title}
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                            )}
-                            {project.videoUrl && !project.isInteractive && (
-                                <div className="project-video">
-                                    <iframe
-                                        width="100%"
-                                        height="200"
-                                        src={project.videoUrl}
-                                        title="Video"
-                                        frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen
-                                    ></iframe>
-                                </div>
-                            )}
-                            {project.isInteractive && (
-                                <div className="project-video">
-                                    {!showInteractive ? (
-                                        <iframe
-                                            width="100%"
-                                            height="200"
-                                            src={project.videoUrl}
-                                            title="Interactive Video"
-                                            frameBorder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowFullScreen
-                                        ></iframe>
-                                    ) : (
-                                        <div className="interactive-screen bg-gray-800 w-full h-[200px] flex items-center justify-center rounded-lg">
-                                            <p className="text-white text-lg">Tela Interativa aqui!</p>
-                                        </div>
-                                    )}
-                                </div>
-                            )}
+                            <CarrouselComponet media={project.media}/>
                             <div className="flex items-center justify-between gap-10 mt-4">
                                 <h3 className="project-title text-xl font-semibold">{project.title}</h3>
                                 {project.isInteractive && (

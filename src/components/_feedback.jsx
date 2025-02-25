@@ -78,7 +78,7 @@ function FeedBackComponent({ language }) {
                 <StarRating setRating={setRating} /> 
 
                 <button
-                    className="mt-4 px-6 py-2 bg-[#3f6edc] hover:bg-[#3d6aa4] text-white font-medium rounded-lg transition border border-gray-600 shadow-md"
+                    className="mt-4 px-6 py-2 bg-gradient-to-r from-[#3f6edc] to-[#6249dd] hover:bg-[#d3d3d3] text-white font-medium rounded-lg transition border border-gray-600 shadow-md"
                     onClick={handleSendResponse}
                 >
                     {text.sendFeedback}
