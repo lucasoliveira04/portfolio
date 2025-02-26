@@ -12,6 +12,7 @@ export const HomePage = () => {
   const [language, setLanguage] = useState(localStorage.getItem("language") || "pt");
 
   const projectsRef = useRef(null);
+  const contactsMeRef = useRef(null)
 
   const scrollToProjects = () => {
     projectsRef.current?.scrollIntoView({
@@ -19,10 +20,16 @@ export const HomePage = () => {
       block: "start",
     });
   };
+  const scrollToContactsMe = () => {
+    contactsMeRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
 
   return (
     <div className="App">
-      <HeaderComponent setLanguage={setLanguage} scrollToProjects={scrollToProjects} />
+      <HeaderComponent setLanguage={setLanguage} scrollToProjects={scrollToProjects} scrollToContactsMe={scrollToContactsMe} />
 
       <MainFirstPage language={language} scrollToProjects={scrollToProjects} />
 
@@ -34,9 +41,11 @@ export const HomePage = () => {
 
       <div className="secao-1"></div>
 
-      <FeedBackComponent language={language}/>
+      <div ref={contactsMeRef}>
+        <FeedBackComponent language={language}/>
+      </div>
 
-      <FooterComponent language={language}/>
+      <FooterComponent language={language} />
 
     </div>
   );

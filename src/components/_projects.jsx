@@ -9,6 +9,7 @@ import csharp from "../../public/img/csharp.png";
 import python from "../../public/img/python.png";
 
 import github_dektop_viewer from "../../public/img/projects/github-dektop-viewer.png";
+import github_dektop_viewer_1 from "../../public/img/projects/github-desktop-viewer-1.png";
 
 import { FaCog, FaRobot } from "react-icons/fa";
 import { getTexts } from "../data/text";
@@ -52,7 +53,7 @@ export function Projects({ language }) {
             id: 1,
             title: text.projects[0].title,
             description: text.projects[0].description,
-            media: [{ type: "image", src: github_dektop_viewer },{ type: "video", src: "https://www.youtube.com/embed/t2eYsNFGEQE?start=2" } ],
+            media: [{ type: "video", src: "https://www.youtube.com/embed/IhRlrBPqkrU?wjPNe9Pp61O9AV" },{ type: "image", src: github_dektop_viewer },{ type: "image", src: github_dektop_viewer_1 } ],
             siteUrl: "https://example.com/project1",
             isInteractive: false,
             technologies: [{ src: python, alt: "Python" }],
@@ -82,14 +83,14 @@ export function Projects({ language }) {
             id: 3,
             title: text.projects[2].title,
             description: text.projects[2].description,
-            media: [{ type: "video", src: "https://www.youtube.com/embed/zkRL5I0OamY?si=c54NDbq8hLkLA5ws" }],
+            media: [{ type: "video", src: "https://www.youtube.com/embed/fDyu3GRaqsY?si=nnYgyDPGdCm1uYZR" }],
             siteUrl: "https://example.com/project3",
-            isInteractive: true,
+            isInteractive: false,
             technologies: [
                 { src: csharp, alt: "C#" },
                 { src: unity, alt: "Unity" },
             ],
-            visitSite: false,
+            visitSite: true,
             textVisitSite: text.projects[2].visit
         },
     ];

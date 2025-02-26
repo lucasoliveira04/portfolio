@@ -108,7 +108,12 @@ export const getTexts = (language) => {
             feedback: highlightedWords.pt.feedback,
             leaveContact: highlightedWords.pt.leaveContact,
             sendFeedback: highlightedWords.pt.sendFeedback,
-            footer: `© ${currentYear} Desenvolvido por Lucas`
+            footer: (
+                <>
+                    © {currentYear} Desenvolvido por 
+                    <span className="bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 bg-clip-text text-transparent font-bold"> Lucas Oliveira</span>
+                </>
+            )
         },
         en: {
             role: "Back-End Developer",
@@ -126,8 +131,13 @@ export const getTexts = (language) => {
             feedback: highlightedWords.en.feedback,
             leaveContact: highlightedWords.en.leaveContact,
             sendFeedback: highlightedWords.en.sendFeedback,
-            footer: `© ${currentYear} Developed by Lucas`
-            
+            footer: (
+                <>
+                    © ${currentYear} Developed by
+                    <span className="bg-gradient-to-r from-blue-500 via-teal-400 to-cyan-500 bg-clip-text text-transparent font-bold"> Lucas Oliveira</span>
+                </>
+            )
+
         },
     }[language];
 };
