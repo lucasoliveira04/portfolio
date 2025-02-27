@@ -23,11 +23,11 @@ function HeaderComponent({ setLanguage, scrollToProjects, scrollToContactsMe, sc
     };
 
     const isSmallMobile = screenWidth < 400;
-    const textSize = isSmallMobile ? "text-[12px] gap-2" : "text-base";
+    const textSize = isSmallMobile && language === "pt" ? "text-[10px]" : isSmallMobile ? "text-[12px]" : "text-base";
     
     return (
         <div className="w-full p-[23px] bg-[#111316] flex justify-between items-center fixed z-10">
-            <div className={`flex gap-6 ${textSize} duration-500 ${fade ? "opacity-50" : "opacity-100"} font-sans`}>
+            <div className={`flex gap-2 ${textSize} duration-500 ${fade ? "opacity-50" : "opacity-100"} font-sans`}>
                 <div className="relative group">
                     <p
                         className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300"

@@ -37,6 +37,7 @@ export const HomePage = () => {
 
   return (
     <div className="App">
+
       <HeaderComponent setLanguage={setLanguage} scrollToProjects={scrollToProjects} scrollToContactsMe={scrollToContactsMe} scrollToAboutMe={scrollToAboutMe} />
 
       <MainFirstPage language={language} scrollToProjects={scrollToProjects} />

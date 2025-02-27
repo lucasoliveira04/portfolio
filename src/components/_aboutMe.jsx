@@ -1,7 +1,6 @@
 import { getTexts } from "../data/text";
 import datacenter from "../../public/pdf/PROJETO EM INFRAESTRUTURA COMPUTACIONAL_ DATACENTER.pdf";
 import { ExternalLinkIcon } from "lucide-react";
-import { FaPersonCircleQuestion } from "react-icons/fa6";
 import { FaUserCircle } from "react-icons/fa";
 
 function AboutMe({ language }) {
@@ -45,7 +44,7 @@ function AboutMe({ language }) {
             <div className="border-l-2 border-gray-300 pl-6">
                 {timelineEvents.map((item, index) => (
                     <div className="flex items-start mb-6 relative" key={index}>
-                        <div className={`absolute left-[-8px] w-4 h-4 ${item.isAcademic ? 'bg-green-500' : 'bg-blue-500'} rounded-full`}></div>
+                        <div className={`absolute left-[-8px] w-4 h-4 ${item.isAcademic ? 'bg-green-500 hover:bg-green-950' : 'bg-blue-500'} rounded-full`}></div>
 
                         <div className="ml-8">
                             <strong className="block text-lg font-semibold text-gray-200">{item.year}, {item.month}</strong>
