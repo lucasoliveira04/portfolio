@@ -10,6 +10,7 @@ import python from "../../public/img/python.png";
 
 import github_dektop_viewer from "../../public/img/projects/github-dektop-viewer.png";
 import github_dektop_viewer_1 from "../../public/img/projects/github-desktop-viewer-1.png";
+import portfolio from "../../public/img/portfolio.webp"
 
 import { FaCog, FaRobot } from "react-icons/fa";
 import { getTexts } from "../data/text";
@@ -92,6 +93,20 @@ export function Projects({ language }) {
             ],
             visitSite: true,
             textVisitSite: text.projects[2].visit
+        },
+        {
+            id: 4,
+            title: text.projects[3].title,
+            description: text.projects[3].description,
+            media: [{ type: "image", src: portfolio }],
+            siteUrl: "https://example.com/project3",
+            isInteractive: false,
+            technologies: [
+                { src: reactjsx, alt: "ReactJSX" },
+                { src: tailwind, alt: "Tailwind" },
+            ],
+            visitSite: true,
+            textVisitSite: text.projects[3].visit
         },
     ];
 

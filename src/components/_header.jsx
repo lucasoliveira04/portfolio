@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { getTexts } from "../data/text";
 import { useScreenSize } from "../context/ScreenSizeProvider";
 
-function HeaderComponent({ setLanguage, scrollToProjects, scrollToContactsMe }) {
+function HeaderComponent({ setLanguage, scrollToProjects, scrollToContactsMe, scrollToAboutMe }) {
     const [fade, setFade] = useState(false);
     const [language, setLangState] = useState(() => localStorage.getItem("language") || "pt");
     const text = getTexts(language);
@@ -39,7 +39,7 @@ function HeaderComponent({ setLanguage, scrollToProjects, scrollToContactsMe }) 
                 </div>
 
                 <div className="relative group">
-                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300">
+                    <p className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300" onClick={scrollToAboutMe}>
                         {text.header.aboutMe}
                     </p>
                     <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></div>
