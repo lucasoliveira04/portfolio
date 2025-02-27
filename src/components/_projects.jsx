@@ -9,10 +9,13 @@ import csharp from "../../public/img/csharp.png";
 import python from "../../public/img/python.png";
 
 import github_dektop_viewer from "../../public/img/projects/github-dektop-viewer.png";
+import github_dektop_viewer_1 from "../../public/img/projects/github-desktop-viewer-1.png";
+import portfolio from "../../public/img/portfolio.webp"
 
 import { FaCog, FaRobot } from "react-icons/fa";
 import { getTexts } from "../data/text";
 import { highlightWords } from "../data/highlightWords";
+import CarrouselComponet from "./carrousel";
 
 export function Projects({ language }) {
     const [showInteractive, setShowInteractive] = useState(false);
@@ -51,8 +54,7 @@ export function Projects({ language }) {
             id: 1,
             title: text.projects[0].title,
             description: text.projects[0].description,
-            imageUrl: github_dektop_viewer,
-            videoUrl: null,
+            media: [{ type: "video", src: "https://www.youtube.com/embed/IhRlrBPqkrU?wjPNe9Pp61O9AV" },{ type: "image", src: github_dektop_viewer },{ type: "image", src: github_dektop_viewer_1 } ],
             siteUrl: "https://example.com/project1",
             isInteractive: false,
             technologies: [{ src: python, alt: "Python" }],
@@ -68,8 +70,7 @@ export function Projects({ language }) {
                 </div>
             ),
             description: text.projects[1].description,
-            imageUrl: null,
-            videoUrl: "https://www.youtube.com/embed/t2eYsNFGEQE?start=2",
+            media: [{ type: "video", src: "https://www.youtube.com/embed/t2eYsNFGEQE?start=2" }],
             siteUrl: "https://chatbot-js-xi.vercel.app/",
             isInteractive: false,
             technologies: [
@@ -83,16 +84,29 @@ export function Projects({ language }) {
             id: 3,
             title: text.projects[2].title,
             description: text.projects[2].description,
-            imageUrl: null,
-            videoUrl: "https://www.youtube.com/embed/zkRL5I0OamY?si=c54NDbq8hLkLA5ws",
+            media: [{ type: "video", src: "https://www.youtube.com/embed/fDyu3GRaqsY?si=nnYgyDPGdCm1uYZR" }],
             siteUrl: "https://example.com/project3",
-            isInteractive: true,
+            isInteractive: false,
             technologies: [
                 { src: csharp, alt: "C#" },
                 { src: unity, alt: "Unity" },
             ],
-            visitSite: false,
+            visitSite: true,
             textVisitSite: text.projects[2].visit
+        },
+        {
+            id: 4,
+            title: text.projects[3].title,
+            description: text.projects[3].description,
+            media: [{ type: "image", src: portfolio }],
+            siteUrl: "https://example.com/project3",
+            isInteractive: false,
+            technologies: [
+                { src: reactjsx, alt: "ReactJSX" },
+                { src: tailwind, alt: "Tailwind" },
+            ],
+            visitSite: true,
+            textVisitSite: text.projects[3].visit
         },
     ];
 
@@ -125,47 +139,7 @@ export function Projects({ language }) {
                         "
                     >
                         <div className="project-content flex-grow mt-4">
-                            {project.imageUrl && (
-                                <div className="project-image">
-                                    <img
-                                        src={project.imageUrl}
-                                        alt={project.title}
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                            )}
-                            {project.videoUrl && !project.isInteractive && (
-                                <div className="project-video">
-                                    <iframe
-                                        width="100%"
-                                        height="200"
-                                        src={project.videoUrl}
-                                        title="Video"
-                                        frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen
-                                    ></iframe>
-                                </div>
-                            )}
-                            {project.isInteractive && (
-                                <div className="project-video">
-                                    {!showInteractive ? (
-                                        <iframe
-                                            width="100%"
-                                            height="200"
-                                            src={project.videoUrl}
-                                            title="Interactive Video"
-                                            frameBorder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowFullScreen
-                                        ></iframe>
-                                    ) : (
-                                        <div className="interactive-screen bg-gray-800 w-full h-[200px] flex items-center justify-center rounded-lg">
-                                            <p className="text-white text-lg">Tela Interativa aqui!</p>
-                                        </div>
-                                    )}
-                                </div>
-                            )}
+                            <CarrouselComponet media={project.media}/>
                             <div className="flex items-center justify-between gap-10 mt-4">
                                 <h3 className="project-title text-xl font-semibold">{project.title}</h3>
                                 {project.isInteractive && (

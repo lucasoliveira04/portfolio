@@ -9,11 +9,9 @@ const highlightedWords = {
             aboutMe: "Sobre Mim",
             contactsMe: "Entre em contato",
         },
-
         feedback: "Deixe seu feedback",
         leaveContact: "Contato (Opcional)",
         sendFeedback: "Enviar",
-
         projects: [
             {
                 id: 1,
@@ -39,7 +37,27 @@ const highlightedWords = {
                 using: "Usando",
                 visit: "Visitar"
             },
+            {
+                id: 4,
+                title: "Portfolio ",
+                description: "Este é o meu portfólio, desenvolvido com ReactJS e Tailwind. Ele apresenta meus projetos e habilidades de forma clara e organizada. O design é moderno, responsivo e otimizado para diferentes dispositivos. Aqui, você pode explorar meu trabalho e conhecer melhor minhas experiências.",
+                visit: "Visitar"
+            },
         ],
+        aboutMe: {
+            aboutMeText: "Sobre Mim",
+            description: "Sou estudante de Desenvolvimento de Sistemas e desenvolvimento de jogos. Tenho trabalhado em diversos projetos acadêmicos que me proporcionaram aprendizado contínuo, sempre em busca de novos desafios e aprimoramento profissional.",
+            projetoDataCenter: {
+                date: "Junho",
+                description: "O projeto visa a construção de um data center de pequeno porte, com ênfase na segurança, integridade e agilidade no gerenciamento de dados acadêmicos e administrativos da escola. Ele inclui análise de requisitos, projeto de infraestrutura física, aquisição de equipamentos, redes e conectividade, sistemas de energia e resfriamento, além de segurança, monitoramento e backup."
+            },
+            projectGameDevUnity: {
+                date: "Agosto",
+                description: "Nosso Mar: Salve os Patinhos é um jogo educativo para conscientizar sobre os impactos da poluição. No jogo, o jogador assume o papel de um protetor dos oceanos e precisa localizar e resgatar 20 patinhos de borracha espalhados pela praia, enfrentando desafios e aprendendo sobre questões ambientais ao longo do caminho."
+            },
+            academicProjectExplanation: "A bolinha verde indica um projeto acadêmico.",
+            visitProject: "Visitar Project"
+        },
     },
     en: {
         developer: "Back-End Developer",
@@ -51,11 +69,9 @@ const highlightedWords = {
             aboutMe: "About Me",
             contactsMe: "Contact Me",
         },
-
         feedback: "Leave your feedback",
         leaveContact: "Contact (Optional)",
         sendFeedback: "Send",
-
         projects: [
             {
                 id: 1,
@@ -81,7 +97,28 @@ const highlightedWords = {
                 using: "Using",
                 visit: "View Site"
             },
+            {
+                "id": 4,
+                "title": "Portfolio",
+                "description": "This is my portfolio, built with ReactJS and Tailwind. It showcases my projects and skills in a clear and organized way. The design is modern, responsive, and optimized for different devices. Here, you can explore my work and learn more about my experiences.",
+                "visit": "View Site"
+            }
+            
         ],
+        aboutMe: {
+            aboutMeText: "About Me",
+            description: "I am a student of Systems Development and game development. I have worked on several academic projects that have provided me with continuous learning, always seeking new challenges and professional improvement.",
+            projetoDataCenter: {
+                date: "June",
+                description: "The project aims to build a small-scale data center, focusing on security, integrity, and agility in managing academic and administrative data for the school. It includes requirements analysis, physical infrastructure design, equipment acquisition, network and connectivity, energy and cooling systems, as well as security, monitoring, and backup."
+            },
+            projectGameDevUnity: {
+                date: "August",
+                description: "Our Sea: Save the Ducklings is an educational game designed to raise awareness about the impacts of pollution. In the game, the player takes on the role of an ocean protector and must locate and rescue 20 rubber ducklings scattered along the beach, facing challenges and learning about environmental issues along the way."
+            },
+            academicProjectExplanation: "The green dot indicates an academic project.",
+            visitProject: "Visit Project"
+        },
     },
 };
 
@@ -89,7 +126,7 @@ export const getTexts = (language) => {
     const currentMonth = new Date().getMonth() + 1;
     const startSemester = 5;
     const semester = startSemester + Math.floor((currentMonth - 1) / 6);
-    const currentYear = new Date().getFullYear()
+    const currentYear = new Date().getFullYear();
 
     return {
         pt: {
@@ -108,7 +145,13 @@ export const getTexts = (language) => {
             feedback: highlightedWords.pt.feedback,
             leaveContact: highlightedWords.pt.leaveContact,
             sendFeedback: highlightedWords.pt.sendFeedback,
-            footer: `© ${currentYear} Desenvolvido por Lucas`
+            aboutMe: highlightedWords.pt.aboutMe,
+            footer: (
+                <>
+                    © {currentYear} Desenvolvido por 
+                    <span className="bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 bg-clip-text text-transparent font-bold"> Lucas Oliveira</span>
+                </>
+            )
         },
         en: {
             role: "Back-End Developer",
@@ -126,8 +169,13 @@ export const getTexts = (language) => {
             feedback: highlightedWords.en.feedback,
             leaveContact: highlightedWords.en.leaveContact,
             sendFeedback: highlightedWords.en.sendFeedback,
-            footer: `© ${currentYear} Developed by Lucas`
-            
+            aboutMe: highlightedWords.en.aboutMe,
+            footer: (
+                <>
+                    © {currentYear} Developed by
+                    <span className="bg-gradient-to-r from-blue-500 via-teal-400 to-cyan-500 bg-clip-text text-transparent font-bold"> Lucas Oliveira</span>
+                </>
+            )
         },
     }[language];
 };
