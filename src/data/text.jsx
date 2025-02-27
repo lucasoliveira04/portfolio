@@ -52,7 +52,7 @@ const highlightedWords = {
                 description: "O projeto visa a construção de um data center de pequeno porte, com ênfase na segurança, integridade e agilidade no gerenciamento de dados acadêmicos e administrativos da escola. Ele inclui análise de requisitos, projeto de infraestrutura física, aquisição de equipamentos, redes e conectividade, sistemas de energia e resfriamento, além de segurança, monitoramento e backup."
             },
             projectGameDevUnity: {
-                date: "Agosto",
+                date: "Dezembro",
                 description: "Nosso Mar: Salve os Patinhos é um jogo educativo para conscientizar sobre os impactos da poluição. No jogo, o jogador assume o papel de um protetor dos oceanos e precisa localizar e resgatar 20 patinhos de borracha espalhados pela praia, enfrentando desafios e aprendendo sobre questões ambientais ao longo do caminho."
             },
             academicProjectExplanation: "A bolinha verde indica um projeto acadêmico.",
@@ -113,7 +113,7 @@ const highlightedWords = {
                 description: "The project aims to build a small-scale data center, focusing on security, integrity, and agility in managing academic and administrative data for the school. It includes requirements analysis, physical infrastructure design, equipment acquisition, network and connectivity, energy and cooling systems, as well as security, monitoring, and backup."
             },
             projectGameDevUnity: {
-                date: "August",
+                date: "Dezember",
                 description: "Our Sea: Save the Ducklings is an educational game designed to raise awareness about the impacts of pollution. In the game, the player takes on the role of an ocean protector and must locate and rescue 20 rubber ducklings scattered along the beach, facing challenges and learning about environmental issues along the way."
             },
             academicProjectExplanation: "The green dot indicates an academic project.",

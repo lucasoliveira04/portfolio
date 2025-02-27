@@ -105,7 +105,7 @@ export function Projects({ language }) {
                 { src: reactjsx, alt: "ReactJSX" },
                 { src: tailwind, alt: "Tailwind" },
             ],
-            visitSite: true,
+            visitSite: false,
             textVisitSite: text.projects[3].visit
         },
     ];
