@@ -85,7 +85,7 @@ export function Projects({ language }) {
             title: text.projects[2].title,
             description: text.projects[2].description,
             media: [{ type: "video", src: "https://www.youtube.com/embed/fDyu3GRaqsY?si=nnYgyDPGdCm1uYZR" }],
-            siteUrl: "https://example.com/project3",
+            siteUrl: "https://mtgroup.itch.io/nosso-mar-salve-os-patinhos",
             isInteractive: false,
             technologies: [
                 { src: csharp, alt: "C#" },
@@ -99,7 +99,7 @@ export function Projects({ language }) {
             title: text.projects[3].title,
             description: text.projects[3].description,
             media: [{ type: "image", src: portfolio }],
-            siteUrl: "https://example.com/project3",
+            siteUrl: "https://portfolio-abcz.vercel.app/",
             isInteractive: false,
             technologies: [
                 { src: reactjsx, alt: "ReactJSX" },
