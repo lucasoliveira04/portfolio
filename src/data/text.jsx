@@ -59,7 +59,7 @@ const highlightedWords = {
             visitProject: "Visitar Project"
         },
     },
-    en: {
+    enUS: {
         developer: "Back-End Developer",
         field: "Computer Science",
         skills: "technologies",
@@ -153,23 +153,23 @@ export const getTexts = (language) => {
                 </>
             )
         },
-        en: {
+        enUS: {
             role: "Back-End Developer",
             pronouns: "He/Him",
             age: "20 Years",
             description: (
                 <>
-                    I am a <span className="font-bold">{highlightedWords.en.developer}</span>. Currently, I am in the {semester}th semester of my studies in <span className="font-bold">{highlightedWords.en.field}</span>, where I acquire knowledge that complements my professional practice. I am always open to learning new <span className="font-bold">{highlightedWords.en.skills}</span> and facing <span className="font-bold">{highlightedWords.en.growth}</span> that can help me grow as a professional.
+                    I am a <span className="font-bold">{highlightedWords.enUS.developer}</span>. Currently, I am in the {semester}th semester of my studies in <span className="font-bold">{highlightedWords.enUS.field}</span>, where I acquire knowledge that complements my professional practice. I am always open to learning new <span className="font-bold">{highlightedWords.enUS.skills}</span> and facing <span className="font-bold">{highlightedWords.enUS.growth}</span> that can help me grow as a professional.
                 </>
             ),
             alt: "Photo of Lucas Oliveira",
             titlePhoto: "Photo of Lucas Oliveira",
-            header: highlightedWords.en.header,
-            projects: highlightedWords.en.projects,
-            feedback: highlightedWords.en.feedback,
-            leaveContact: highlightedWords.en.leaveContact,
-            sendFeedback: highlightedWords.en.sendFeedback,
-            aboutMe: highlightedWords.en.aboutMe,
+            header: highlightedWords.enUS.header,
+            projects: highlightedWords.enUS.projects,
+            feedback: highlightedWords.enUS.feedback,
+            leaveContact: highlightedWords.enUS.leaveContact,
+            sendFeedback: highlightedWords.enUS.sendFeedback,
+            aboutMe: highlightedWords.enUS.aboutMe,
             footer: (
                 <>
                     © {currentYear} Developed by
