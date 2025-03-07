@@ -15,7 +15,7 @@ export const highlightWords = {
       "Python ": "text-yellow-400 font-bold",
       "Github Desktop Viewer": "text-blue-400 font-bold",
     },
-    en: {
+    enUS: {
       "ChatBot": "text-yellow-400 font-bold",
       "ReactJS": "text-blue-400 font-bold",
       "Tailwind": "text-teal-400 font-bold",

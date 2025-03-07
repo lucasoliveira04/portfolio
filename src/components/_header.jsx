@@ -4,14 +4,17 @@ import { useScreenSize } from "../context/ScreenSizeProvider";
 
 function HeaderComponent({ setLanguage, scrollToProjects, scrollToContactsMe, scrollToAboutMe }) {
     const [fade, setFade] = useState(false);
-    const [language, setLangState] = useState(() => localStorage.getItem("language") || "pt");
+    const [language, setLangState] = useState(() => {
+        return (localStorage.getItem("language") || "en-US").replace(/-/g, "");
+    });
+
     const text = getTexts(language);
     const { screenWidth } = useScreenSize();
 
     useEffect(() => {
         setFade(true);
         const timeout = setTimeout(() => setFade(false), 300);
-        
+
         localStorage.setItem("language", language);
         setLanguage(language);
 
@@ -19,7 +22,7 @@ function HeaderComponent({ setLanguage, scrollToProjects, scrollToContactsMe, sc
     }, [language, setLanguage]);
 
     const toggleLanguage = () => {
-        setLangState((prevLang) => (prevLang === "en" ? "pt" : "en"));
+        setLangState((prevLang) => (prevLang === "enUS" ? "pt" : "enUS"));
     };
 
     const isSmallMobile = screenWidth < 400;
@@ -61,7 +64,7 @@ function HeaderComponent({ setLanguage, scrollToProjects, scrollToContactsMe, sc
                 className="text-white text-2xl transform transition-transform duration-200 ease-in-out hover:scale-110"
             >
                 <img
-                    src={language === "en" ? "/img/eua.png" : "/img/brasil.png"}
+                    src={language === "enUS" ? "/img/eua.png" : "/img/brasil.png"}
                     alt="Bandeira"
                     width={36}
                     height={24}

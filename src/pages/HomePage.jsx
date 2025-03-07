@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import HeaderComponent from "../components/_header";
 import MainFirstPage from "../components/_mainFirstPage";
 import "../../public/css/animation.css";
