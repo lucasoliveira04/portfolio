@@ -1,6 +1,6 @@
 const highlightedWords = {
   pt: {
-    developer: "Desenvolvedor Back-End",
+    developer: "Desenvolvedor Full-Stack",
     field: "Ciências da Computação",
     skills: "tecnologias",
     growth: "desafios",
@@ -83,7 +83,7 @@ const highlightedWords = {
     },
   },
   enUS: {
-    developer: "Back-End Developer",
+    developer: "Full-Stack Developer",
     field: "Computer Science",
     skills: "technologies",
     growth: "challenges",
@@ -173,7 +173,7 @@ export const getTexts = (language) => {
 
   return {
     pt: {
-      role: "Desenvolvedor Back-End",
+      role: "Desenvolvedor Full-Stack",
       pronouns: "Ele/Dele",
       age: "20 Anos",
       description: (
@@ -209,7 +209,7 @@ export const getTexts = (language) => {
       ),
     },
     enUS: {
-      role: "Back-End Developer",
+      role: "Full-Stack Developer",
       pronouns: "He/Him",
       age: "20 Years",
       description: (

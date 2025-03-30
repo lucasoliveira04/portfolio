@@ -67,7 +67,10 @@ export function Projects({ language }) {
       ],
       siteUrl: "https://example.com/project1",
       isInteractive: false,
-      technologies: [{ src: python, alt: "Python" }],
+      technologies: [
+        { src: python, alt: "Python" },
+        { src: sql, alt: "SQLite" },
+      ],
       visitSite: false,
       textVisitSite: text.projects[0].visit,
     },
