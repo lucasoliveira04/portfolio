@@ -1,5 +1,6 @@
 const highlightedWords = {
   pt: {
+    skill: "Habilidades",
     developer: "Desenvolvedor Full-Stack",
     field: "Ciências da Computação",
     skills: "tecnologias",
@@ -83,6 +84,7 @@ const highlightedWords = {
     },
   },
   enUS: {
+    skill: "Tech Skills",
     developer: "Full-Stack Developer",
     field: "Computer Science",
     skills: "technologies",
@@ -173,6 +175,7 @@ export const getTexts = (language) => {
 
   return {
     pt: {
+      skill: highlightedWords.pt.skill,
       role: "Desenvolvedor Full-Stack",
       pronouns: "Ele/Dele",
       age: "20 Anos",
@@ -209,6 +212,7 @@ export const getTexts = (language) => {
       ),
     },
     enUS: {
+      skill: highlightedWords.enUS.skill,
       role: "Full-Stack Developer",
       pronouns: "He/Him",
       age: "20 Years",
