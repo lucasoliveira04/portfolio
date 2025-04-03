@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { getTexts } from "../data/text";
 import { ImageStack } from "./_imageStack";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 import js from "../../public/img/stacks/js.png";
 import git from "../../public/img/stacks/git.png";
