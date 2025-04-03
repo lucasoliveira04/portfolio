@@ -1,7 +1,14 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaArrowDown,
+  FaFile,
+} from "react-icons/fa";
 import eu from "../../public/img/i.jpg";
 import { useEffect, useState } from "react";
 import { getTexts } from "../data/text";
+import curriculo from "../../public/pdf/Curriculo de Lucas Oliveira.pdf";
 
 function MainFirstPage({ language, scrollToProjects }) {
   const [showArrow, setShowArrow] = useState(true);
@@ -69,6 +76,7 @@ function MainFirstPage({ language, scrollToProjects }) {
               href="mailto:camposdlucasoli@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
+              title="Email"
             >
               <FaEnvelope className="text-gray-400 hover:text-white text-xl md:text-2xl transition" />
             </a>
@@ -76,6 +84,7 @@ function MainFirstPage({ language, scrollToProjects }) {
               href="https://github.com/lucasoliveira04"
               target="_blank"
               rel="noopener noreferrer"
+              title="Github"
             >
               <FaGithub className="text-gray-400 hover:text-white text-xl md:text-2xl transition" />
             </a>
@@ -83,8 +92,17 @@ function MainFirstPage({ language, scrollToProjects }) {
               href="https://linkedin.com/in/lucas-oliveira-campos"
               target="_blank"
               rel="noopener noreferrer"
+              title="Linkedln"
             >
               <FaLinkedin className="text-gray-400 hover:text-white text-xl md:text-2xl transition" />
+            </a>
+            <a
+              href={curriculo}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Curriculo"
+            >
+              <FaFile className="text-gray-400 hover:text-white text-xl md:text-2xl transition" />
             </a>
           </div>
         </div>
