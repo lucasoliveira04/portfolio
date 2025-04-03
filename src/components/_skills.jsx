@@ -8,7 +8,7 @@ import git from "../../public/img/stacks/git.png";
 import html from "../../public/img/stacks/html-5.png";
 import java from "../../public/img/stacks/java.png";
 import css from "../../public/img/stacks/css-3.png";
-import tailwind from "../../public/img/stacks/tailwind.png";
+import tailwind from "../../public/img/stacks/Tailwind CSS.png";
 import sql from "../../public/img/stacks/sql-server.png";
 import bootstrap from "../../public/img/stacks/bootstrap.png";
 import reactjsx from "../../public/img/stacks/science.png";
