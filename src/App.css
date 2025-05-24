@@ -7,12 +7,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary-font: "Inter", sans-serif;
-  --secondary-font: "Cabin", sans-serif;
-  --tertiary-font: "Sigmar", sans-serif;
-}
-
 body {
   margin: 0;
   padding: 0;

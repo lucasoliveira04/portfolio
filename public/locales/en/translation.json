@@ -1,0 +1,10 @@
+{
+  "header": {
+    "navigation": {
+      "aboutMe": "About Me",
+      "projects": "Projects",
+      "experience": "Experience",
+      "contact": "Contact"
+    }
+  }
+}
