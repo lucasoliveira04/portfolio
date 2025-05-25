@@ -61,7 +61,7 @@ export function HomeProjects() {
                                     <CardProjects {...project} />
                                 </div>
                             ) : (
-                                <div className="text-sm text-gray-500 text-left pl-4">
+                                <div className="text-sm text-gray-500 font-sigmarOne text-left pl-4">
                                     <p>{project.startDate} - {project.endDate}</p>
                                 </div>
                             )}
@@ -77,7 +77,7 @@ export function HomeProjects() {
                                     <CardProjects {...project} />
                                 </div>
                             ) : (
-                                <div className="text-sm text-gray-500 text-right pr-4">
+                                <div className="text-sm text-gray-500 font-sigmarOne text-right pr-4">
                                     <p>{project.startDate} - {project.endDate}</p>
                                 </div>
                             )}

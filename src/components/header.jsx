@@ -12,7 +12,6 @@ export function HeaderComponent() {
 
     const navOptions = [
         { key: "aboutMe", label: t("header.navigation.aboutMe") },
-        { key: "projects", label: t("header.navigation.projects") },
         { key: "experience", label: t("header.navigation.experience") },
         { key: "contact", label: t("header.navigation.contact") },
     ];

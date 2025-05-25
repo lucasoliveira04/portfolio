@@ -46,19 +46,30 @@ const socialLinks = [
 ];
 
 export const HomePage = () => {
-    const {t} = useTranslation()
+    const { t } = useTranslation();
 
     return (
         <div className="w-full h-screen bg-gradient-to-r from-white to-green-100 flex items-start pt-20 md:pt-32 px-10">
             <div className="w-full flex flex-col md:flex-row justify-between items-start">
-                {/* Texto à esquerda */}
-                <div className="flex-1 h-[50vh] pt-10">
-                    <h1 className="text-7xl md:text-8xl font-extrabold text-gray-900 leading-tight font-comic">
+                {/* Foto em cima no mobile, à direita no desktop */}
+                <div className="flex justify-center w-full md:w-[40%] order-1 md:order-2 mt-0 md:mt-0">
+                    <div className="w-56 h-56 md:w-[450px] md:h-[450px] rounded-full overflow-hidden shadow-2xl border-4 border-green-500 mt-10">
+                        <img
+                            src={photoIam}
+                            alt="Lucas Oliveira"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                </div>
+
+                {/* Texto abaixo no mobile, à esquerda no desktop */}
+                <div className="flex-1 h-[50vh] pt-10 order-2 md:order-1 text-center md:text-left">
+                    <h1 className="text-5xl md:text-8xl font-extrabold text-gray-900 leading-tight font-comic">
                         Lucas Oliveira
                     </h1>
-                    <Typewriter text={t("home.subtitle")}/>
+                    <Typewriter text={t("home.subtitle")} />
 
-                    <div className="flex gap-3 mt-10 text-3xl text-green-600">
+                    <div className="flex gap-3 mt-10 text-3xl text-green-600 justify-center md:justify-start">
                         {socialLinks.map(({ name, url, icon }) => (
                             <a
                                 key={name}
@@ -74,20 +85,9 @@ export const HomePage = () => {
                         ))}
                     </div>
                 </div>
-
-                {/* Foto à direita */}
-                <div className="flex justify-center w-full md:w-[40%] mt-10 md:mt-0">
-                    <div className="w-[450px] h-[450px] rounded-full overflow-hidden shadow-2xl border-4 border-green-500">
-                    <img
-                            src={photoIam}
-                            alt="Lucas Oliveira"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                </div>
             </div>
 
-            <ScrollArrow/>
+            <ScrollArrow />
         </div>
     );
 };

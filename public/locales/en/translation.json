@@ -2,8 +2,7 @@
   "header": {
     "navigation": {
       "aboutMe": "About Me",
-      "projects": "Projects",
-      "experience": "Experience",
+      "experience": "Experiences",
       "contact": "Contacts"
     }
   },
