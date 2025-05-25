@@ -32,7 +32,7 @@ export function HeaderComponent() {
 
     return (
         <header
-            className={`fixed flex w-full justify-between items-center p-4 bg-gradient-to-r from-white to-green-100 transition-all duration-300 ${
+            className={`fixed z-50 flex w-full justify-between items-center p-4 bg-gradient-to-r from-white to-green-100 transition-all duration-300 ${
                 showBorder ? "border-b border-gray-300" : "border-b-0"
             }`}
         >

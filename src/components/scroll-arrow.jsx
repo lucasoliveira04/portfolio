@@ -2,7 +2,7 @@ import {FaChevronDown} from "react-icons/fa";
 
 export function ScrollArrow(){
     const handleClick = () => {
-        window.scrollBy({top: 100, behavior: "smooth"});
+        window.scrollBy({top: 900, behavior: "smooth"});
     }
 
     return (

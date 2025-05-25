@@ -54,9 +54,7 @@ export const HomePage = () => {
                     <h1 className="text-7xl md:text-8xl font-extrabold text-gray-900 leading-tight font-comic">
                         Lucas Oliveira
                     </h1>
-                    <h2 className="text-4xl md:text-5xl text-gray-700 mt-6 font-comic">
-                        <Typewriter text={t("home.subtitle")}/>
-                    </h2>
+                    <Typewriter text={t("home.subtitle")}/>
 
                     <div className="flex gap-3 mt-10 text-3xl text-green-600">
                         {socialLinks.map(({ name, url, icon }) => (

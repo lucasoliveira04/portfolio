@@ -9,5 +9,25 @@
   },
   "home": {
     "subtitle": "Software Developer"
+  },
+  "projectsAndExperiences": {
+    "nossoMarSalveOsPatos": {
+      "title": "Our Sea Saves the Ducklings",
+      "description": "Game independently developed in Unity with C#, where I acted as programmer and project leader. The game's goal is to raise awareness about environmental pollution."
+    },
+    "estagioPlanetEco": {
+      "title": "Software Development Intern - Planet Eco",
+      "description": "Currently contributing to the maintenance and improvement of the company's internal systems by developing new features and fixing bugs. I am also learning data analysis with Excel and Power BI, and participating in client interactions to understand their needs and provide technical support."
+    },
+    "deckIfy": {
+      "title": "DeckIfy",
+      "description": "DeckIfy is a web platform focused on automating your studies by generating Anki flashcards with AI. Developed with React.js and Python, it is 100% open source."
+    },
+    "chatBotAI": {
+      "title": "ChatBot AI",
+      "description": "An intelligent chatbot implementation in JavaScript, designed to provide realistic and interactive conversations. It uses artificial intelligence to interpret user input and respond dynamically."
+    },
+    "repository": "Github",
+    "visit": "Try Here"
   }
 }

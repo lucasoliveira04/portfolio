@@ -29,6 +29,7 @@
     "react-slick": "^0.30.3",
     "react-transition-group": "^4.4.5",
     "react-world-flags": "^1.6.0",
+    "scrollreveal": "^4.0.9",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.2.4"
   },

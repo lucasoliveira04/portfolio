@@ -9,5 +9,25 @@
   },
   "home": {
     "subtitle": "Desenvolvedor de Software"
+  },
+  "projectsAndExperiences": {
+    "nossoMarSalveOsPatos": {
+      "title": "Nosso Mar Salve os Patinhos",
+      "description": "Jogo desenvolvido de forma autonoma na Unity com C# utilizando a Unity, neste projeto atuei programando e liderando o projeto, objetivo do jogo é concientizar as pessoas a não poluir o meio ambiente"
+    },
+    "estagioPlanetEco": {
+      "title": "Estágio em Desenvolvimento de Software - Planet Eco",
+      "description": "Atualmente, estou contribuindo para a manutenção e aprimoramento dos sistemas internos da empresa, desenvolvendo novas funcionalidades e corrigindo erros. Também estou aprendendo a trabalhar com análise de dados em Excel e Power BI, além de participar do contato com clientes para entender suas necessidades e oferecer suporte técnico."
+    },
+    "deckIfy": {
+      "title": "DeckIfy",
+      "description": "DeckIfy é uma plataforma Web que foca em automatizar seus estudos gerando FlashCards Anki com AI, desenvolvido com React.js e Python ele é 100% Open Source."
+    },
+    "chatBotAI": {
+      "title": "ChatBot AI",
+      "description": "Implementação de um chatbot inteligente em JavaScript, projetado para oferecer conversas realistas e interativas. Utiliza inteligência artificial para interpretar entradas do usuário e responder de forma dinâmica."
+    },
+    "repository": "Github",
+    "visit": "Use Aqui"
   }
 }
