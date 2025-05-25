@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
         comic: ['"Comic Neue"', 'cursive'],
+        fredoka: ['Fredoka', 'sans-serif'],
       },
       screens: {
         mobile: { min: '200px', max: '650px' },
