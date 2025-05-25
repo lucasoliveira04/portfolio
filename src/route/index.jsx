@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router";
 import { UsersPage } from "../page/user-page.jsx";
 import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const LanguageWrapper = ({ children }) => {
     const { lang } = useParams();
@@ -16,15 +16,30 @@ const LanguageWrapper = ({ children }) => {
     return children;
 };
 
-export const AppRoutes = () => {
+const RedirectToUserLang = () => {
     const { i18n } = useTranslation();
+    const [userLang, setUserLang] = useState(null);
 
-    const userLang = i18n.language || navigator.language.split("-")[0] || "pt";
+    useEffect(() => {
+        const langFromI18n = i18n.language;
+        const langFromNavigator = navigator.language ? navigator.language.split("-")[0] : null;
 
+        const chosenLang = langFromI18n || langFromNavigator || "en";
+        setUserLang(chosenLang);
+    }, [i18n]);
+
+    if (!userLang) {
+        return null;
+    }
+
+    return <Navigate to={`/${userLang}/home`} replace />;
+};
+
+export const AppRoutes = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Navigate to={`/${userLang}/home`} replace />} />
+                <Route path="/" element={<RedirectToUserLang />} />
 
                 <Route
                     path="/:lang/home"
@@ -35,7 +50,7 @@ export const AppRoutes = () => {
                     }
                 />
 
-                <Route path="*" element={<Navigate to={`/${userLang}/home`} replace />} />
+                <Route path="*" element={<Navigate to="/en/home" replace />} />
             </Routes>
         </BrowserRouter>
     );
