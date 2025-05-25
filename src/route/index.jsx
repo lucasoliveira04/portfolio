@@ -20,7 +20,7 @@ export const AppRoutes = () => {
     return (
         <HashRouter>
             <Routes>
-                <Route path="/" element={<Navigate to="/pt/home" replace />} />
+                <Route path="*" element={<Navigate to="/pt/home" replace />} />
 
                 <Route
                     path="/:lang/home"
@@ -30,9 +30,8 @@ export const AppRoutes = () => {
                         </LanguageWrapper>
                     }
                 />
-
-                <Route path="*" element={<Navigate to="/pt/home" replace />} />
             </Routes>
         </HashRouter>
+
     );
 };
