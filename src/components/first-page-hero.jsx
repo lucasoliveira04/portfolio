@@ -3,11 +3,12 @@ import {
     FaInstagram,
     FaLinkedin,
     FaGithub,
-    FaFile,
+    FaFile, FaEnvelope,
 } from "react-icons/fa";
 import photoIam from "../../public/img/iam/iAm.png";
 import {useTranslation} from "react-i18next";
 import {Typewriter} from "../util/Typewriter.jsx";
+import {ScrollArrow} from "./scroll-arrow.jsx";
 
 const socialLinks = [
     {
@@ -29,6 +30,11 @@ const socialLinks = [
         name: "LinkedIn",
         url: "https://linkedin.com/in/lucas-oliveira-campos",
         icon: <FaLinkedin />,
+    },
+    {
+        name: "Gmail",
+        url: "mailto:lucasolisocialmedia@gmail.com",
+        icon: <FaEnvelope />,
     },
     {
         name: "Currículo",
@@ -80,6 +86,8 @@ export const HomePage = () => {
                     </div>
                 </div>
             </div>
+
+            <ScrollArrow/>
         </div>
     );
 };
