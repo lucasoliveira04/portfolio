@@ -6,6 +6,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap');
 
 
+::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22c55e;
+  border-radius: 9999px;
+  box-shadow: 0 0 5px #22c55e88;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #16a34a;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #22c55e transparent;
+}
+
+* {
+  scrollbar-track-color: transparent;
+}
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -6,6 +6,8 @@ import {
     FaFile, FaEnvelope,
 } from "react-icons/fa";
 import photoIam from "../../public/img/iam/iAm.png";
+import curriculo from "../../public/pdf/Curriculo_Lucas_Oliveira.pdf"
+
 import {useTranslation} from "react-i18next";
 import {Typewriter} from "../util/Typewriter.jsx";
 import {ScrollArrow} from "./scroll-arrow.jsx";
@@ -38,7 +40,7 @@ const socialLinks = [
     },
     {
         name: "Currículo",
-        url: "/path/para/seu-curriculo.pdf",
+        url: curriculo,
         icon: <FaFile />,
     },
 ];

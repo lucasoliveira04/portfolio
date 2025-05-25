@@ -27,7 +27,12 @@
       "title": "ChatBot AI",
       "description": "An intelligent chatbot implementation in JavaScript, designed to provide realistic and interactive conversations. It uses artificial intelligence to interpret user input and respond dynamically."
     },
+    "artigoCientifico": {
+      "title": "Scientific Article",
+      "description": "Scientific article analyzing the economic impact of the pandemic on Airbnb, using Python for data collection, filtering, and analysis."
+    },
     "repository": "Github",
-    "visit": "Try Here"
+    "visit": "Try Here",
+    "download": "Download"
   }
 }

@@ -13,7 +13,7 @@
   "projectsAndExperiences": {
     "nossoMarSalveOsPatos": {
       "title": "Nosso Mar Salve os Patinhos",
-      "description": "Jogo desenvolvido de forma autonoma na Unity com C# utilizando a Unity, neste projeto atuei programando e liderando o projeto, objetivo do jogo é concientizar as pessoas a não poluir o meio ambiente"
+      "description": "Jogo desenvolvido de forma autonoma na Unity com C# utilizando a Unity, neste projeto atuei programando e liderando o projeto, objetivo do jogo é conscientizar as pessoas a não poluir o meio ambiente"
     },
     "estagioPlanetEco": {
       "title": "Estágio em Desenvolvimento de Software - Planet Eco",
@@ -27,7 +27,12 @@
       "title": "ChatBot AI",
       "description": "Implementação de um chatbot inteligente em JavaScript, projetado para oferecer conversas realistas e interativas. Utiliza inteligência artificial para interpretar entradas do usuário e responder de forma dinâmica."
     },
+    "artigoCientifico": {
+      "title": "Artigo Ciêntífico",
+      "description": "Artigo científico que analisa os impactos da pandemia na economia da Airbnb, utilizando Python para coleta, filtragem e análise de dados."
+    },
     "repository": "Github",
-    "visit": "Use Aqui"
+    "visit": "Use Aqui",
+    "download": "Baixar"
   }
 }

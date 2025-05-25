@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { MdPictureAsPdf } from "react-icons/md";
 
-export function CardProjects({ title, description, repoUrl, github, visitUrl, visit, langs, images = [] }) {
+export function CardProjects({ title, description, repoUrl, github, visitUrl, downloadPdf, pdfUrl, visit, langs, images = [] }) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     useEffect(() => {
@@ -29,7 +30,7 @@ export function CardProjects({ title, description, repoUrl, github, visitUrl, vi
             <h3 className="text-xl font-semibold text-gray-800 mb-2">{title}</h3>
             <p className="text-gray-600 mb-4 text-sm">{description}</p>
 
-            <div className="flex gap-4 mb-4">
+            <div className="flex flex-wrap gap-4 mb-4">
                 {repoUrl && (
                     <a
                         href={repoUrl}
@@ -50,6 +51,17 @@ export function CardProjects({ title, description, repoUrl, github, visitUrl, vi
                     >
                         <FaExternalLinkAlt className="text-sm" />
                         {visit}
+                    </a>
+                )}
+                {pdfUrl && (
+                    <a
+                        href={pdfUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-red-700 hover:text-red-900 text-sm font-medium transition"
+                    >
+                        <MdPictureAsPdf className="text-lg" />
+                        {downloadPdf}
                     </a>
                 )}
             </div>
