@@ -1,0 +1,52 @@
+{
+  "header": {
+    "navigation": {
+      "aboutMe": "Sobre Mim",
+      "experience": "Experiências",
+      "contact": "Contatos"
+    }
+  },
+  "home": {
+    "subtitle": "Desenvolvedor de Software"
+  },
+  "projectsAndExperiences": {
+    "nossoMarSalveOsPatos": {
+      "title": "Nosso Mar Salve os Patinhos",
+      "description": "Jogo desenvolvido de forma autonoma na Unity com C# utilizando a Unity, neste projeto atuei programando e liderando o projeto, objetivo do jogo é conscientizar as pessoas a não poluir o meio ambiente"
+    },
+    "estagioPlanetEco": {
+      "title": "Estágio em Desenvolvimento de Software - Planet Eco",
+      "description": "Atualmente, estou contribuindo para a manutenção e aprimoramento dos sistemas internos da empresa, desenvolvendo novas funcionalidades e corrigindo erros. Também estou aprendendo a trabalhar com análise de dados em Excel e Power BI, além de participar do contato com clientes para entender suas necessidades e oferecer suporte técnico."
+    },
+    "deckIfy": {
+      "title": "DeckIfy",
+      "description": "DeckIfy é uma plataforma Web que foca em automatizar seus estudos gerando FlashCards Anki com AI, desenvolvido com React.js e Python ele é 100% Open Source."
+    },
+    "chatBotAI": {
+      "title": "ChatBot AI",
+      "description": "Implementação de um chatbot inteligente em JavaScript, projetado para oferecer conversas realistas e interativas. Utiliza inteligência artificial para interpretar entradas do usuário e responder de forma dinâmica."
+    },
+    "artigoCientifico": {
+      "title": "Artigo Ciêntífico",
+      "description": "Artigo científico que analisa os impactos da pandemia na economia da Airbnb, utilizando Python para coleta, filtragem e análise de dados."
+    },
+    "repository": "Github",
+    "visit": "Use Aqui",
+    "download": "Baixar"
+  },
+  "aboutMe": {
+    "intro": "Tenho {{age}} anos e estou no {{semester}} da faculdade de Ciência da Computação.",
+    "graduation": "Minha previsão de formação é para Dezembro de 2026.",
+    "work": "Atualmente, estou estagiando na área de desenvolvimento de software, atuando com tecnologias variadas.",
+    "focus": "Tenho foco em desenvolvimento back-end, onde adquiri sólida experiência em frameworks como Spring Boot e Flask.",
+    "skills": "Ao longo de projetos acadêmicos e profissionais, também desenvolvi habilidades em linguagens e frameworks do front-end, como JavaScript e React.",
+    "moreSkills": "Possuo conhecimento em arquitetura de microsserviços, aplicações monolíticas, bancos de dados SQL e Firebase.",
+    "learning": "Sou comprometido com aprendizado contínuo, sempre buscando formas de aprimorar e otimizar meus códigos e aplicações."
+  },
+  "feedback": {
+    "leaveFeedback": "Deixe seu Feedback",
+    "sendFeedback": "Enviar"
+  },
+  "writeHere": "Escreva Aqui",
+  "progressProjects": "Em Andamento"
+}

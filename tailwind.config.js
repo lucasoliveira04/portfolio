@@ -3,26 +3,24 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      screens:{
-        xs: {max: "630px"}
-      },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        sigma: ['Sigmar', 'sans-serif'],
-        boldonse: ['Boldonse', 'sans-serif'],
-
+        inter: ['Inter', 'sans-serif'],
+        comic: ['"Comic Neue"', 'cursive'],
+        fredoka: ['Fredoka', 'sans-serif'],
+        bungeeOutline: ['"Bungee Outline"', 'cursive'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+        winky: ['Winky Sans', 'sans-serif'],
+        sigmarOne: ['Sigmar One', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
       },
-      animation: {
-        float: "float 2s ease-in-out infinite",
+      screens: {
+        mobile: { min: '200px', max: '471px' },
       },
-      keyframes: {
-        float: {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-5px)" },
-        },
+      colors: {
+        primary: '#f8f9fa',
+        textPrimary: '#38a3a5',
       },
     },
   },
-  plugins: [],
-}
-
+};

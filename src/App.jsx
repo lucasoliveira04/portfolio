@@ -1,15 +1,13 @@
 
 import './App.css'
-import { ScreenSizeProvider } from './context/ScreenSizeProvider'
-import {Routers} from './routers'
+import {AppRoutes} from "./route/index.jsx";
+import './i18n.js'
 
 function App() {
 
   return (
     <>
-      <ScreenSizeProvider>
-        <Routers/>
-      </ScreenSizeProvider>   
+        <AppRoutes/>
     </>
   )
 }
