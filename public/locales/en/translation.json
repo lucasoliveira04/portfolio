@@ -42,5 +42,11 @@
     "skills": "Through academic and professional projects, I have also developed front-end skills in languages and frameworks like JavaScript and React.",
     "moreSkills": "I have knowledge in microservices architecture, monolithic applications, SQL databases, and Firebase.",
     "learning": "I am committed to continuous learning, always looking for ways to improve and optimize my code and applications."
-  }
+  },
+  "feedback": {
+    "leaveFeedback": "Leave your Feedback",
+    "sendFeedback": "Send"
+  },
+  "writeHere": "Write Here",
+  "progressProjects": "In progress"
 }

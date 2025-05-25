@@ -28,7 +28,7 @@ export function getProjects(t) {
             ],
             side: "right",
             startDate: "Maio 2025",
-            endDate: "Atual",
+            endDate: "",
             images: [estagio],
         },
         {

@@ -2,7 +2,18 @@ import { useEffect, useState } from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { MdPictureAsPdf } from "react-icons/md";
 
-export function CardProjects({ title, description, repoUrl, github, visitUrl, downloadPdf, pdfUrl, visit, langs, images = [] }) {
+export function CardProjects({
+                                 title,
+                                 description,
+                                 repoUrl,
+                                 github,
+                                 visitUrl,
+                                 downloadPdf,
+                                 pdfUrl,
+                                 visit,
+                                 langs,
+                                 images = [],
+                             }) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     useEffect(() => {
@@ -18,12 +29,12 @@ export function CardProjects({ title, description, repoUrl, github, visitUrl, do
     }, [images]);
 
     return (
-        <div className="bg-white rounded-xl shadow-lg p-6 max-w-[500px] border border-gray-200">
+        <div className="bg-white rounded-xl shadow-lg p-6 max-w-full md:max-w-[500px] border border-gray-200">
             {images.length > 0 && (
                 <img
                     src={images[currentImageIndex]}
                     alt={`Imagem ${currentImageIndex + 1} do projeto ${title}`}
-                    className="w-full h-56 object-cover rounded-lg mb-4 transition-all duration-500"
+                    className="w-full h-48 md:h-56 object-cover rounded-lg mb-4 transition-all duration-500"
                 />
             )}
 
@@ -67,16 +78,16 @@ export function CardProjects({ title, description, repoUrl, github, visitUrl, do
             </div>
 
             {langs && (
-                <div className="flex gap-5 flex-wrap items-center justify-center text-sm text-gray-500">
+                <div className="flex gap-3 flex-wrap items-center justify-center md:justify-start text-sm text-gray-500">
                     {langs.map((lang, idx) =>
-                        typeof lang === "string" ? (
-                            <span key={idx}>{lang}</span>
-                        ) : (
-                            <span key={idx} className="flex items-center gap-1">
-                                <img src={lang.icon} alt={lang.name} className="w-5 h-5" />
-                                {lang.name}
-                            </span>
-                        )
+                            typeof lang === "string" ? (
+                                <span key={idx}>{lang}</span>
+                            ) : (
+                                <span key={idx} className="flex items-center gap-1">
+                <img src={lang.icon} alt={lang.name} className="w-5 h-5" />
+                                    {lang.name}
+              </span>
+                            )
                     )}
                 </div>
             )}

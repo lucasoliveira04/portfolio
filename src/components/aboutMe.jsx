@@ -135,15 +135,15 @@ export function AboutMeHome() {
 
     return (
         <div
-            className="flex flex-col md:flex-row gap-4 min-h-screen relative px-4 justify-center
-    bg-gradient-to-l from-green-100 via-green-50 to-white overflow-hidden"
+            className="flex flex-col md:flex-row gap-6 min-h-screen relative px-4 py-16 md:py-24 justify-center
+            bg-gradient-to-l from-green-100 via-green-50 to-white overflow-hidden"
         >
             <div className="w-full md:w-1/2 flex justify-center items-center">
                 <div className="p-4 bg-white bg-opacity-15 rounded-xl shadow-xl">
                     <img
                         src={eu}
                         alt="Minha foto acenando"
-                        className="w-[456px] rounded-xl border-4 border-green-400"
+                        className="w-40 md:w-full max-w-[456px] rounded-xl border-4 border-green-400"
                         style={imgStyle}
                         onMouseMove={handleMouseMove}
                         onMouseLeave={handleMouseLeave}
@@ -151,12 +151,12 @@ export function AboutMeHome() {
                 </div>
             </div>
 
-            <div className="flex flex-col w-full md:w-1/2 space-y-4 text-justify justify-center items-center">
-                <p className="font-comic font-semibold text-2xl">
+            <div className="flex flex-col w-full md:w-1/2 space-y-6 md:space-y-4 text-justify justify-center items-center px-4 md:px-0">
+                <p className="font-comic font-semibold text-base md:text-2xl">
                     {aboutMeText.map((text, i) => (
                         <span key={i}>
-                            {highlightText(text, highlightWords)}{" "}
-                        </span>
+                        {highlightText(text, highlightWords)}{" "}
+                    </span>
                     ))}
                 </p>
 
@@ -165,10 +165,8 @@ export function AboutMeHome() {
                         <WaterButton key={name} name={name} color={color} icon={icon} />
                     ))}
                 </div>
-
             </div>
-
-
         </div>
     );
+
 }

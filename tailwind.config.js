@@ -15,7 +15,7 @@ export default {
         roboto: ['Roboto', 'sans-serif'],
       },
       screens: {
-        mobile: { min: '200px', max: '650px' },
+        mobile: { min: '200px', max: '471px' },
       },
       colors: {
         primary: '#f8f9fa',

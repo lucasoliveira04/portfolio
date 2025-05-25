@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 import { CardProjects } from "./card-projects.jsx";
 import { useTranslation } from "react-i18next";
-import {getProjects} from "../data/projectData.js";
-import {FloatingBubbles} from "./floating-bubbles.jsx";
+import { getProjects } from "../data/projectData.js";
+import { FloatingBubbles } from "./floating-bubbles.jsx";
 
 export function HomeProjects() {
     const { t } = useTranslation();
@@ -34,52 +34,60 @@ export function HomeProjects() {
     const projects = getProjects(t);
 
     return (
-        <div className="min-h-screen relative px-4 py-10 flex flex-col justify-center bg-gradient-to-r from-white to-green-100 overflow-hidden">
+        <div className="min-h-screen relative px-4 py-10 flex flex-col justify-center bg-gradient-to-r from-white to-green-100 overflow-hidden py-20">
+            <FloatingBubbles />
 
-            <FloatingBubbles/>
-
-            {/* Linha de progresso */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[4px] h-full z-10 bg-white">
                 <div
                     id="scroll-line"
-                    className="w-full bg-green-600 origin-top scale-y-0 transition-transform duration-500 ease-linear"
-                    style={{ height: "100%" }}
+                    className="w-full bg-green-600 origin-top scale-y-0 transition-transform duration-200 ease-linear"
+                    style={{ height: "120%" }}
                 />
             </div>
 
-            <div className="flex flex-col items-center relative z-10 w-full space-y-32 max-w-6xl mx-auto">
+            <div className="flex flex-col space-y-32 w-full max-w-6xl mx-auto relative z-10">
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className="flex items-center w-full relative"
+                        className="flex flex-col md:flex-row items-center w-full relative space-y-4 md:space-y-0"
                         style={{ minHeight: "120px" }}
                     >
                         {/* Lado esquerdo */}
-                        <div className="flex-1 flex justify-end pr-6">
+                        <div className="flex-1 flex justify-center md:justify-end pr-0 md:pr-6">
                             {project.side === "left" ? (
-                                <div className="reveal-card">
+                                <div className="reveal-card w-full max-w-md">
                                     <CardProjects {...project} />
                                 </div>
                             ) : (
-                                <div className="text-sm text-gray-500 font-sigmarOne text-left pl-4">
-                                    <p>{project.startDate} - {project.endDate}</p>
+                                <div className="text-sm text-gray-500 font-sigmarOne text-center md:text-right pr-0 md:pr-4">
+                                    <p className={project.endDate ? "" : "pl-12 pr-2"}>
+                                        {project.startDate}
+                                        {" - "}
+                                        {project.endDate ? project.endDate : t("progressProjects")}
+                                    </p>
                                 </div>
                             )}
                         </div>
 
-                        <div className="w-[4px] relative flex justify-center">
+                        <div className="w-[4px] relative flex justify-center my-2 md:my-0">
                             <div className="w-5 h-5 bg-green-600 rounded-full border-2 border-white absolute top-1/2 -translate-y-1/2" />
                         </div>
 
-                        <div className="flex-1 flex justify-start pl-6">
+                        {/* Lado direito */}
+                        <div className="flex-1 flex justify-center md:justify-start pl-0 md:pl-6">
                             {project.side === "right" ? (
-                                <div className="reveal-card">
+                                <div className="reveal-card w-full max-w-md">
                                     <CardProjects {...project} />
                                 </div>
                             ) : (
-                                <div className="text-sm text-gray-500 font-sigmarOne text-right pr-4">
-                                    <p>{project.startDate} - {project.endDate}</p>
+                                <div className="text-sm text-gray-500 font-sigmarOne text-center md:text-right pr-0 md:pr-4">
+                                    <p className={project.endDate ? "" : "pl-14 pr-1"}>
+                                        {project.startDate}
+                                        {" - "}
+                                        {project.endDate ? project.endDate : t("progressProjects")}
+                                    </p>
                                 </div>
+
                             )}
                         </div>
                     </div>
@@ -88,4 +96,3 @@ export function HomeProjects() {
         </div>
     );
 }
-

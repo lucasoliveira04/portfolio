@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
 import emailjs from "emailjs-com";
+import {useTranslation} from "react-i18next";
 
 export function FooterComponent() {
+    const {t} = useTranslation();
     const [feedback, setFeedback] = useState("");
 
     async function handleSubmit() {
@@ -37,15 +39,14 @@ export function FooterComponent() {
     return (
         <footer className="bg-green-700 text-white py-10 px-6">
             <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-                {/* Feedback Textarea */}
                 <div className="flex flex-col w-full md:w-1/2">
                     <label htmlFor="feedback" className="mb-2 font-semibold text-lg">
-                        Deixe seu feedback:
+                        {t("feedback.leaveFeedback")}
                     </label>
                     <textarea
                         id="feedback"
                         rows={4}
-                        placeholder="Digite aqui..."
+                        placeholder={t("writeHere")}
                         value={feedback}
                         onChange={(e) => setFeedback(e.target.value)}
                         className="w-full p-3 rounded-md border border-green-400 text-black focus:outline-none focus:ring-2 focus:ring-green-400 resize-none"
@@ -55,11 +56,10 @@ export function FooterComponent() {
                         onClick={handleSubmit}
                         className="mt-3 bg-green-500 hover:bg-green-400 text-white px-4 py-2 rounded-md font-bold shadow-md border border-white transition duration-200 self-start"
                     >
-                        Enviar
+                        {t("feedback.sendFeedback")}
                     </button>
                 </div>
 
-                {/* Social Links */}
                 <div className="flex gap-6 items-center text-2xl">
                     <a
                         href="https://github.com/lucasoliveira04"
