@@ -34,5 +34,14 @@
     "repository": "Github",
     "visit": "Use Aqui",
     "download": "Baixar"
+  },
+  "aboutMe": {
+    "intro": "Tenho {{age}} anos e estou no {{semester}} da faculdade de Ciência da Computação.",
+    "graduation": "Minha previsão de formação é para Dezembro de 2026.",
+    "work": "Atualmente, estou estagiando na área de desenvolvimento de software, atuando com tecnologias variadas.",
+    "focus": "Tenho foco em desenvolvimento back-end, onde adquiri sólida experiência em frameworks como Spring Boot e Flask.",
+    "skills": "Ao longo de projetos acadêmicos e profissionais, também desenvolvi habilidades em linguagens e frameworks do front-end, como JavaScript e React.",
+    "moreSkills": "Possuo conhecimento em arquitetura de microsserviços, aplicações monolíticas, bancos de dados SQL e Firebase.",
+    "learning": "Sou comprometido com aprendizado contínuo, sempre buscando formas de aprimorar e otimizar meus códigos e aplicações."
   }
 }

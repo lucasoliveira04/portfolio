@@ -4,7 +4,7 @@
       "aboutMe": "About Me",
       "projects": "Projects",
       "experience": "Experience",
-      "contact": "Contact"
+      "contact": "Contacts"
     }
   },
   "home": {
@@ -12,27 +12,36 @@
   },
   "projectsAndExperiences": {
     "nossoMarSalveOsPatos": {
-      "title": "Our Sea Saves the Ducklings",
-      "description": "Game independently developed in Unity with C#, where I acted as programmer and project leader. The game's goal is to raise awareness about environmental pollution."
+      "title": "Nosso Mar Salve os Patinhos",
+      "description": "Game developed independently in Unity with C#. In this project, I worked as the lead developer and project manager. The game's objective is to raise awareness about environmental pollution."
     },
     "estagioPlanetEco": {
-      "title": "Software Development Intern - Planet Eco",
-      "description": "Currently contributing to the maintenance and improvement of the company's internal systems by developing new features and fixing bugs. I am also learning data analysis with Excel and Power BI, and participating in client interactions to understand their needs and provide technical support."
+      "title": "Software Development Internship - Planet Eco",
+      "description": "Currently contributing to the maintenance and improvement of the company’s internal systems, developing new features and fixing bugs. I'm also learning to work with data analysis in Excel and Power BI, and I participate in client interactions to understand their needs and provide technical support."
     },
     "deckIfy": {
       "title": "DeckIfy",
-      "description": "DeckIfy is a web platform focused on automating your studies by generating Anki flashcards with AI. Developed with React.js and Python, it is 100% open source."
+      "description": "DeckIfy is a web platform focused on automating your studies by generating Anki FlashCards using AI. Developed with React.js and Python, it is 100% open source."
     },
     "chatBotAI": {
       "title": "ChatBot AI",
-      "description": "An intelligent chatbot implementation in JavaScript, designed to provide realistic and interactive conversations. It uses artificial intelligence to interpret user input and respond dynamically."
+      "description": "Implementation of an intelligent chatbot in JavaScript, designed to deliver realistic and interactive conversations. It uses artificial intelligence to interpret user inputs and respond dynamically."
     },
     "artigoCientifico": {
       "title": "Scientific Article",
-      "description": "Scientific article analyzing the economic impact of the pandemic on Airbnb, using Python for data collection, filtering, and analysis."
+      "description": "Scientific article analyzing the impact of the pandemic on Airbnb's economy, using Python for data collection, filtering, and analysis."
     },
     "repository": "Github",
     "visit": "Try Here",
     "download": "Download"
+  },
+  "aboutMe": {
+    "intro": "I am {{age}} years old and currently in the {{semester}} of my Computer Science degree.",
+    "graduation": "My expected graduation date is December 2026.",
+    "work": "I am currently interning in software development, working with a variety of technologies.",
+    "focus": "My main focus is back-end development, with solid experience in frameworks such as Spring Boot and Flask.",
+    "skills": "Through academic and professional projects, I have also developed front-end skills in languages and frameworks like JavaScript and React.",
+    "moreSkills": "I have knowledge in microservices architecture, monolithic applications, SQL databases, and Firebase.",
+    "learning": "I am committed to continuous learning, always looking for ways to improve and optimize my code and applications."
   }
 }

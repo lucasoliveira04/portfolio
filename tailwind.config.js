@@ -7,6 +7,12 @@ export default {
         inter: ['Inter', 'sans-serif'],
         comic: ['"Comic Neue"', 'cursive'],
         fredoka: ['Fredoka', 'sans-serif'],
+        bungeeOutline: ['"Bungee Outline"', 'cursive'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+        winky: ['Winky Sans', 'sans-serif'],
+        sigmarOne: ['Sigmar One', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
       },
       screens: {
         mobile: { min: '200px', max: '650px' },
