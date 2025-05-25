@@ -9,10 +9,7 @@ export function useLanguageToggle() {
     const toggleLanguage = () => {
         const newLang = lang === "pt" ? "en" : "pt";
         i18n.changeLanguage(newLang);
-
-        const currentPath = window.location.pathname;
-        const updatedPath = currentPath.replace(`/${lang}`, `/${newLang}`);
-        navigate(updatedPath);
+        navigate(`/${newLang}/home`, { replace: true });
     };
 
     return {
