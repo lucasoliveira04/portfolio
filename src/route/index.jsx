@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router";
+import { Routes, Route, Navigate, useParams, HashRouter} from "react-router";
 import { UsersPage } from "../page/user-page.jsx";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
@@ -18,7 +18,7 @@ const LanguageWrapper = ({ children }) => {
 
 export const AppRoutes = () => {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<Navigate to="/pt/home" replace />} />
 
@@ -33,6 +33,6 @@ export const AppRoutes = () => {
 
                 <Route path="*" element={<Navigate to="/pt/home" replace />} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 };
