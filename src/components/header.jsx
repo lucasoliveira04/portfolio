@@ -33,6 +33,14 @@ export function HeaderComponent() {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
+    const sectionFooter = document.getElementById(navOptions.key)
+    const sectionExperience = document.getElementById(navOptions.key)
+    const sectionAboutMe = document.getElementById(navOptions.key)
+
+    sectionFooter?.scrollIntoView({behavior: "smooth"});
+    sectionExperience?.scrollIntoView({behavior: "smooth"});
+    sectionAboutMe?.scrollIntoView({behavior: "smooth"});
+
     return (
         <header
             className={`fixed z-50 flex w-full justify-between items-center p-4 bg-gradient-to-r from-white to-green-100 transition-all duration-300 ${
@@ -79,7 +87,10 @@ export function HeaderComponent() {
 
             <div className="flex items-center gap-4">
                 <nav className="md:hidden">
-                    <HamburgerMenu navOptions={navOptions} />
+                    <HamburgerMenu navOptions={navOptions} onNavigate={(id) => {
+                        const section = document.getElementById(id);
+                        section?.scrollIntoView({ behavior: "smooth" });
+                    }}/>
                 </nav>
 
                 <img

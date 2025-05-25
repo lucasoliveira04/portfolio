@@ -137,6 +137,7 @@ export function AboutMeHome() {
         <div
             className="flex flex-col md:flex-row gap-6 min-h-screen relative px-4 py-16 md:py-24 justify-center
             bg-gradient-to-l from-green-100 via-green-50 to-white overflow-hidden"
+            id="aboutMe"
         >
             <div className="w-full md:w-1/2 flex justify-center items-center">
                 <div className="p-4 bg-white bg-opacity-15 rounded-xl shadow-xl">

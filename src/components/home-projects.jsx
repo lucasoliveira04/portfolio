@@ -34,7 +34,7 @@ export function HomeProjects() {
     const projects = getProjects(t);
 
     return (
-        <div className="min-h-screen relative px-4 py-10 flex flex-col justify-center bg-gradient-to-r from-white to-green-100 overflow-hidden py-20">
+        <div className="min-h-screen relative px-4 py-10 flex flex-col justify-center bg-gradient-to-r from-white to-green-100 overflow-hidden py-20" id="experience">
             <FloatingBubbles />
 
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[4px] h-full z-10 bg-white">

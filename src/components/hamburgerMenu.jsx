@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function HamburgerMenu({ navOptions }) {
+export function HamburgerMenu({ navOptions, onNavigate }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => setIsOpen(!isOpen);
@@ -46,7 +46,10 @@ export function HamburgerMenu({ navOptions }) {
                     <li
                         key={option.key}
                         className="px-4 py-2 hover:bg-green-100 cursor-pointer text-green-700 font-semibold"
-                        onClick={() => setIsOpen(false)}
+                        onClick={() => {
+                            onNavigate(option.key);
+                            setIsOpen(false);
+                        }}
                     >
                         {option.label}
                     </li>

@@ -37,7 +37,7 @@ export function FooterComponent() {
     }
 
     return (
-        <footer className="bg-green-700 text-white py-10 px-6">
+        <footer className="bg-green-700 text-white py-10 px-6" id="contact">
             <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
                 <div className="flex flex-col w-full md:w-1/2">
                     <label htmlFor="feedback" className="mb-2 font-semibold text-lg">
