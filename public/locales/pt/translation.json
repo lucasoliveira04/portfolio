@@ -3,8 +3,11 @@
     "navigation": {
       "aboutMe": "Sobre Mim",
       "projects": "Projetos",
-      "experience": "Experiências",
-      "contact": "Contato"
+      "experience": "Experiência",
+      "contact": "Contatos"
     }
+  },
+  "home": {
+    "subtitle": "Desenvolvedor de Software"
   }
 }

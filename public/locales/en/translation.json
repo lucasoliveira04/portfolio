@@ -6,5 +6,8 @@
       "experience": "Experience",
       "contact": "Contact"
     }
+  },
+  "home": {
+    "subtitle": "Software Developer"
   }
 }

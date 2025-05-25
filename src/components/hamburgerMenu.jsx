@@ -12,21 +12,20 @@ export function HamburgerMenu({ navOptions }) {
                 aria-label="Toggle menu"
                 className="p-2 flex flex-col justify-center items-center gap-1 focus:outline-none"
             >
+        <span
+            className={`block w-6 h-0.5 bg-green-700 transition-transform duration-300 ease-in-out ${
+                isOpen ? "rotate-45 translate-y-1.5" : ""
+            }`}
+        ></span>
 
                 <span
-                    className={`block w-6 h-0.5 bg-black transition-transform duration-300 ease-in-out ${
-                        isOpen ? "rotate-45 translate-y-1.5" : ""
-                    }`}
-                ></span>
-
-                <span
-                    className={`block w-6 h-0.5 bg-black transition-opacity duration-300 ease-in-out ${
+                    className={`block w-6 h-0.5 bg-green-700 transition-opacity duration-300 ease-in-out ${
                         isOpen ? "opacity-0" : "opacity-100"
                     }`}
                 ></span>
 
                 <span
-                    className={`block w-6 h-0.5 bg-black transition-transform duration-300 ease-in-out ${
+                    className={`block w-6 h-0.5 bg-green-700 transition-transform duration-300 ease-in-out ${
                         isOpen ? "-rotate-45 -translate-y-1.5" : ""
                     }`}
                 ></span>
@@ -46,7 +45,7 @@ export function HamburgerMenu({ navOptions }) {
                 {navOptions.map((option) => (
                     <li
                         key={option.key}
-                        className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                        className="px-4 py-2 hover:bg-green-100 cursor-pointer text-green-700 font-semibold"
                         onClick={() => setIsOpen(false)}
                     >
                         {option.label}

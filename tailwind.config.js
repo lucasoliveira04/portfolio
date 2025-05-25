@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
+        comic: ['"Comic Neue"', 'cursive'],
       },
       screens: {
         mobile: { min: '200px', max: '650px' },
