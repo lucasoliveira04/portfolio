@@ -1,12 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
-import eu from "../../public/img/iam/Eu.png";
-import java from "../../public/img/langs/java.png";
-import python from "../../public/img/langs/python.png"
-import react from "../../public/img/langs/programing.png"
-import tailwind from "../../public/img/langs/Tailwind CSS.png"
-import sql from "../../public/img/langs/sql-server.png"
+import eu from "../assets/iam/Eu.png";
+import java from "../assets/langs/java.png";
+import python from "../assets/langs/python.png"
+import react from "../assets/langs/programing.png"
+import tailwind from "../assets/langs/Tailwind CSS.png"
+import sql from "../assets/langs/sql-server.png"
 import {WaterButton} from "./watter-button.jsx";
 
 const highlightWords = [

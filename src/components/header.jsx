@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { HamburgerMenu } from "./hamburgerMenu.jsx";
-import brazil from "../../public/img/countrys/square.png";
-import eua from "../../public/img/countrys/united-states.png";
+import brazil from "../assets/countrys/square.png";
+import eua from "../assets/countrys/united-states.png";
 import { useEffect, useState } from "react";
 import { useLanguageToggle } from "../hook/useLanguageToggle.js";
 

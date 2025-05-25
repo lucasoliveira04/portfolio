@@ -5,8 +5,8 @@ import {
     FaGithub,
     FaFile, FaEnvelope,
 } from "react-icons/fa";
-import photoIam from "../../public/img/iam/iAm.png";
-import curriculo from "../../public/pdf/Curriculo_Lucas_Oliveira.pdf"
+import photoIam from "../assets/iam/iAm.png";
+import curriculo from "../assets/pdf/Curriculo_Lucas_Oliveira.pdf"
 
 import {useTranslation} from "react-i18next";
 import {Typewriter} from "../util/Typewriter.jsx";

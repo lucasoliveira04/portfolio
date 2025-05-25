@@ -1,20 +1,21 @@
-import nossoMarSalveOsPatinhosLogo from "/public/img/projects/nossoMarSalveOsPatinhosLogo.jpg";
-import deckIfy from "/public/img/projects/deckIfy.png";
-import estagio from "/public/img/projects/estagio.png";
-import chatBot from "/public/img/projects/chatbot.png";
-import capaArtigo from "/public/img/projects/CAPA-Artigo-O-que-e-Tecnologia-da-Informacao-TI-768x450.jpg";
+import nossoMarSalveOsPatinhosLogo from "../assets/projects/nossoMarSalveOsPatinhosLogo.jpg";
+import deckIfy from "../assets/projects/deckIfy.png";
+import estagio from "../assets/projects/estagio.png";
+import chatBot from "../assets/projects/chatbot.png";
+import capaArtigo from "../assets/projects/CAPA-Artigo-O-que-e-Tecnologia-da-Informacao-TI-768x450.jpg";
 
-import reactIcon from "/public/img/langs/programing.png";
-import tailwindCss from "/public/img/langs/Tailwind CSS.png";
-import python from "/public/img/langs/python.png";
-import excel from "/public/img/langs/excel.png";
-import powerBi from "/public/img/langs/powerBi.png";
-import csharp from "/public/img/langs/c-sharp.png";
-import unity from "/public/img/langs/unity.png";
-import java from "/public/img/langs/java.png";
-import sql from "/public/img/langs/sql-server.png";
+import reactIcon from "../assets/langs/programing.png";
+import tailwindCss from "../assets/langs/Tailwind CSS.png";
+import python from "../assets/langs/python.png";
+import excel from "../assets/langs/excel.png";
+import powerBi from "../assets/langs/powerBi.png";
+import csharp from "../assets/langs/c-sharp.png";
+import unity from "../assets/langs/unity.png";
+import java from "../assets/langs/java.png";
+import sql from "../assets/langs/sql-server.png";
 
-import article from "/public/pdf/Artigo_Cientifico__O_impacto_da_pandemia_na_economia_da_Airbnb.pdf";
+
+import article from "../assets/pdf/Artigo_Cientifico__O_impacto_da_pandemia_na_economia_da_Airbnb.pdf";
 
 export function getProjects(t) {
     return [
