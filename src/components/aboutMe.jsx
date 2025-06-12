@@ -7,6 +7,7 @@ import react from "../assets/langs/programing.png";
 import tailwind from "../assets/langs/Tailwind CSS.png";
 import sql from "../assets/langs/sql-server.png";
 import typescript from "../assets/langs/typescript.png";
+import java from "../assets/langs/java.png";
 import { WaterButton } from "./watter-button.jsx";
 import { color } from "framer-motion";
 
@@ -23,6 +24,16 @@ const highlightWords = [
   "front-end",
   "JavaScript",
   "React",
+  "Native",
+  "Docker",
+  "Spring Security",
+  "TypeORM",
+  "RabbitMQ",
+  "JPA",
+  "Domain-Driven Design",
+  "Node",
+  "TypeScript",
+  "Web",
   "microsserviços",
   "aplicações monolíticas",
   "SQL",
@@ -58,13 +69,14 @@ function highlightText(text, wordsToHighlight) {
   );
 }
 
-function getCurrentAge(birthYear = 2004, birthMonth = 6) {
+function getCurrentAge(birthYear = 2004, birthMonth = 6, birthDay = 29) {
   const today = new Date();
   const year = today.getFullYear();
   const month = today.getMonth() + 1;
+  const day = today.getDate();
 
   let age = year - birthYear;
-  if (month < birthMonth) {
+  if (month < birthMonth || (month === birthMonth && day < birthDay)) {
     age -= 1;
   }
 
@@ -132,6 +144,7 @@ export function AboutMeHome() {
 
   const languages = [
     { name: "TypeScript", color: "#306998", icon: typescript },
+    { name: "Java", color: "#b07219", icon: java },
     { name: "Python", color: "#306998", icon: python },
     { name: "React", color: "#0c1a1e", icon: react },
     { name: "Tailwind CSS", color: "#38b2ac", icon: tailwind },

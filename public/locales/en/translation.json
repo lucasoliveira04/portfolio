@@ -35,14 +35,15 @@
     "download": "Download"
   },
   "aboutMe": {
-    "intro": "I am {{age}} years old and currently in the {{semester}} of my Computer Science degree.",
+    "intro": "I am {{age}} years old and currently in the {{semester}} semester of my Computer Science degree.",
     "graduation": "My expected graduation date is December 2026.",
-    "work": "I am currently interning in software development, working with a variety of technologies.",
-    "focus": "My main focus is back-end development, with solid experience in frameworks such as Spring Boot and Flask.",
-    "skills": "Through academic and professional projects, I have also developed front-end skills in languages and frameworks like JavaScript, TypeScript and React.",
-    "moreSkills": "I have knowledge in microservices architecture, monolithic applications, SQL databases, and Firebase.",
+    "work": "I am currently interning in software development, working with React Native and Web using TypeScript, as well as Python for automation and desktop software development.",
+    "focus": "My main focus is back-end development, with experience in frameworks such as Spring Boot and Node, and basic knowledge of Domain-Driven Design (DDD).",
+    "skills": "Through academic and professional projects, I have also developed front-end skills in languages and frameworks such as JavaScript, TypeScript, and React.",
+    "moreSkills": "I have knowledge of software architecture principles such as SOLID, Clean Code, and Design Patterns, and experience with Docker, Spring Security, JPA, TypeORM, and basic RabbitMQ.",
     "learning": "I am committed to continuous learning, always looking for ways to improve and optimize my code and applications."
   },
+
   "feedback": {
     "leaveFeedback": "Leave your Feedback",
     "sendFeedback": "Send"
