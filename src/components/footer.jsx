@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import {useTranslation} from "react-i18next";
 
 export function FooterComponent() {
@@ -22,10 +22,12 @@ export function FooterComponent() {
 
         try {
             await emailjs.send(
-                "service_v53a9xf",
+                "service_0nnl9ci",
                 "template_086rl2e",
                 templateParams,
-                "epnuzJO_MARQZzQ44"
+                {
+                    publicKey: "epnuzJO_MARQZzQ44"
+                }
             );
 
             alert("Feedback enviado com sucesso!");
