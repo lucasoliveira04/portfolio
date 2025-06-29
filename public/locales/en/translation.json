@@ -18,6 +18,10 @@
       "title": "Software Development Internship - Planet Eco",
       "description": "Currently contributing to the maintenance and improvement of the company’s internal systems, developing new features and fixing bugs. I'm also learning to work with data analysis in Excel and Power BI, and I participate in client interactions to understand their needs and provide technical support."
     },
+    "restaurantePs": {
+      "title": "Restaurante Web",
+      "description": "Project for a restaurant menu management system, developed with React.js and Firebase, allowing users to view and manage the menu intuitively. The system includes features such as adding, editing, and deleting menu items, as well as a billing system after payment, and a user-friendly interface for administrators."
+    },
     "deckIfy": {
       "title": "DeckIfy",
       "description": "DeckIfy is a web platform focused on automating your studies by generating Anki FlashCards using AI. Developed with React.js and Python, it is 100% open source."
@@ -49,5 +53,7 @@
     "sendFeedback": "Send"
   },
   "writeHere": "Write Here",
-  "progressProjects": "In progress"
+  "progressProjects": "In progress",
+  "showMore": "Show More",
+  "showLess": "Show Less"
 }

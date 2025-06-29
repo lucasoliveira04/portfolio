@@ -18,6 +18,10 @@
       "title": "Estágio em Desenvolvimento de Software - Planet Eco",
       "description": "Atualmente, estou contribuindo para a manutenção e aprimoramento dos sistemas internos da empresa, desenvolvendo novas funcionalidades e corrigindo erros. Também estou aprendendo a trabalhar com análise de dados em Excel e Power BI, além de participar do contato com clientes para entender suas necessidades e oferecer suporte técnico."
     },
+    "restaurantePs": {
+      "title": "Restaurante Web",
+      "description": "Projeto de um sistema de gerenciamento de cardapio de restaurante, desenvolvido com React.js e Firebase, que permite aos usuários visualizar e gerenciar o cardápio de forma intuitiva. O sistema inclui funcionalidades como adição, edição e exclusão de itens do cardápio, também conta com um sistema de geração de NF após o pagamento, além de uma interface amigável para os administradores."
+    },
     "deckIfy": {
       "title": "DeckIfy",
       "description": "DeckIfy é uma plataforma Web que foca em automatizar seus estudos gerando FlashCards Anki com AI, desenvolvido com React.js e Python ele é 100% Open Source."
@@ -49,5 +53,7 @@
     "sendFeedback": "Enviar"
   },
   "writeHere": "Escreva Aqui",
-  "progressProjects": "Em Andamento"
+  "progressProjects": "Em Andamento",
+  "showMore": "Ver Mais",
+  "showLess": "Ver Menos"
 }
