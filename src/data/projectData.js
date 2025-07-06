@@ -19,7 +19,7 @@ import rabbitmq from "../assets/langs/RabbitMQ.png";
 import docker from "../assets/langs/docker.png";
 import flask from "../assets/langs/Flask.png";
 import postgresIcon from "../assets/langs/postgres.png";
-import springBootIcon from "../assets/langs/spring.png";
+import springBootIcon from "../assets/langs/Spring.png";
 import typescript from "../assets/langs/typescript.png";
 import javascript from "../assets/langs/js.png";
 import oracle from "../assets/langs/Oracle.png";
