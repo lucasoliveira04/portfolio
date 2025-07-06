@@ -15,14 +15,14 @@ import java from "../assets/langs/java.png";
 import sql from "../assets/langs/sql-server.png";
 import firebase from "../assets/langs/firebase.png";
 import redis from "../assets/langs/redis.png";
-import rabbitmq from "../assets/langs/rabbitmq.png";
+import rabbitmq from "../assets/langs/RabbitMQ.png";
 import docker from "../assets/langs/docker.png";
 import flask from "../assets/langs/flask.png";
 import postgresIcon from "../assets/langs/postgres.png";
 import springBootIcon from "../assets/langs/spring.png";
 import typescript from "../assets/langs/typescript.png";
 import javascript from "../assets/langs/javascript.png";
-import oracle from "../assets/langs/oracle.png";
+import oracle from "../assets/langs/Oracle.png";
 
 import article from "../assets/pdf/Artigo_Cientifico__O_impacto_da_pandemia_na_economia_da_Airbnb.pdf";
 
