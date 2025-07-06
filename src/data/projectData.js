@@ -9,7 +9,6 @@ import reactIcon from "../assets/langs/programing.png";
 import tailwindCss from "../assets/langs/Tailwind CSS.png";
 import python from "../assets/langs/python.png";
 import excel from "../assets/langs/excel.png";
-import powerBi from "../assets/langs/powerBi.png";
 import csharp from "../assets/langs/c-sharp.png";
 import unity from "../assets/langs/unity.png";
 import java from "../assets/langs/java.png";
