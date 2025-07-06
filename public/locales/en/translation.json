@@ -74,6 +74,8 @@
     "backend": "Backend",
     "fullstack": "Fullstack",
     "data": "Data Science",
-    "game": "Games"
+    "game": "Games",
+    "recent": "Recent",
+    "old": "Old"
   }
 }

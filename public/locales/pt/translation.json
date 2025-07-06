@@ -74,6 +74,8 @@
     "backend": "Backend",
     "fullstack": "Fullstack",
     "data": "Ciência de Dados",
-    "game": "Jogos"
+    "game": "Jogos",
+    "recent": "Recentes",
+    "old": "Antigos"
   }
 }

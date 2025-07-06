@@ -9,6 +9,7 @@ export function HomeProjects() {
   const { t } = useTranslation();
   const [showAll, setShowAll] = useState(false);
   const [selectedFilter, setSelectedFilter] = useState("all");
+  const [selectedFilterDate, setSelectedFilterDate] = useState("recent");
 
   useEffect(() => {
     ScrollReveal().reveal(".reveal-card", {
@@ -44,10 +45,41 @@ export function HomeProjects() {
     game: t("filters.game"),
   };
 
-  const filteredProjects =
+  function parseDateString(dateStr) {
+    const months = {
+      Jan: 0,
+      Fev: 1,
+      Mar: 2,
+      Abr: 3,
+      Abril: 3,
+      Maio: 4,
+      May: 4,
+      Jun: 5,
+      Jul: 6,
+      Ago: 7,
+      Set: 8,
+      Out: 9,
+      Nov: 10,
+      Dez: 11,
+    };
+
+    if (!dateStr) return new Date(0);
+    const [month, year] = dateStr.split(" ");
+    return new Date(parseInt(year), months[month] ?? 0);
+  }
+
+  // Filtro por categoria
+  const filteredByCategory =
     selectedFilter === "all"
       ? projects
       : projects.filter((project) => project.tags?.includes(selectedFilter));
+
+  // Ordenação por data
+  const filteredProjects = [...filteredByCategory].sort((a, b) => {
+    const dateA = parseDateString(a.startDate);
+    const dateB = parseDateString(b.startDate);
+    return selectedFilterDate === "old" ? dateA - dateB : dateB - dateA;
+  });
 
   const visibleProjects = showAll
     ? filteredProjects
@@ -55,22 +87,66 @@ export function HomeProjects() {
 
   return (
     <>
-      {/* Botões de filtro */}
-      <div className="bg-gradient-to-r from-white to-green-100 flex flex-wrap justify-center py-4">
-        {Object.keys(buttonsFilterObject).map((key) => (
-          <button
-            key={key}
-            className={`px-4 py-2 m-2 rounded-full shadow-md transition duration-200 ease-in-out
-              ${
-                selectedFilter === key
-                  ? "bg-green-800 text-white ring-2 ring-green-900"
-                  : "bg-green-600 text-white hover:bg-green-700"
-              }`}
-            onClick={() => setSelectedFilter(key)}
+      {/* Filtros */}
+      <div className="bg-gradient-to-r from-white to-green-100 flex flex-wrap justify-center gap-4 py-4">
+        {/* Filtro por categoria */}
+        <div className="relative inline-block w-48">
+          <select
+            value={selectedFilter}
+            onChange={(e) => setSelectedFilter(e.target.value)}
+            className="block appearance-none w-full bg-green-600 text-white font-semibold py-2 px-4 pr-8 rounded-none shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-900 transition duration-200 ease-in-out cursor-pointer"
           >
-            {buttonsFilterObject[key]}
-          </button>
-        ))}
+            {Object.entries(buttonsFilterObject).map(([key, label]) => (
+              <option key={key} value={key} className="text-white font-bold">
+                {label}
+              </option>
+            ))}
+          </select>
+          <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white">
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </div>
+        </div>
+
+        {/* Filtro por data */}
+        <div className="relative inline-block w-48">
+          <select
+            value={selectedFilterDate}
+            onChange={(e) => setSelectedFilterDate(e.target.value)}
+            className="block appearance-none w-full bg-green-600 text-white font-semibold py-2 px-4 pr-8 rounded-none shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-900 transition duration-200 ease-in-out cursor-pointer"
+          >
+            <option value="recent">
+              {t("filters.recent") || "Mais recentes"}
+            </option>
+            <option value="old">{t("filters.old") || "Mais antigos"}</option>
+          </select>
+          <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white">
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </div>
+        </div>
       </div>
 
       {/* Conteúdo principal */}
@@ -108,9 +184,7 @@ export function HomeProjects() {
                     <div className="text-sm text-gray-500 font-sigmarOne text-center md:text-right pr-0 md:pr-4">
                       <p className={project.endDate ? "" : "pl-12 pr-2"}>
                         {project.startDate} -{" "}
-                        {project.endDate
-                          ? project.endDate
-                          : t("progressProjects")}
+                        {project.endDate || t("progressProjects")}
                       </p>
                     </div>
                   )}
@@ -131,9 +205,7 @@ export function HomeProjects() {
                     <div className="text-sm text-gray-500 font-sigmarOne text-center md:text-right pr-0 md:pr-4">
                       <p className={project.endDate ? "" : "pl-14 pr-1"}>
                         {project.startDate} -{" "}
-                        {project.endDate
-                          ? project.endDate
-                          : t("progressProjects")}
+                        {project.endDate || t("progressProjects")}
                       </p>
                     </div>
                   )}
