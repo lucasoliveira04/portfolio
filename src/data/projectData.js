@@ -9,7 +9,6 @@ import reactIcon from "../assets/langs/programing.png";
 import tailwindCss from "../assets/langs/Tailwind CSS.png";
 import python from "../assets/langs/python.png";
 import excel from "../assets/langs/excel.png";
-import powerBi from "../assets/langs/powerBi.png";
 import csharp from "../assets/langs/c-sharp.png";
 import unity from "../assets/langs/unity.png";
 import java from "../assets/langs/java.png";
@@ -23,7 +22,7 @@ import postgresIcon from "../assets/langs/postgres.png";
 import springBootIcon from "../assets/langs/spring.png";
 import typescript from "../assets/langs/typescript.png";
 import javascript from "../assets/langs/javascript.png";
-import oracle from "../assets/langs/Oracle.png";
+import oracle from "../assets/langs/oracle.png";
 
 import article from "../assets/pdf/Artigo_Cientifico__O_impacto_da_pandemia_na_economia_da_Airbnb.pdf";
 
@@ -59,6 +58,8 @@ export function getProjects(t) {
         { name: "TypeScript", icon: typescript },
         { name: "React.js", icon: reactIcon },
         { name: "JavaScript", icon: javascript },
+        { name: "Docker", icon: docker },
+        { name: "RabbitMQ", icon: rabbitmq },
       ],
       startDate: "Maio 2025",
       endDate: "",
