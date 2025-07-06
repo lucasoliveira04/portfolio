@@ -55,5 +55,9 @@
   "writeHere": "Write Here",
   "progressProjects": "In progress",
   "showMore": "Show More",
-  "showLess": "Show Less"
+  "showLess": "Show Less",
+  "allProjects": "All Projects",
+  "frontendProjects": "Front End Projects",
+  "backendProjects": "Back End Projects",
+  "fullstackProjects": "Full Stack Projects"
 }

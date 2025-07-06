@@ -8,6 +8,7 @@ import { FloatingBubbles } from "./floating-bubbles.jsx";
 export function HomeProjects() {
   const { t } = useTranslation();
   const [showAll, setShowAll] = useState(false);
+  const [selectedFilter, setSelectedFilter] = useState("all");
 
   useEffect(() => {
     ScrollReveal().reveal(".reveal-card", {
@@ -35,80 +36,113 @@ export function HomeProjects() {
   const projects = getProjects(t);
   const visibleProjects = showAll ? projects : projects.slice(0, 3);
 
+  const buttonsFilterObject = {
+    all: t("allProjects"),
+    frontend: t("frontendProjects"),
+    backend: t("backendProjects"),
+    fullstack: t("fullstackProjects"),
+  };
+
   return (
-    <div
-      className="min-h-screen relative px-4 py-10 flex flex-col justify-center bg-gradient-to-r from-white to-green-100 overflow-hidden py-20"
-      id="experience"
-    >
-      <FloatingBubbles />
-
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[4px] h-full z-10 bg-white">
-        <div
-          id="scroll-line"
-          className="w-full bg-green-600 origin-top scale-y-0 transition-transform duration-200 ease-linear"
-          style={{ height: "120%" }}
-        />
-      </div>
-
-      <div className="flex flex-col space-y-32 w-full max-w-6xl mx-auto relative z-10">
-        {visibleProjects.map((project, index) => (
-          <div
-            key={index}
-            className="flex flex-col md:flex-row items-center w-full relative space-y-4 md:space-y-0"
-            style={{ minHeight: "120px" }}
+    <>
+      <div className="flex justify-center bg-gradient-to-r from-white to-green-100">
+        {Object.keys(buttonsFilterObject).map((button, key) => (
+          <button
+            key={button}
+            className={`px-4 py-2 m-2 rounded-full shadow-md transition 
+      ${
+        selectedFilter === key
+          ? "bg-green-800 text-white"
+          : "bg-green-600 text-white hover:bg-green-700"
+      }`}
+            onClick={() => {
+              setSelectedFilter(key);
+              console.log(`Filter projects by: ${button}`);
+            }}
           >
-            {/* Lado esquerdo */}
-            <div className="flex-1 flex justify-center md:justify-end pr-0 md:pr-6">
-              {project.side === "left" ? (
-                <div className="reveal-card w-full max-w-md">
-                  <CardProjects {...project} />
-                </div>
-              ) : (
-                <div className="text-sm text-gray-500 font-sigmarOne text-center md:text-right pr-0 md:pr-4">
-                  <p className={project.endDate ? "" : "pl-12 pr-2"}>
-                    {project.startDate}
-                    {" - "}
-                    {project.endDate ? project.endDate : t("progressProjects")}
-                  </p>
-                </div>
-              )}
-            </div>
-
-            <div className="w-[4px] relative flex justify-center my-2 md:my-0">
-              <div className="w-5 h-5 bg-green-600 rounded-full border-2 border-white absolute top-1/2 -translate-y-1/2" />
-            </div>
-
-            {/* Lado direito */}
-            <div className="flex-1 flex justify-center md:justify-start pl-0 md:pl-6">
-              {project.side === "right" ? (
-                <div className="reveal-card w-full max-w-md">
-                  <CardProjects {...project} />
-                </div>
-              ) : (
-                <div className="text-sm text-gray-500 font-sigmarOne text-center md:text-right pr-0 md:pr-4">
-                  <p className={project.endDate ? "" : "pl-14 pr-1"}>
-                    {project.startDate}
-                    {" - "}
-                    {project.endDate ? project.endDate : t("progressProjects")}
-                  </p>
-                </div>
-              )}
-            </div>
-          </div>
+            {buttonsFilterObject[button]}
+          </button>
         ))}
-
-        {/* Botão Ver Mais / Ver Menos */}
-        {projects.length > 3 && (
-          <div className="flex justify-center mt-8">
-            <button
-              className="px-6 py-2 bg-green-600 text-white rounded-full shadow-md hover:bg-green-700 transition"
-              onClick={() => setShowAll((prev) => !prev)}
-            >
-              {showAll ? t("showLess") : t("showMore")}
-            </button>
-          </div>
-        )}
       </div>
-    </div>
+
+      <div
+        className="min-h-screen relative px-4 flex flex-col justify-center bg-gradient-to-r from-white to-green-100 overflow-hidden py-20"
+        id="experience"
+      >
+        <FloatingBubbles />
+
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[4px] h-full z-10 bg-white">
+          <div
+            id="scroll-line"
+            className="w-full bg-green-600 origin-top scale-y-0 transition-transform duration-200 ease-linear"
+            style={{ height: "120%" }}
+          />
+        </div>
+
+        <div className="flex flex-col space-y-32 w-full max-w-6xl mx-auto relative z-10">
+          {visibleProjects.map((project, index) => (
+            <div
+              key={index}
+              className="flex flex-col md:flex-row items-center w-full relative space-y-4 md:space-y-0"
+              style={{ minHeight: "120px" }}
+            >
+              {/* Lado esquerdo */}
+              <div className="flex-1 flex justify-center md:justify-end pr-0 md:pr-6">
+                {project.side === "left" ? (
+                  <div className="reveal-card w-full max-w-md">
+                    <CardProjects {...project} />
+                  </div>
+                ) : (
+                  <div className="text-sm text-gray-500 font-sigmarOne text-center md:text-right pr-0 md:pr-4">
+                    <p className={project.endDate ? "" : "pl-12 pr-2"}>
+                      {project.startDate}
+                      {" - "}
+                      {project.endDate
+                        ? project.endDate
+                        : t("progressProjects")}
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              <div className="w-[4px] relative flex justify-center my-2 md:my-0">
+                <div className="w-5 h-5 bg-green-600 rounded-full border-2 border-white absolute top-1/2 -translate-y-1/2" />
+              </div>
+
+              {/* Lado direito */}
+              <div className="flex-1 flex justify-center md:justify-start pl-0 md:pl-6">
+                {project.side === "right" ? (
+                  <div className="reveal-card w-full max-w-md">
+                    <CardProjects {...project} />
+                  </div>
+                ) : (
+                  <div className="text-sm text-gray-500 font-sigmarOne text-center md:text-right pr-0 md:pr-4">
+                    <p className={project.endDate ? "" : "pl-14 pr-1"}>
+                      {project.startDate}
+                      {" - "}
+                      {project.endDate
+                        ? project.endDate
+                        : t("progressProjects")}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+
+          {/* Botão Ver Mais / Ver Menos */}
+          {projects.length > 3 && (
+            <div className="flex justify-center mt-8">
+              <button
+                className="px-6 py-2 bg-green-600 text-white rounded-full shadow-md hover:bg-green-700 transition"
+                onClick={() => setShowAll((prev) => !prev)}
+              >
+                {showAll ? t("showLess") : t("showMore")}
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    </>
   );
 }

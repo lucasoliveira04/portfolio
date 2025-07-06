@@ -55,5 +55,9 @@
   "writeHere": "Escreva Aqui",
   "progressProjects": "Em Andamento",
   "showMore": "Ver Mais",
-  "showLess": "Ver Menos"
+  "showLess": "Ver Menos",
+  "allProjects": "Todos os Projetos",
+  "frontendProjects": "Projetos Front End",
+  "backendProjects": "Projetos Back End",
+  "fullstackProjects": "Projetos Full Stack"
 }
