@@ -34,37 +34,46 @@ export function HomeProjects() {
   }, []);
 
   const projects = getProjects(t);
-  const visibleProjects = showAll ? projects : projects.slice(0, 3);
 
   const buttonsFilterObject = {
-    all: t("allProjects"),
-    frontend: t("frontendProjects"),
-    backend: t("backendProjects"),
-    fullstack: t("fullstackProjects"),
+    all: t("filters.all"),
+    frontend: t("filters.frontend"),
+    backend: t("filters.backend"),
+    fullstack: t("filters.fullstack"),
+    data: t("filters.data"),
+    game: t("filters.game"),
   };
+
+  const filteredProjects =
+    selectedFilter === "all"
+      ? projects
+      : projects.filter((project) => project.tags?.includes(selectedFilter));
+
+  const visibleProjects = showAll
+    ? filteredProjects
+    : filteredProjects.slice(0, 3);
 
   return (
     <>
-      <div className="flex justify-center bg-gradient-to-r from-white to-green-100">
-        {Object.keys(buttonsFilterObject).map((button, key) => (
+      {/* Botões de filtro */}
+      <div className="bg-gradient-to-r from-white to-green-100 flex flex-wrap justify-center py-4">
+        {Object.keys(buttonsFilterObject).map((key) => (
           <button
-            key={button}
-            className={`px-4 py-2 m-2 rounded-full shadow-md transition 
-      ${
-        selectedFilter === key
-          ? "bg-green-800 text-white"
-          : "bg-green-600 text-white hover:bg-green-700"
-      }`}
-            onClick={() => {
-              setSelectedFilter(key);
-              console.log(`Filter projects by: ${button}`);
-            }}
+            key={key}
+            className={`px-4 py-2 m-2 rounded-full shadow-md transition duration-200 ease-in-out
+              ${
+                selectedFilter === key
+                  ? "bg-green-800 text-white ring-2 ring-green-900"
+                  : "bg-green-600 text-white hover:bg-green-700"
+              }`}
+            onClick={() => setSelectedFilter(key)}
           >
-            {buttonsFilterObject[button]}
+            {buttonsFilterObject[key]}
           </button>
         ))}
       </div>
 
+      {/* Conteúdo principal */}
       <div
         className="min-h-screen relative px-4 flex flex-col justify-center bg-gradient-to-r from-white to-green-100 overflow-hidden py-20"
         id="experience"
@@ -80,58 +89,61 @@ export function HomeProjects() {
         </div>
 
         <div className="flex flex-col space-y-32 w-full max-w-6xl mx-auto relative z-10">
-          {visibleProjects.map((project, index) => (
-            <div
-              key={index}
-              className="flex flex-col md:flex-row items-center w-full relative space-y-4 md:space-y-0"
-              style={{ minHeight: "120px" }}
-            >
-              {/* Lado esquerdo */}
-              <div className="flex-1 flex justify-center md:justify-end pr-0 md:pr-6">
-                {project.side === "left" ? (
-                  <div className="reveal-card w-full max-w-md">
-                    <CardProjects {...project} />
-                  </div>
-                ) : (
-                  <div className="text-sm text-gray-500 font-sigmarOne text-center md:text-right pr-0 md:pr-4">
-                    <p className={project.endDate ? "" : "pl-12 pr-2"}>
-                      {project.startDate}
-                      {" - "}
-                      {project.endDate
-                        ? project.endDate
-                        : t("progressProjects")}
-                    </p>
-                  </div>
-                )}
-              </div>
+          {visibleProjects.map((project, index) => {
+            const isLeft = index % 2 === 0;
 
-              <div className="w-[4px] relative flex justify-center my-2 md:my-0">
-                <div className="w-5 h-5 bg-green-600 rounded-full border-2 border-white absolute top-1/2 -translate-y-1/2" />
-              </div>
+            return (
+              <div
+                key={index}
+                className="flex flex-col md:flex-row items-center w-full relative space-y-4 md:space-y-0"
+                style={{ minHeight: "120px" }}
+              >
+                {/* Lado esquerdo */}
+                <div className="flex-1 flex justify-center md:justify-end pr-0 md:pr-6">
+                  {isLeft ? (
+                    <div className="reveal-card w-full max-w-md">
+                      <CardProjects {...project} />
+                    </div>
+                  ) : (
+                    <div className="text-sm text-gray-500 font-sigmarOne text-center md:text-right pr-0 md:pr-4">
+                      <p className={project.endDate ? "" : "pl-12 pr-2"}>
+                        {project.startDate} -{" "}
+                        {project.endDate
+                          ? project.endDate
+                          : t("progressProjects")}
+                      </p>
+                    </div>
+                  )}
+                </div>
 
-              {/* Lado direito */}
-              <div className="flex-1 flex justify-center md:justify-start pl-0 md:pl-6">
-                {project.side === "right" ? (
-                  <div className="reveal-card w-full max-w-md">
-                    <CardProjects {...project} />
-                  </div>
-                ) : (
-                  <div className="text-sm text-gray-500 font-sigmarOne text-center md:text-right pr-0 md:pr-4">
-                    <p className={project.endDate ? "" : "pl-14 pr-1"}>
-                      {project.startDate}
-                      {" - "}
-                      {project.endDate
-                        ? project.endDate
-                        : t("progressProjects")}
-                    </p>
-                  </div>
-                )}
+                {/* Linha central */}
+                <div className="w-[4px] relative flex justify-center my-2 md:my-0">
+                  <div className="w-5 h-5 bg-green-600 rounded-full border-2 border-white absolute top-1/2 -translate-y-1/2" />
+                </div>
+
+                {/* Lado direito */}
+                <div className="flex-1 flex justify-center md:justify-start pl-0 md:pl-6">
+                  {!isLeft ? (
+                    <div className="reveal-card w-full max-w-md">
+                      <CardProjects {...project} />
+                    </div>
+                  ) : (
+                    <div className="text-sm text-gray-500 font-sigmarOne text-center md:text-right pr-0 md:pr-4">
+                      <p className={project.endDate ? "" : "pl-14 pr-1"}>
+                        {project.startDate} -{" "}
+                        {project.endDate
+                          ? project.endDate
+                          : t("progressProjects")}
+                      </p>
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
 
           {/* Botão Ver Mais / Ver Menos */}
-          {projects.length > 3 && (
+          {filteredProjects.length > 3 && (
             <div className="flex justify-center mt-8">
               <button
                 className="px-6 py-2 bg-green-600 text-white rounded-full shadow-md hover:bg-green-700 transition"
