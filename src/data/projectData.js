@@ -59,6 +59,8 @@ export function getProjects(t) {
         { name: "TypeScript", icon: typescript },
         { name: "React.js", icon: reactIcon },
         { name: "JavaScript", icon: javascript },
+        { name: "Docker", icon: docker },
+        { name: "RabbitMQ", icon: rabbitmq },
       ],
       startDate: "Maio 2025",
       endDate: "",
