@@ -16,7 +16,7 @@
     },
     "estagioPlanetEco": {
       "title": "Estágio em Desenvolvimento de Software - Planet Eco",
-      "description": "Atualmente, estou contribuindo para a manutenção e aprimoramento dos sistemas internos da empresa, desenvolvendo novas funcionalidades e corrigindo erros. Também estou aprendendo a trabalhar com análise de dados em Excel e Power BI, além de participar do contato com clientes para entender suas necessidades e oferecer suporte técnico."
+      "description": "Atuo no desenvolvimento de microserviços em Flask com comunicação via Redis, criando APIs REST para automação e integração de sistemas. Também desenvolvo interfaces web responsivas com React e TypeScript, automatizo coleta e processamento de dados em planilhas e arquivos XLSX/CSV, além de manter sistemas desktop em Python. Participo do contato com clientes para entender requisitos e entregar soluções técnicas alinhadas às necessidades."
     },
     "restaurantePs": {
       "title": "Restaurante Web",
@@ -29,6 +29,18 @@
     "chatBotAI": {
       "title": "ChatBot AI",
       "description": "Implementação de um chatbot inteligente em JavaScript, projetado para oferecer conversas realistas e interativas. Utiliza inteligência artificial para interpretar entradas do usuário e responder de forma dinâmica."
+    },
+    "ankiConvertAPI": {
+      "title": "Anki Convert API",
+      "description": "API que converte conjuntos de flashcards em arquivos .apkg compatíveis com o Anki, facilitando a criação de materiais de estudo usando o método de repetição espaçada."
+    },
+    "authJWTAPI": {
+      "title": "API de Autenticação com JWT",
+      "description": "Microserviço de autenticação que utiliza JWT e PostgreSQL para login seguro e escalável. A API está hospedada na Render junto com o banco de dados, permitindo fácil integração em aplicações modernas."
+    },
+    "processImageAPI": {
+      "title": "API de Processamento de Imagens",
+      "description": "Microserviço desenvolvido com Flask para redimensionamento de imagens de forma assíncrona. Utiliza Redis para cache, RabbitMQ para mensageria e PIL para processamento. A aplicação está containerizada com Docker Compose, permitindo fácil deploy e escalabilidade. Conta com dois endpoints: um para envio da imagem e redimensionamento, e outro para consulta dos metadados armazenados."
     },
     "artigoCientifico": {
       "title": "Artigo Ciêntífico",
@@ -55,5 +67,15 @@
   "writeHere": "Escreva Aqui",
   "progressProjects": "Em Andamento",
   "showMore": "Ver Mais",
-  "showLess": "Ver Menos"
+  "showLess": "Ver Menos",
+  "filters": {
+    "all": "Todos",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "fullstack": "Fullstack",
+    "data": "Ciência de Dados",
+    "game": "Jogos",
+    "recent": "Recentes",
+    "old": "Antigos"
+  }
 }

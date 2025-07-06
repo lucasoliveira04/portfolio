@@ -16,7 +16,7 @@
     },
     "estagioPlanetEco": {
       "title": "Software Development Internship - Planet Eco",
-      "description": "Currently contributing to the maintenance and improvement of the company’s internal systems, developing new features and fixing bugs. I'm also learning to work with data analysis in Excel and Power BI, and I participate in client interactions to understand their needs and provide technical support."
+      "description": "I am currently working on developing microservices in Flask with Redis communication, creating REST APIs for automation and system integration. I also develop responsive web interfaces using React and TypeScript, automate data collection and processing in spreadsheets and XLSX/CSV files, and maintain desktop systems in Python. Additionally, I participate in client interactions to understand requirements and deliver technical solutions aligned with their needs."
     },
     "restaurantePs": {
       "title": "Restaurante Web",
@@ -29,6 +29,18 @@
     "chatBotAI": {
       "title": "ChatBot AI",
       "description": "Implementation of an intelligent chatbot in JavaScript, designed to deliver realistic and interactive conversations. It uses artificial intelligence to interpret user inputs and respond dynamically."
+    },
+    "ankiConvertAPI": {
+      "title": "Anki Convert API",
+      "description": "API that converts sets of flashcards into .apkg files compatible with Anki, facilitating the creation of study materials using spaced repetition."
+    },
+    "processImageAPI": {
+      "title": "Image Processing API",
+      "description": "Microservice developed with Flask for asynchronous image resizing. It uses Redis for caching, RabbitMQ for messaging, and PIL for processing. The application is containerized with Docker Compose, allowing easy deployment and scalability. It has two endpoints: one for sending the image and resizing it, and another for querying the stored metadata."
+    },
+    "authJWTAPI": {
+      "title": "Auth JWT API",
+      "description": "Authentication microservice that uses JWT and PostgreSQL for secure and scalable login. The API is hosted on Render along with the database, allowing easy integration into modern applications."
     },
     "artigoCientifico": {
       "title": "Scientific Article",
@@ -55,5 +67,15 @@
   "writeHere": "Write Here",
   "progressProjects": "In progress",
   "showMore": "Show More",
-  "showLess": "Show Less"
+  "showLess": "Show Less",
+  "filters": {
+    "all": "All",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "fullstack": "Fullstack",
+    "data": "Data Science",
+    "game": "Games",
+    "recent": "Recent",
+    "old": "Old"
+  }
 }
