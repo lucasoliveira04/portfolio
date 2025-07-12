@@ -41,7 +41,6 @@ export function HomeProjects() {
     frontend: t("filters.frontend"),
     backend: t("filters.backend"),
     fullstack: t("filters.fullstack"),
-    data: t("filters.data"),
     game: t("filters.game"),
   };
 
