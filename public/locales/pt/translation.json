@@ -62,7 +62,8 @@
 
   "feedback": {
     "leaveFeedback": "Deixe seu Feedback",
-    "sendFeedback": "Enviar"
+    "sendFeedback": "Enviar",
+    "youContactFeedback": "Deixe seu contato (Opcional)"
   },
   "writeHere": "Escreva Aqui",
   "progressProjects": "Em Andamento",
