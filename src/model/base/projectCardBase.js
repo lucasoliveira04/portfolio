@@ -1,4 +1,4 @@
-export class ProjectCardBase {
+export class Project {
   constructor(
     viewProject,
     title,

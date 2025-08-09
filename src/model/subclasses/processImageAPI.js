@@ -1,5 +1,3 @@
-import { ProjectCardBase } from "../base/projectCardBase";
-
 import python from "../../assets/langs/python.png";
 import flask from "../../assets/langs/Flask.png";
 import redis from "../../assets/langs/redis.png";
@@ -7,11 +5,12 @@ import docker from "../../assets/langs/docker.png";
 import rabbitmq from "../../assets/langs/RabbitMQ.png";
 
 import estagio from "../../assets/projects/estagio.png";
+import { Project } from "../base/projectCardBase";
 
-export class ProcessImageApi extends ProjectCardBase {
+export class ProcessImageApi extends Project {
   constructor(t) {
     super(
-      true,
+      false,
       t("projectsAndExperiences.processImageAPI.title"),
       t("projectsAndExperiences.processImageAPI.description"),
       [
