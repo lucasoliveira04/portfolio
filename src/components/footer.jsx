@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
-import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
 import { FormattedMensagemBodyEmail } from "../util/formattedBodyFeedbackEmail";
 
 export function FooterComponent() {
   const { t } = useTranslation();
   const [feedback, setFeedback] = useState("");
-  const [contatoFeedback, setContatoFeedback] = useState("")
+  const [contatoFeedback, setContatoFeedback] = useState("");
 
   async function handleSubmit() {
+    setFeedback("");
+    setContatoFeedback("");
     const urlApi = `https://api-send-email-spring.onrender.com/api/v1/sendMessage`;
     try {
       const response = await fetch(urlApi, {
@@ -22,16 +23,16 @@ export function FooterComponent() {
           subject: "Feedback do portfolio",
           body: FormattedMensagemBodyEmail(feedback, contatoFeedback),
         }),
-      })
+      });
 
-      if (response.ok){
-        console.log("Email enviado com sucesso")
+      if (response.ok) {
+        console.log("Email enviado com sucesso");
       }
 
-      const result = await response.json()
-      setFeedback("")
+      const result = await response.json();
+      setFeedback("");
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
 
@@ -42,19 +43,24 @@ export function FooterComponent() {
           <label htmlFor="feedback" className="mb-2 font-semibold text-lg">
             {t("feedback.leaveFeedback")}
           </label>
-          <input type="text" 
-              placeholder="Deixe seu contato (Opcional)" 
-              value={contatoFeedback} 
+          <div className="flex flex-col gap-3">
+            <input
+              type="text"
+              placeholder={t("feedback.youContactFeedback")}
+              value={contatoFeedback}
               onChange={(e) => setContatoFeedback(e.target.value)}
+              className="p-2 text-black"
             />
-          <textarea
-            id="feedback"
-            rows={4}
-            placeholder={t("writeHere")}
-            value={feedback}
-            onChange={(e) => setFeedback(e.target.value)}
-            className="w-full p-3 rounded-md border border-green-400 text-black focus:outline-none focus:ring-2 focus:ring-green-400 resize-none"
-          />
+            <textarea
+              id="feedback"
+              rows={4}
+              placeholder={t("writeHere")}
+              value={feedback}
+              onChange={(e) => setFeedback(e.target.value)}
+              className="w-full p-3 rounded-md border border-green-400 text-black focus:outline-none focus:ring-2 focus:ring-green-400 resize-none"
+            />
+          </div>
+
           <button
             type="button"
             onClick={handleSubmit}
