@@ -36,6 +36,11 @@ export function HomeProjects() {
 
   const projects = getProjects(t);
 
+  // Filtra apenas projetos visíveis
+  const visibleOnly = projects.filter(
+    (project) => project.viewProject !== false
+  );
+
   const buttonsFilterObject = {
     all: t("filters.all"),
     frontend: t("filters.frontend"),
@@ -70,8 +75,8 @@ export function HomeProjects() {
   // Filtro por categoria
   const filteredByCategory =
     selectedFilter === "all"
-      ? projects
-      : projects.filter((project) => project.tags?.includes(selectedFilter));
+      ? visibleOnly
+      : visibleOnly.filter((project) => project.tags?.includes(selectedFilter));
 
   // Ordenação por data
   const filteredProjects = [...filteredByCategory].sort((a, b) => {
@@ -80,6 +85,7 @@ export function HomeProjects() {
     return selectedFilterDate === "old" ? dateA - dateB : dateB - dateA;
   });
 
+  // Limite inicial (mostrar mais/menos)
   const visibleProjects = showAll
     ? filteredProjects
     : filteredProjects.slice(0, 3);
