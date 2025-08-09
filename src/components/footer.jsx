@@ -2,38 +2,36 @@ import { useState } from "react";
 import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
+import { FormattedMensagemBodyEmail } from "../util/formattedBodyFeedbackEmail";
 
 export function FooterComponent() {
   const { t } = useTranslation();
   const [feedback, setFeedback] = useState("");
+  const [contatoFeedback, setContatoFeedback] = useState("")
 
   async function handleSubmit() {
-    if (feedback.trim() === "") {
-      alert("Por favor, escreva seu feedback antes de enviar.");
-      return;
-    }
-
-    const templateParams = {
-      message: feedback,
-      from_name: "Lucas Oliveira",
-      reply_to: "lucasolisocialmedia@gmail.com",
-      subject: "Feedback from Portfolio",
-    };
-
+    const urlApi = `https://api-send-email-spring.onrender.com/api/v1/sendMessage`;
     try {
-      await emailjs.send(
-        "service_0nnl9ci",
-        "template_086rl2e",
-        templateParams,
-        {
-          publicKey: "epnuzJO_MARQZzQ44",
-        }
-      );
+      const response = await fetch(urlApi, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fromEmail: "camposdlucasoli@gmail.com",
+          subject: "Feedback do portfolio",
+          body: FormattedMensagemBodyEmail(feedback, contatoFeedback),
+        }),
+      })
 
-      alert("Feedback enviado com sucesso!");
-      setFeedback("");
+      if (response.ok){
+        console.log("Email enviado com sucesso")
+      }
+
+      const result = await response.json()
+      setFeedback("")
     } catch (error) {
-      console.error("Erro ao enviar feedback:", error);
+      console.log(error)
     }
   }
 
@@ -44,6 +42,11 @@ export function FooterComponent() {
           <label htmlFor="feedback" className="mb-2 font-semibold text-lg">
             {t("feedback.leaveFeedback")}
           </label>
+          <input type="text" 
+              placeholder="Deixe seu contato (Opcional)" 
+              value={contatoFeedback} 
+              onChange={(e) => setContatoFeedback(e.target.value)}
+            />
           <textarea
             id="feedback"
             rows={4}
