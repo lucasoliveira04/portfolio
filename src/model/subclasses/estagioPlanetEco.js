@@ -1,12 +1,13 @@
 import { Project } from "../base/projectCardBase";
 
-import typescript from "../../assets/langs/typescript.png";
-import excel from "../../assets/langs/excel.png";
 import python from "../../assets/langs/python.png";
-import oracleSql from "../../assets/langs/Oracle.png";
-import tailwindcss from "../../assets/langs/Tailwind CSS.png";
-import docker from "../../assets/langs/docker.png";
+import react from "../../assets/langs/programing.png";
 import flask from "../../assets/langs/Flask.png";
+import typescript from "../../assets/langs/typescript.png";
+import redis from "../../assets/langs/redis.png";
+import oracle from "../../assets/langs/Oracle.png";
+
+import estagio from "../../assets/projects/estagio.png";
 
 export class EstagioPlanetEco extends Project {
   constructor(t) {
@@ -16,8 +17,11 @@ export class EstagioPlanetEco extends Project {
       t("projectsAndExperiences.estagioPlanetEco.description"),
       [
         { name: "React", icon: react },
-        { name: "Node.js", icon: node },
-        { name: "MongoDB", icon: mongodb },
+        { name: "Typescript", icon: typescript },
+        { name: "Redis", icon: redis },
+        { name: "Flask", icon: flask },
+        { name: "Python", icon: python },
+        { name: "Oracle", icon: oracle }
       ],
       "Github",
       "https://github.com/lucasoliveira04/estagio-planet-eco.git",
@@ -25,7 +29,7 @@ export class EstagioPlanetEco extends Project {
       null,
       "Jun 2025",
       [estagio],
-      ["fullstack"]
+      ["fullstack, xpProfissional, estagio"],
     );
   }
 }
