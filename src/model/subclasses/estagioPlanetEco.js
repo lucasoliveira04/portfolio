@@ -10,8 +10,9 @@ import oracle from "../../assets/langs/Oracle.png";
 import estagio from "../../assets/projects/estagio.png";
 
 export class EstagioPlanetEco extends Project {
-  constructor(t) {
+  constructor(t, position) {
     super(
+      position,
       true,
       t("projectsAndExperiences.estagioPlanetEco.title"),
       t("projectsAndExperiences.estagioPlanetEco.description"),
@@ -23,13 +24,14 @@ export class EstagioPlanetEco extends Project {
         { name: "Python", icon: python },
         { name: "Oracle", icon: oracle }
       ],
-      "Github",
-      "https://github.com/lucasoliveira04/estagio-planet-eco.git",
+      false,
+      false,
       null,
       null,
-      "Jun 2025",
+      "Abril 2025",
+      "Jul 2025",
       [estagio],
-      ["fullstack, xpProfissional, estagio"],
+      ["frontend", "backend", "fullstack"],
     );
   }
 }

@@ -18,6 +18,10 @@
       "title": "Estágio em Desenvolvimento de Software - Planet Eco",
       "description": "Atuo no desenvolvimento de microserviços em Flask com comunicação via Redis, criando APIs REST para automação e integração de sistemas. Também desenvolvo interfaces web responsivas com React e TypeScript, automatizo coleta e processamento de dados em planilhas e arquivos XLSX/CSV, além de manter sistemas desktop em Python. Participo do contato com clientes para entender requisitos e entregar soluções técnicas alinhadas às necessidades."
     },
+    "desenvolvedorJrJavaSmit": {
+      "title": "Desenvolvedor Java Jr - Smit",
+      "description": "Atuo como desenvolvedor Java Jr, contribuindo para o desenvolvimento de aplicações backend utilizando Java e Spring."
+    },
     "restaurantePs": {
       "title": "Restaurante Web",
       "description": "Projeto de um sistema de gerenciamento de cardapio de restaurante, desenvolvido com React.js e Firebase, que permite aos usuários visualizar e gerenciar o cardápio de forma intuitiva. O sistema inclui funcionalidades como adição, edição e exclusão de itens do cardápio, também conta com um sistema de geração de NF após o pagamento, além de uma interface amigável para os administradores."
@@ -66,7 +70,7 @@
     "youContactFeedback": "Deixe seu contato (Opcional)"
   },
   "writeHere": "Escreva Aqui",
-  "progressProjects": "Em Andamento",
+  "progressProjects": "Atual",
   "showMore": "Ver Mais",
   "showLess": "Ver Menos",
   "filters": {

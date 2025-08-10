@@ -85,10 +85,15 @@ export function HomeProjects() {
     return selectedFilterDate === "old" ? dateA - dateB : dateB - dateA;
   });
 
+  // Ordenar por posição
+  const sortedProjects = [...filteredProjects].sort((a, b) => {
+    return a.positionProject - b.positionProject;
+  });
+
   // Limite inicial (mostrar mais/menos)
   const visibleProjects = showAll
-    ? filteredProjects
-    : filteredProjects.slice(0, 3);
+    ? sortedProjects
+    : sortedProjects.slice(0, 3);
 
   return (
     <>
@@ -132,9 +137,9 @@ export function HomeProjects() {
             className="block appearance-none w-full bg-green-600 text-white font-semibold py-2 px-4 pr-8 rounded-none shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-900 transition duration-200 ease-in-out cursor-pointer"
           >
             <option value="recent">
-              {t("filters.recent") || "Mais recentes"}
+              {t("filters.recent")}
             </option>
-            <option value="old">{t("filters.old") || "Mais antigos"}</option>
+            <option value="old">{t("filters.old")}</option>
           </select>
           <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white">
             <svg

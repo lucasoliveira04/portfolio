@@ -18,6 +18,10 @@
       "title": "Software Development Internship - Planet Eco",
       "description": "I am currently working on developing microservices in Flask with Redis communication, creating REST APIs for automation and system integration. I also develop responsive web interfaces using React and TypeScript, automate data collection and processing in spreadsheets and XLSX/CSV files, and maintain desktop systems in Python. Additionally, I participate in client interactions to understand requirements and deliver technical solutions aligned with their needs."
     },
+    "desenvolvedorJrJavaSmit": {
+      "title": "Junior Java Developer - Smit",
+      "description": "I work as a Junior Java Developer, contributing to the development of backend applications using Java and Spring."
+    },
     "restaurantePs": {
       "title": "Restaurante Web",
       "description": "Project for a restaurant menu management system, developed with React.js and Firebase, allowing users to view and manage the menu intuitively. The system includes features such as adding, editing, and deleting menu items, as well as a billing system after payment, and a user-friendly interface for administrators."
@@ -66,7 +70,7 @@
     "youContactFeedback": "Leave yout contact (Optional)"
   },
   "writeHere": "Write Here",
-  "progressProjects": "In progress",
+  "progressProjects": "Now",
   "showMore": "Show More",
   "showLess": "Show Less",
   "filters": {

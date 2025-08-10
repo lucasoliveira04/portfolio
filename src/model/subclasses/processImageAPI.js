@@ -8,9 +8,10 @@ import estagio from "../../assets/projects/estagio.png";
 import { Project } from "../base/projectCardBase";
 
 export class ProcessImageApi extends Project {
-  constructor(t) {
+  constructor(t, position) {
     super(
-      false,
+      position,
+      true,
       t("projectsAndExperiences.processImageAPI.title"),
       t("projectsAndExperiences.processImageAPI.description"),
       [
@@ -25,6 +26,7 @@ export class ProcessImageApi extends Project {
       null,
       null,
       "Jun 2025",
+      "Jul 2025",
       [estagio],
       ["backend"]
     );
