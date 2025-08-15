@@ -1,8 +1,8 @@
-import { Deckify } from "../model/subclasses/deckify";
-import { DesenvolvedorJrJava } from "../model/subclasses/desenvolvedorJrJava";
-import { EstagioPlanetEco } from "../model/subclasses/estagioPlanetEco";
-import { NossoMarSalveOsPatinhos } from "../model/subclasses/nossoMarSalveOsPatinhos";
-import { ProcessImageApi } from "../model/subclasses/processImageAPI";
+import { Deckify } from "../model/projects/subclasses/deckify";
+import { DesenvolvedorJrJava } from "../model/projects/subclasses/desenvolvedorJrJava";
+import { EstagioPlanetEco } from "../model/projects/subclasses/estagioPlanetEco";
+import { NossoMarSalveOsPatinhos } from "../model/projects/subclasses/nossoMarSalveOsPatinhos";
+import { ProcessImageApi } from "../model/projects/subclasses/processImageAPI";
 
 export function getProjects(t) {
   const projects = [

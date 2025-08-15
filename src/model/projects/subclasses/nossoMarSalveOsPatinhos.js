@@ -1,9 +1,9 @@
 import { Project } from "../base/projectCardBase";
 
-import csharp from "../../assets/langs/c-sharp.png";
-import unity from "../../assets/langs/unity.png";
+import csharp from "../../../assets/langs/c-sharp.png";
+import unity from "../../../assets/langs/unity.png";
 
-import nossoMarSalveOsPatinhosLogo from "../../assets/projects/NossoMarSalveOsPatinhos.jpg";
+import nossoMarSalveOsPatinhosLogo from "../../../assets/projects/NossoMarSalveOsPatinhos.jpg";
 
 export class NossoMarSalveOsPatinhos extends Project {
   constructor(t, position) {

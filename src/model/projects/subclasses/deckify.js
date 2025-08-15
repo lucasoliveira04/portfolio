@@ -1,13 +1,13 @@
 import { Project } from "../base/projectCardBase";
 
-import python from "../../assets/langs/python.png";
-import react from "../../assets/langs/programing.png";
-import flask from "../../assets/langs/Flask.png";
-import javascript from "../../assets/langs/js.png";
-import docker from "../../assets/langs/docker.png";
-import tailwindcss from "../../assets/langs/Tailwind CSS.png";
+import python from "../../../assets/langs/python.png";
+import react from "../../../assets/langs/programing.png";
+import flask from "../../../assets/langs/Flask.png";
+import javascript from "../../../assets/langs/js.png";
+import docker from "../../../assets/langs/docker.png";
+import tailwindcss from "../../../assets/langs/Tailwind CSS.png";
 
-import deckify from "../../assets/projects/deckIfy.png"
+import deckify from "../../../assets/projects/deckIfy.png"
 
 export class Deckify extends Project {
   constructor(t, position) {

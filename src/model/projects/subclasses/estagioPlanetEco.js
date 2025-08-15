@@ -1,13 +1,13 @@
 import { Project } from "../base/projectCardBase";
 
-import python from "../../assets/langs/python.png";
-import react from "../../assets/langs/programing.png";
-import flask from "../../assets/langs/Flask.png";
-import typescript from "../../assets/langs/typescript.png";
-import redis from "../../assets/langs/redis.png";
-import oracle from "../../assets/langs/Oracle.png";
+import python from "../../../assets/langs/python.png";
+import react from "../../../assets/langs/programing.png";
+import flask from "../../../assets/langs/Flask.png";
+import typescript from "../../../assets/langs/typescript.png";
+import redis from "../../../assets/langs/redis.png";
+import oracle from "../../../assets/langs/Oracle.png";
 
-import estagio from "../../assets/projects/estagio.png";
+import estagio from "../../../assets/projects/estagio.png";
 
 export class EstagioPlanetEco extends Project {
   constructor(t, position) {
