@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import { FormattedMensagemBodyEmail } from "../util/formattedBodyFeedbackEmail";
 
 export function FooterComponent() {
   const { t } = useTranslation();
@@ -11,7 +10,7 @@ export function FooterComponent() {
   async function handleSubmit() {
     setFeedback("");
     setContatoFeedback("");
-    const urlApi = `https://api-send-email-spring.onrender.com/api/v1/sendMessage`;
+    const urlApi = `https://api-send-email-spring.onrender.com/api/v2/sendMessage`;
     try {
       const response = await fetch(urlApi, {
         method: "POST",
@@ -19,9 +18,8 @@ export function FooterComponent() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          fromEmail: "camposdlucasoli@gmail.com",
-          subject: "Feedback do portfolio",
-          body: FormattedMensagemBodyEmail(feedback, contatoFeedback),
+          fromEmail: contatoFeedback,
+          subject: feedback,
         }),
       });
 
@@ -35,6 +33,9 @@ export function FooterComponent() {
       console.log(error);
     }
   }
+
+  console.log(feedback);
+  console.log(contatoFeedback);
 
   return (
     <footer className="bg-green-700 text-white py-10 px-6" id="contact">
