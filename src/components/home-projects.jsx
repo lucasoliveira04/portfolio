@@ -91,16 +91,15 @@ export function HomeProjects() {
   });
 
   // Limite inicial (mostrar mais/menos)
-  const visibleProjects = showAll
-    ? sortedProjects
-    : sortedProjects.slice(0, 3);
+  const visibleProjects = showAll ? sortedProjects : sortedProjects.slice(0, 3);
 
   return (
     <>
       {/* Filtros */}
       <div className="bg-gradient-to-r from-white to-green-100 flex flex-wrap justify-center gap-4 py-4">
         {/* Filtro por categoria */}
-        <div className="relative inline-block w-48">
+
+        {/* <div className="relative inline-block w-48">
           <select
             value={selectedFilter}
             onChange={(e) => setSelectedFilter(e.target.value)}
@@ -127,10 +126,10 @@ export function HomeProjects() {
               />
             </svg>
           </div>
-        </div>
+        </div> */}
 
         {/* Filtro por data */}
-        <div className="relative inline-block w-48">
+        {/* <div className="relative inline-block w-48">
           <select
             value={selectedFilterDate}
             onChange={(e) => setSelectedFilterDate(e.target.value)}
@@ -156,7 +155,7 @@ export function HomeProjects() {
               />
             </svg>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Conteúdo principal */}

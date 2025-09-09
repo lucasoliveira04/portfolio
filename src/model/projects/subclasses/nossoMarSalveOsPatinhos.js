@@ -14,16 +14,16 @@ export class NossoMarSalveOsPatinhos extends Project {
       t("projectsAndExperiences.nossoMarSalveOsPatos.description"),
       [
         { name: "CSharp", icon: csharp },
-        { name: "Unity", icon: unity }
+        { name: "Unity", icon: unity },
       ],
       "Github",
       "https://github.com/MTGrupo/SOP-SalveOsPatinhos.git",
-      "https://mtgroup.itch.io/nosso-mar-salve-os-patinhos",
-      t("projectsAndExperiences.visit"),
+      "https://play.google.com/store/apps/details?id=com.mtgroup.sop&pcampaignid=web_share",
+      t("Play Store"),
       "Jul 2024",
       "Dez 2024",
       [nossoMarSalveOsPatinhosLogo],
-      ["game"],
+      ["game"]
     );
   }
 }
