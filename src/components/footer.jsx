@@ -34,9 +34,6 @@ export function FooterComponent() {
     }
   }
 
-  console.log(feedback);
-  console.log(contatoFeedback);
-
   return (
     <footer className="bg-green-700 text-white py-10 px-6" id="contact">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
