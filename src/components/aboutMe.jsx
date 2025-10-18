@@ -3,13 +3,17 @@ import { useState } from "react";
 
 import eu from "../assets/iam/Eu.png";
 import python from "../assets/langs/python.png";
-import react from "../assets/langs/programing.png";
-import tailwind from "../assets/langs/Tailwind CSS.png";
 import sql from "../assets/langs/sql-server.png";
-import typescript from "../assets/langs/typescript.png";
 import java from "../assets/langs/java.png";
+import spring from "../assets/langs/Spring.png"
+import junit from "../assets/langs/JUnit.png"
+import docker from "../assets/langs/docker.png"
+import grafana from "../assets/langs/Grafana.png"
+import typescript from "../assets/langs/typescript.png"
 import { WaterButton } from "./watter-button.jsx";
 import { color } from "framer-motion";
+import { icons } from "lucide-react";
+
 
 const highlightWords = [
   "20 anos",
@@ -31,9 +35,9 @@ const highlightWords = [
   "RabbitMQ",
   "JPA",
   "Domain-Driven Design",
-  "Node",
   "TypeScript",
   "Web",
+  "Node.js",
   "microsserviços",
   "aplicações monolíticas",
   "SQL",
@@ -143,13 +147,15 @@ export function AboutMeHome() {
   };
 
   const languages = [
-    { name: "TypeScript", color: "#306998", icon: typescript },
-    { name: "Java", color: "#b07219", icon: java },
-    { name: "Python", color: "#306998", icon: python },
-    { name: "React", color: "#0c1a1e", icon: react },
-    { name: "Tailwind CSS", color: "#38b2ac", icon: tailwind },
-    { name: "SQL", color: "#cc2927", icon: sql },
-  ];
+  { name: "Java", color: "#b07219", icon: java },        
+  { name: "Spring", color: "#6DB33F", icon: spring },    
+  { name: "Python", color: "#3776AB", icon: python }, 
+  { name: "TypeScript", color: "#0284e7ff", icon: typescript},  
+  { name: "SQL", color: "#CC2927", icon: sql },          
+  { name: "JUnit", color: "#25A162", icon: junit },      
+  { name: "Docker", color: "#2496ED", icon: docker },    
+  { name: "Grafana", color: "#F46800", icon: grafana }   
+];
 
   return (
     <div
@@ -177,11 +183,12 @@ export function AboutMeHome() {
           ))}
         </p>
 
-        <div className="flex flex-wrap gap-4 justify-center mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 justify-items-center mt-6">
           {languages.map(({ name, color, icon }) => (
             <WaterButton key={name} name={name} color={color} icon={icon} />
           ))}
         </div>
+
       </div>
     </div>
   );

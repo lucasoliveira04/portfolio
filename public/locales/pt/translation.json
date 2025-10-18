@@ -15,8 +15,8 @@
       "description": "Jogo desenvolvido de forma autonoma na Unity com C# utilizando a Unity, neste projeto atuei programando e liderando o projeto, objetivo do jogo é conscientizar as pessoas a não poluir o meio ambiente"
     },
     "estagioPlanetEco": {
-      "title": "Estágio em Desenvolvimento de Software - Planet Eco",
-      "description": "Atuo no desenvolvimento de microserviços em Flask com comunicação via Redis, criando APIs REST para automação e integração de sistemas. Também desenvolvo interfaces web responsivas com React e TypeScript, automatizo coleta e processamento de dados em planilhas e arquivos XLSX/CSV, além de manter sistemas desktop em Python. Participo do contato com clientes para entender requisitos e entregar soluções técnicas alinhadas às necessidades."
+      "title": "Desenvolvedor Full Stack - Planet Eco",
+      "description": "Atuei no desenvolvimento de microserviços em Flask com comunicação via Redis, criando APIs REST para automação e integração de sistemas. Também desenvolvo interfaces web responsivas com React e TypeScript, automatizo coleta e processamento de dados em planilhas e arquivos XLSX/CSV, além de manter sistemas desktop em Python. Participo do contato com clientes para entender requisitos e entregar soluções técnicas alinhadas às necessidades."
     },
     "desenvolvedorJrJavaSmit": {
       "title": "Desenvolvedor Java Jr - Smit",
@@ -55,15 +55,14 @@
     "download": "Baixar"
   },
   "aboutMe": {
-    "intro": "Tenho {{age}} anos e estou no {{semester}} semestre da faculdade de Ciência da Computação.",
-    "graduation": "Minha previsão de formação é para dezembro de 2026.",
-    "work": "Atualmente, estou estagiando na área de desenvolvimento de software, atuando com React Native e Web usando TypeScript, além de Python para automação e desenvolvimento de software desktop.",
-    "focus": "Meu foco principal é desenvolvimento back-end, com experiência em frameworks como Spring Boot e Node, além de conhecimento básico em Domain-Driven Design (DDD).",
-    "skills": "Ao longo de projetos acadêmicos e profissionais, também desenvolvi habilidades em linguagens e frameworks front-end como JavaScript, TypeScript e React.",
-    "moreSkills": "Possuo conhecimentos em princípios de arquitetura de software como SOLID, Clean Code, Design Patterns, e experiência com Docker, Spring Security, JPA, TypeORM e RabbitMQ básico.",
-    "learning": "Sou comprometido com o aprendizado contínuo, sempre buscando formas de aprimorar e otimizar meus códigos e aplicações."
-  },
-
+  "intro": "Tenho {{age}} anos e estou no {{semester}} semestre da faculdade de Ciência da Computação.",
+  "graduation": "Minha previsão de formação é para dezembro de 2026.",
+  "work": "Atualmente, atuo como desenvolvedor de software com experiência em Java, Spring e SQL, além de Node.js (Express), React e Python.",
+  "focus": "Meu foco principal é desenvolvimento back-end, contribuindo também em decisões de arquitetura e qualidade de código.",
+  "skills": "No dia a dia, trabalho com Java, Spring e testes automatizados usando JUnit e Mockito.",
+  "moreSkills": "Tenho conhecimentos em princípios de arquitetura como SOLID, Clean Code, Design Patterns e experiência com Docker, Spring Security, JPA, TypeORM e RabbitMQ.",
+  "learning": "Estou em constante aprendizado, especialmente em Cloud Computing e boas práticas de desenvolvimento."
+},
   "feedback": {
     "leaveFeedback": "Deixe seu Feedback",
     "sendFeedback": "Enviar",

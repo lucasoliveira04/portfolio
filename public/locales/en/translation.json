@@ -15,7 +15,7 @@
       "description": "Game developed independently in Unity with C#. In this project, I worked as the lead developer and project manager. The game's objective is to raise awareness about environmental pollution."
     },
     "estagioPlanetEco": {
-      "title": "Software Development Internship - Planet Eco",
+      "title": "Full Stack Developer - Planet Eco",
       "description": "I am currently working on developing microservices in Flask with Redis communication, creating REST APIs for automation and system integration. I also develop responsive web interfaces using React and TypeScript, automate data collection and processing in spreadsheets and XLSX/CSV files, and maintain desktop systems in Python. Additionally, I participate in client interactions to understand requirements and deliver technical solutions aligned with their needs."
     },
     "desenvolvedorJrJavaSmit": {
@@ -55,14 +55,15 @@
     "download": "Download"
   },
   "aboutMe": {
-    "intro": "I am {{age}} years old and currently in the {{semester}} semester of my Computer Science degree.",
-    "graduation": "My expected graduation date is December 2026.",
-    "work": "I am currently interning in software development, working with React Native and Web using TypeScript, as well as Python for automation and desktop software development.",
-    "focus": "My main focus is back-end development, with experience in frameworks such as Spring Boot and Node, and basic knowledge of Domain-Driven Design (DDD).",
-    "skills": "Through academic and professional projects, I have also developed front-end skills in languages and frameworks such as JavaScript, TypeScript, and React.",
-    "moreSkills": "I have knowledge of software architecture principles such as SOLID, Clean Code, and Design Patterns, and experience with Docker, Spring Security, JPA, TypeORM, and basic RabbitMQ.",
-    "learning": "I am committed to continuous learning, always looking for ways to improve and optimize my code and applications."
-  },
+  "intro": "I am {{age}} years old and currently in the {{semester}} semester of my Computer Science degree.",
+  "graduation": "I am expected to graduate in December 2026.",
+  "work": "I work as a software developer with experience in Java, Spring, and SQL, as well as Node.js (Express), React, and Python.",
+  "focus": "My main focus is back-end development, also contributing to architecture decisions and code quality.",
+  "skills": "In my daily work, I use GitHub Actions and write automated tests with JUnit and Mockito.",
+  "moreSkills": "I have knowledge of software architecture principles such as SOLID, Clean Code, and Design Patterns, along with experience in Docker, Spring Security, JPA, TypeORM, and RabbitMQ.",
+  "learning": "I am committed to continuous learning, especially in Cloud Computing and software development best practices."
+},
+
 
   "feedback": {
     "leaveFeedback": "Leave your Feedback",

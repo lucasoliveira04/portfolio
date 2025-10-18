@@ -9,7 +9,7 @@ export function getProjects(t) {
     new DesenvolvedorJrJava(t, 1),
     new EstagioPlanetEco(t, 2),
     new NossoMarSalveOsPatinhos(t, 3),
-    new ProcessImageApi(t, 4),
+    // new ProcessImageApi(t, 4),
     new Deckify(t, 5)
   ]
 
