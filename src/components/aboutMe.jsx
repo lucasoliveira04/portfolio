@@ -183,7 +183,7 @@ export function AboutMeHome() {
           ))}
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 justify-items-center mt-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 justify-items-center mt-6">
           {languages.map(({ name, color, icon }) => (
             <WaterButton key={name} name={name} color={color} icon={icon} />
           ))}
