@@ -3,7 +3,7 @@ import { Project } from "../base/projectCardBase";
 import java from "../../../assets/langs/java.png";
 import spring from "../../../assets/langs/Spring.png";
 
-import estagio from "../../../assets/projects/estagio.png";
+import javacapa from "../../../assets/projects/capajava.png";
 
 export class DesenvolvedorJrJava extends Project {
   constructor(t, position) {
@@ -22,7 +22,7 @@ export class DesenvolvedorJrJava extends Project {
       null,
       "Jul 2025",
       false,
-      [estagio],
+      [javacapa],
       ["backend"],
     );
   }
