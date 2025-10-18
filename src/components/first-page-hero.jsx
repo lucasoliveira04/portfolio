@@ -6,13 +6,25 @@ import {
     FaFile, FaEnvelope,
 } from "react-icons/fa";
 import photoIam from "../assets/iam/iAm.png";
-import curriculo from "../assets/pdf/Curriculo_Lucas_Oliveira.pdf"
+
+import curriculoPt from "../assets/pdf/Curriculo_Lucas_Oliveira.pdf";
+import curriculoEn from "../assets/pdf/Curriculum_Lucas_Oliveira.pdf";
 
 import {useTranslation} from "react-i18next";
 import {Typewriter} from "../util/Typewriter.jsx";
 import {ScrollArrow} from "./scroll-arrow.jsx";
+import i18next from "i18next";
 
-const socialLinks = [
+
+
+export const HomePage = () => {
+  const { t } = useTranslation();
+
+  const currentLang = i18next.language
+
+  const curriculoUrl = currentLang.startsWith("pt") ? curriculoPt : curriculoEn
+
+  const socialLinks = [
     {
         name: "GitHub",
         url: "https://github.com/lucasoliveira04",
@@ -40,13 +52,10 @@ const socialLinks = [
     },
     {
         name: "Currículo",
-        url: curriculo,
+        url: curriculoUrl,
         icon: <FaFile />,
     },
 ];
-
-export const HomePage = () => {
-  const { t } = useTranslation();
 
   return (
     <>
