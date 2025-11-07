@@ -1,13 +1,11 @@
-
 import './App.css'
-import {AppRoutes} from "./route/index.jsx";
-import './i18n.js'
+import {AppRouters} from "./router/app.routers.jsx";
 
 function App() {
 
   return (
     <>
-        <AppRoutes/>
+        <AppRouters/>
     </>
   )
 }
