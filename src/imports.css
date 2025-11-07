@@ -1,12 +1,14 @@
-/* Importa o Tailwind */
-@import "tailwindcss";
-
 /* Importa as fontes do Google */
 @import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+
+/* Importa o Tailwind */
+@import "tailwindcss";
 
 /* Define as variáveis do tema */
 @theme {
     --font-momo: "Momo Trust Display", sans-serif;
     --font-open-sans: "Open Sans", sans-serif;
+    --font-oswald: "Oswald", sans-serif;
 }
