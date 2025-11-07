@@ -1,0 +1,12 @@
+{
+  "header": {
+    "subtitle": "Full Stack Developer",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "projects": "Projects",
+      "contact": "Contact"
+    }
+  }
+}

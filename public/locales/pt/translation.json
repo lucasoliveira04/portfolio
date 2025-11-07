@@ -1,0 +1,12 @@
+{
+  "header": {
+    "subtitle": "Desenvolvedor Full Stack",
+    "nav": {
+      "home": "Início",
+      "about": "Sobre",
+      "services": "Serviços",
+      "projects": "Projetos",
+      "contact": "Contato"
+    }
+  }
+}
