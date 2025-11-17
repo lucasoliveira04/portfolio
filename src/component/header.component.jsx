@@ -1,10 +1,33 @@
 import { Component } from "react";
 import { handleNavigate } from "../global/navigate.js";
 import { LanguageSelect } from "./language-select.component.jsx";
-import {Home, User, Briefcase, Mail, Settings} from "lucide-react";
+import { Home, User, Briefcase, Mail, Settings } from "lucide-react";
 
 export default class HeaderComponent extends Component {
+    state = {
+        showHome: false,
+    };
+
+    componentDidMount() {
+        window.addEventListener("scroll", this.handleScroll);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.handleScroll);
+    }
+
+    handleScroll = () => {
+        const scrollY = window.scrollY;
+        this.setState({ showHome: scrollY > 100 });
+    };
+
     render() {
+        const { showHome } = this.state;
+
+        const filteredNav = this.props.nav?.filter(
+            (nav) => nav.icon !== "home" || showHome
+        );
+
         return (
             <header
                 style={{
@@ -12,6 +35,7 @@ export default class HeaderComponent extends Component {
                 }}
                 className="w-full flex flex-wrap md:flex-nowrap items-center justify-between px-6 py-3 shadow-lg sticky top-0 z-30"
             >
+                {/* Título */}
                 <section
                     onClick={() => handleNavigate("/")}
                     className="flex items-center gap-2 cursor-pointer select-none"
@@ -32,9 +56,9 @@ export default class HeaderComponent extends Component {
                     </div>
                 </section>
 
-                {/* Navegação */}
+                {/* Navegação desktop */}
                 <nav className="hidden md:flex gap-8 items-center">
-                    {this.props.nav?.map((nav, i) => (
+                    {filteredNav?.map((nav, i) => (
                         <button
                             key={i}
                             onClick={() => handleNavigate(nav.path)}
@@ -56,9 +80,9 @@ export default class HeaderComponent extends Component {
                     <LanguageSelect />
                 </div>
 
-                {/* Navegação responsiva */}
+                {/* Navegação mobile */}
                 <div className="flex md:hidden mt-3 w-full justify-around text-white">
-                    {this.props.nav?.map((nav, i) => (
+                    {filteredNav?.map((nav, i) => (
                         <button
                             key={i}
                             onClick={() => handleNavigate(nav.path)}
