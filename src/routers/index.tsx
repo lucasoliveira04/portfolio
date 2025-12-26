@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { HomePage } from "../pages/home";
 
-const LanguageWrapper = ({ children }) => {
+const LanguageWrapper = ({ children }: { children: React.ReactNode }) => {
     const { lang } = useParams();
     const { i18n } = useTranslation();
 
