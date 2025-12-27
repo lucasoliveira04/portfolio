@@ -1,6 +1,14 @@
 {
     "header": {
         "title": "Welcome to my portfolio",
+
+        "navigation": {
+            "home": "Home",
+            "about": "About",
+            "projects": "Projects",
+            "contact": "Contact"
+        },
+
         "change_language": {
             "en": "English",
             "pt": "Portuguese",

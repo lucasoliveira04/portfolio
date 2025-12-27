@@ -2,6 +2,13 @@
     "header": {
         "title": "Bem-vindo ao meu portfólio",
 
+        "navigation": {
+            "home": "Início",
+            "about": "Sobre",
+            "projects": "Projetos",
+            "contact": "Contato"
+        },
+
         "change_language": {
             "en": "Inglês",
             "pt": "Português",

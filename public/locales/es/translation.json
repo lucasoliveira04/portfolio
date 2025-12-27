@@ -1,6 +1,14 @@
 {
     "header": {
         "title": "Bienvenido a mi portafolio",
+
+        "navigation": {
+            "home": "Inicio",
+            "about": "Acerca de",
+            "projects": "Proyectos",
+            "contact": "Contacto"
+        },
+
         "change_language": {
             "en": "Inglés",
             "pt": "Portugués",
