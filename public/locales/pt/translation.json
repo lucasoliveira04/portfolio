@@ -1,5 +1,11 @@
 {
     "header": {
-        "title": "Bem-vindo ao meu portfólio"
+        "title": "Bem-vindo ao meu portfólio",
+
+        "change_language": {
+            "en": "Inglês",
+            "pt": "Português",
+            "es": "Espanhol"
+        }
     }
 }

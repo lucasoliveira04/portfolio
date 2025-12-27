@@ -1,0 +1,10 @@
+{
+    "header": {
+        "title": "Bienvenido a mi portafolio",
+        "change_language": {
+            "en": "Inglés",
+            "pt": "Portugués",
+            "es": "Español"
+        }
+    }
+}

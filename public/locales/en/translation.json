@@ -1,5 +1,10 @@
 {
     "header": {
-        "title": "Welcome to my portfolio"
+        "title": "Welcome to my portfolio",
+        "change_language": {
+            "en": "English",
+            "pt": "Portuguese",
+            "es": "Spanish"
+        }
     }
 }

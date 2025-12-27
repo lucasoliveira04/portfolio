@@ -8,10 +8,10 @@ export const HeaderComponent = () => {
 
     return (
         <>
+        
             <ToggleChangeLanguage
                 lang={lang!}
                 toggleLanguage={toggleLanguage}
             />
         </>
-    )
-}
+    ) }
