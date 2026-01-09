@@ -1,0 +1,58 @@
+name: Update npm dependencies
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-deps:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install deps
+        run: npm install
+
+      - name: Audit fix
+        run: npm audit fix || true
+
+      - name: Generate PR description
+        run: |
+            echo "## 🔄 Dependency updates" > pr-body.md
+            echo "" >> pr-body.md
+
+            OUTDATED=$(npm outdated --json || true)
+
+            if [ "$OUTDATED" = "{}" ] || [ -z "$OUTDATED" ]; then
+            echo "✅ All dependencies are up to date." >> pr-body.md
+            echo "" >> pr-body.md
+            echo "_This PR was created because security fixes or lockfile updates were applied._" >> pr-body.md
+            else
+            echo "The following dependencies were updated:" >> pr-body.md
+            echo "" >> pr-body.md
+            npm outdated >> pr-body.md || true
+            fi
+
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: "chore: update npm dependencies"
+          body-path: pr-body.md
+          branch: "chore/npm-deps-update"
+          delete-branch: true
+          commit-message: "chore: update npm dependencies"
+          base: main
