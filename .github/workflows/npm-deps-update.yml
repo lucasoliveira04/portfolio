@@ -31,9 +31,21 @@ jobs:
 
       - name: Generate PR description
         run: |
-          echo "## 🔄 Dependency updates" > pr-body.md
-          echo "" >> pr-body.md
-          npm outdated || true >> pr-body.md
+            echo "## 🔄 Dependency updates" > pr-body.md
+            echo "" >> pr-body.md
+
+            OUTDATED=$(npm outdated --json || true)
+
+            if [ "$OUTDATED" = "{}" ] || [ -z "$OUTDATED" ]; then
+            echo "✅ All dependencies are up to date." >> pr-body.md
+            echo "" >> pr-body.md
+            echo "_This PR was created because security fixes or lockfile updates were applied._" >> pr-body.md
+            else
+            echo "The following dependencies were updated:" >> pr-body.md
+            echo "" >> pr-body.md
+            npm outdated >> pr-body.md || true
+            fi
+
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
