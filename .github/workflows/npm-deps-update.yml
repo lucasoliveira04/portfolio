@@ -61,5 +61,6 @@ jobs:
             delete-branch: true
             commit-message: "chore: update npm dependencies"
             skip-no-changes: true
+            base: "main"
 
         
