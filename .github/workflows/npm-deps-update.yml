@@ -1,12 +1,10 @@
 name: Update npm dependencies
 
 on:
-  push:
-    branches:
-      - test-workflow
+  push: # para teste
+  workflow_dispatch:
   schedule:
     - cron: "0 3 * * 1"
-  workflow_dispatch:
 
 permissions:
   contents: write
@@ -17,54 +15,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "npm"
 
-      - name: Install dependencies
+      - name: Install deps
         run: npm install
 
-      - name: Run npm audit fix
+      - name: Audit fix
         run: npm audit fix || true
 
       - name: Generate PR description
         run: |
-          echo "## Automated dependency update" > pr-body.md
+          echo "## 🔄 Dependency updates" > pr-body.md
           echo "" >> pr-body.md
-          echo "This PR updates npm dependencies to address known security vulnerabilities." >> pr-body.md
-          echo "" >> pr-body.md
-          echo "### package.json changes" >> pr-body.md
-          git diff -- package.json >> pr-body.md || true
-          echo "" >> pr-body.md
-          echo "### package-lock.json" >> pr-body.md
-          echo "Lockfile updated automatically by npm audit fix." >> pr-body.md
-          echo "" >> pr-body.md
-          echo "### Checklist" >> pr-body.md
-          echo "- [ ] Application runs correctly" >> pr-body.md
-          echo "- [ ] Routes and navigation tested" >> pr-body.md
-          echo "- [ ] Build passes" >> pr-body.md
-
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add package.json package-lock.json
-          git commit -m "chore: update npm dependencies" || exit 0
+          npm outdated || true >> pr-body.md
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
-            title: "chore: update npm dependencies"
-            body-path: pr-body.md
-            branch: "chore/npm-deps-update"
-            delete-branch: true
-            commit-message: "chore: update npm dependencies"
-            skip-no-changes: true
-            base: "main"
-
-        
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: "chore: update npm dependencies"
+          body-path: pr-body.md
+          branch: "chore/npm-deps-update"
+          delete-branch: true
+          commit-message: "chore: update npm dependencies"
+          base: main
