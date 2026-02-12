@@ -1,54 +1,46 @@
 {
   "name": "portfolio",
-  "private": true,
-  "version": "1.0.0",
-  "type": "module",
+  "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
   },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "angular"
+        }
+      }
+    ]
+  },
+  "private": true,
+  "packageManager": "npm@11.8.0",
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
-    "@fortawesome/free-solid-svg-icons": "^6.7.2",
-    "@fortawesome/react-fontawesome": "^0.2.2",
-    "@heroicons/react": "^2.2.0",
-    "framer-motion": "^12.12.2",
-    "i18next": "^25.2.0",
-    "i18next-browser-languagedetector": "^8.1.0",
-    "i18next-http-backend": "^3.0.2",
-    "lucide-react": "^0.475.0",
-    "particles-bg": "^2.5.5",
-    "react": "^19.0.0",
-    "react-canvas-nest": "^1.1.1",
-    "react-dom": "^19.0.0",
-    "react-helmet": "^6.1.0",
-    "react-i18next": "^15.5.2",
-    "react-icons": "^5.5.0",
-    "react-router": "^7.1.5",
-    "react-router-dom": "^7.1.5",
-    "react-scroll": "^1.9.2",
-    "react-slick": "^0.30.3",
-    "react-transition-group": "^4.4.5",
-    "react-tsparticles": "^2.12.2",
-    "react-world-flags": "^1.6.0",
-    "scrollreveal": "^4.0.9",
-    "slick-carousel": "^1.8.1",
-    "swiper": "^11.2.4",
-    "tsparticles-preset-links": "^2.12.0"
+    "@angular/common": "^21.1.0",
+    "@angular/compiler": "^21.1.0",
+    "@angular/core": "^21.1.0",
+    "@angular/forms": "^21.1.0",
+    "@angular/platform-browser": "^21.1.0",
+    "@angular/router": "^21.1.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
-    "@vitejs/plugin-react": "^4.3.4",
-    "autoprefixer": "^10.4.20",
-    "eslint": "^9.20.1",
-    "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
-    "postcss": "^8.5.2",
-    "tailwindcss": "^3.4.17",
-    "vite": "^6.1.0"
+    "@angular/build": "^21.1.4",
+    "@angular/cli": "^21.1.4",
+    "@angular/compiler-cli": "^21.1.0",
+    "@tailwindcss/postcss": "^4.1.12",
+    "jsdom": "^27.1.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.12",
+    "typescript": "~5.9.2",
+    "vitest": "^4.0.8"
   }
 }
