@@ -1,9 +1,18 @@
-<header>
+<header
+  class="w-full h-14 bg-gradient-to-r from-green-200 to-white flex items-center justify-center"
+>
   <nav>
-    <ul>
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/about">About</a></li>
-      <li><a routerLink="/projects">Projects</a></li>
+    <ul class="flex gap-6 text-2xl px-4">
+      @for (item of navItems; track item.id) {
+        <li>
+          <a
+            [routerLink]="item.path"
+            class="font-[--font-text-header] font-bold text-gray-900 hover:text-green-700 transition-colors duration-300"
+          >
+            {{ item.label }}
+          </a>
+        </li>
+      }
     </ul>
   </nav>
 </header>

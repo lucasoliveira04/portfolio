@@ -1,0 +1,55 @@
+<main class="w-full h-screen bg-linear-to-b from-blue-100 to-white relative">
+  @if (showHeader) {
+    <app-header></app-header>
+  }
+
+  <div class="flex">
+    <div class="flex flex-col items-center justify-center w-[50%]">
+      <h1 class="text-4xl font-bold">Desenvolvedor Back End</h1>
+
+      <div class="flex justify-center gap-2">
+        <a
+          [href]="linkedlnUrl"
+          target="_blank"
+          class="text-blue-700 hover:scale-110 transition-transform duration-200 text-2xl"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+
+        <a
+          [href]="githubUrl"
+          target="_blank"
+          class="text-gray-800 hover:scale-110 transition-transform duration-200 text-2xl"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+
+        <a
+          [href]="emailUrl"
+          target="_blank"
+          class="text-red-600 hover:scale-110 transition-transform duration-200 text-2xl"
+        >
+          <i class="fas fa-envelope"></i>
+        </a>
+
+        <a
+          [href]="curriculoUrl"
+          target="_self"
+          class="text-red-600 hover:scale-110 transition-transform duration-200 text-2xl"
+        >
+          <i class="fas fa-file-alt"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="flex w-[50%] h-screen items-center justify-center">
+      <img
+        [src]="image.src"
+        [style.width]="image.width"
+        [style.height]="image.height"
+        [attr.alt]="image.alt"
+        class="rounded-full border-4 border-white shadow-lg object-cover"
+      />
+    </div>
+  </div>
+</main>

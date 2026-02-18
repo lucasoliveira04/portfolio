@@ -1,9 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import 'tailwindcss';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
 
 :root {
   --color-primary: #2b818c;
   --color-secondary: #ffc026;
   --color-background: #ffffff;
+}
+
+@theme {
+  --font-text-header: 'Libre Baskerville', serif;
 }

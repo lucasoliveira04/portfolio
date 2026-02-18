@@ -6,6 +6,13 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './header.html',
-  styleUrl: './header.css',
+  styleUrls: ['./header.css', '../../../styles.css'],
 })
-export class Header {}
+export class Header {
+  navItems = [
+    { id: 1, label: 'Home', path: '/' },
+    { id: 2, label: 'Sobre', path: '/about' },
+    { id: 3, label: 'Projetos', path: '/projects' },
+    { id: 4, label: 'Contato', path: '/contact' },
+  ];
+}
