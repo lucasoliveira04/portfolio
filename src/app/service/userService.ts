@@ -1,11 +1,7 @@
 import { Injectable } from '@angular/core';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../config/firebase';
-
-interface User {
-  id: string;
-  [key: string]: any;
-}
+import { User } from '../model/user.model';
 
 @Injectable({
   providedIn: 'root',

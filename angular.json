@@ -8,6 +8,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "portfolio": {
+      "i18n": {
+        "sourceLocale": "pt-BR",
+        "locales": {
+          "en-US": "src/locale/messages.en.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -25,9 +31,13 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.css"]
+            "styles": ["src/styles.css"],
+            "polyfills": ["@angular/localize/init"]
           },
           "configurations": {
+            "en-US": {
+              "localize": ["en-US"]
+            },
             "production": {
               "budgets": [
                 {
@@ -59,6 +69,9 @@
             },
             "development": {
               "buildTarget": "portfolio:build:development"
+            },
+            "en-US": {
+              "buildTarget": "portfolio:build:en-US"
             }
           },
           "defaultConfiguration": "development"

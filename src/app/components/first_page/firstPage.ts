@@ -1,6 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EnvironmentInjector, OnInit } from '@angular/core';
 import { Header } from '../header/header';
 import { UserService } from '../../service/userService';
+
+interface SocialLinks {
+  linkedln: string;
+  github: string;
+  email: string;
+  curriculo: string;
+}
+
+interface User {
+  social: SocialLinks;
+}
 
 @Component({
   selector: 'first-page',
@@ -10,7 +21,7 @@ import { UserService } from '../../service/userService';
   styleUrls: ['./firstPage.css', '../../../styles.css'],
 })
 export class FirstPage implements OnInit {
-  users: any[] = [];
+  users: User[] = [];
 
   constructor(private userService: UserService) {}
 
@@ -23,11 +34,11 @@ export class FirstPage implements OnInit {
     this.users = await this.userService.getUserCollection();
 
     if (this.users.length > 0) {
-      this.linkedlnUrl = this.users[0].social[0];
-      this.githubUrl = this.users[0].social[1];
-      this.emailUrl = this.users[0].social[2];
-      this.curriculoUrl =
-        'https://github.com/lucasoliveira04/portfolio/releases/download/v2.0.0/curriculo.pdf';
+      const user = this.users[0];
+      this.linkedlnUrl = user.social.linkedln;
+      this.githubUrl = user.social.github;
+      this.emailUrl = user.social.email;
+      this.curriculoUrl = user.social.curriculo;
     }
   }
 
