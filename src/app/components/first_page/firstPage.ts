@@ -1,4 +1,4 @@
-import { Component, EnvironmentInjector, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Header } from '../header/header';
 import { UserService } from '../../service/userService';
 
@@ -10,7 +10,7 @@ interface SocialLinks {
 }
 
 interface User {
-  social: SocialLinks;
+  social: string[];
 }
 
 @Component({
@@ -30,22 +30,42 @@ export class FirstPage implements OnInit {
   emailUrl: string = '';
   curriculoUrl: string = '';
 
-  async ngOnInit() {
-    this.users = await this.userService.getUserCollection();
-
-    if (this.users.length > 0) {
-      const user = this.users[0];
-      this.linkedlnUrl = user.social.linkedln;
-      this.githubUrl = user.social.github;
-      this.emailUrl = user.social.email;
-      this.curriculoUrl = user.social.curriculo;
-    }
+  ngOnInit() {
+    this.loadUsers();
   }
 
-  imgPerfil = 'img/eu/eu.png';
+  async loadUsers() {
+    try {
+      this.users = await this.userService.getUserCollection();
+
+      if (this.users.length > 0) {
+        const social = this.users[0].social;
+
+        this.linkedlnUrl = social[0];
+        this.githubUrl = social[1];
+        this.emailUrl = social[2];
+      }
+    } catch (error) {
+      console.error(error);
+    }
+
+    console.log(this.linkedlnUrl);
+    console.log(this.githubUrl);
+    console.log(this.emailUrl);
+  }
+
   imgWidth = '550px';
   imgHeight = '550px';
   imgAlt = 'Imagem de perfil';
+
+  imgPerfilCartoon = 'img/eu/eu_cartoon.png';
+  imgPerfil = 'img/eu/eu_pessoa_real.png';
+
+  isFlipped = false;
+
+  toggleImage() {
+    this.isFlipped = !this.isFlipped;
+  }
 
   imageConfig = [
     {
@@ -58,7 +78,7 @@ export class FirstPage implements OnInit {
 
   image = this.imageConfig[0];
 
-  showHeader = false;
+  showHeader = true;
 
   toggleHeader() {
     this.showHeader = !this.showHeader;

@@ -12,9 +12,13 @@ export class UserService {
   async getUserCollection(): Promise<User[]> {
     const querySnapshot = await getDocs(collection(db, this.nameCollection));
 
-    return querySnapshot.docs.map((doc) => ({
-      id: doc.id,
-      ...doc.data(),
-    })) as User[];
+    return querySnapshot.docs.map((doc) => {
+      const data = doc.data() as Omit<User, 'id'>;
+
+      return {
+        id: doc.id,
+        ...data,
+      };
+    });
   }
 }
