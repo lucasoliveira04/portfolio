@@ -8,10 +8,10 @@ Package                            Current   Wanted   Latest  Location          
 @types/react                        19.0.8  19.2.14  19.2.14  node_modules/@types/react                       portfolio
 @types/react-dom                    19.0.3   19.2.3   19.2.3  node_modules/@types/react-dom                   portfolio
 @vitejs/plugin-react                 4.3.4    4.7.0    5.1.4  node_modules/@vitejs/plugin-react               portfolio
-autoprefixer                       10.4.20  10.4.24  10.4.24  node_modules/autoprefixer                       portfolio
-eslint                              9.39.3   9.39.3   10.0.1  node_modules/eslint                             portfolio
+autoprefixer                       10.4.20  10.4.27  10.4.27  node_modules/autoprefixer                       portfolio
+eslint                              9.39.3   9.39.3   10.0.2  node_modules/eslint                             portfolio
 eslint-plugin-react-hooks            5.1.0    5.2.0    7.0.1  node_modules/eslint-plugin-react-hooks          portfolio
-eslint-plugin-react-refresh         0.4.19   0.4.26    0.5.0  node_modules/eslint-plugin-react-refresh        portfolio
+eslint-plugin-react-refresh         0.4.19   0.4.26    0.5.2  node_modules/eslint-plugin-react-refresh        portfolio
 framer-motion                      12.12.2  12.34.3  12.34.3  node_modules/framer-motion                      portfolio
 i18next                             25.2.0  25.8.13  25.8.13  node_modules/i18next                            portfolio
 i18next-browser-languagedetector     8.1.0    8.2.1    8.2.1  node_modules/i18next-browser-languagedetector   portfolio
@@ -19,10 +19,10 @@ lucide-react                       0.475.0  0.475.0  0.575.0  node_modules/lucid
 react                               19.0.0   19.2.4   19.2.4  node_modules/react                              portfolio
 react-dom                           19.0.0   19.2.4   19.2.4  node_modules/react-dom                          portfolio
 react-i18next                       15.5.2   15.7.4   16.5.4  node_modules/react-i18next                      portfolio
-react-router                        7.12.0   7.13.0   7.13.0  node_modules/react-router                       portfolio
-react-router-dom                    7.12.0   7.13.0   7.13.0  node_modules/react-router-dom                   portfolio
+react-router                        7.12.0   7.13.1   7.13.1  node_modules/react-router                       portfolio
+react-router-dom                    7.12.0   7.13.1   7.13.1  node_modules/react-router-dom                   portfolio
 react-scroll                         1.9.2    1.9.3    1.9.3  node_modules/react-scroll                       portfolio
 react-slick                         0.30.3   0.30.3   0.31.0  node_modules/react-slick                        portfolio
 swiper                             11.2.10  11.2.10   12.1.2  node_modules/swiper                             portfolio
-tailwindcss                         3.4.17   3.4.19    4.2.0  node_modules/tailwindcss                        portfolio
+tailwindcss                         3.4.17   3.4.19    4.2.1  node_modules/tailwindcss                        portfolio
 vite                                 6.4.1    6.4.1    7.3.1  node_modules/vite                               portfolio
