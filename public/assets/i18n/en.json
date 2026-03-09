@@ -1,0 +1,20 @@
+{
+  "SELECT_CHANGE_LANGUAGE": {
+    "PT": "Portuguese (BR)",
+    "EN": "English (US)"
+  },
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "PROJECTS": "Projects",
+    "CONTACT": "Contact"
+  },
+  "PROFILE": {
+    "JOB_TITLE": "Backend Developer",
+    "TITLE_1": "Building",
+    "TITLE_2": "scalable backend systems",
+    "DESCRIPTION": "Java & Spring Boot developer focused on building scalable APIs, cloud-based applications and clean architectures.",
+    "RESUME": "View Resume",
+    "VIEW_PROJECTS": "View Projects"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "SELECT_CHANGE_LANGUAGE": {
+    "PT": "Português (BR)",
+    "EN": "English (US)"
+  },
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "Sobre",
+    "PROJECTS": "Projetos",
+    "CONTACT": "Contato"
+  },
+  "PROFILE": {
+    "JOB_TITLE": "Desenvolvedor Backend",
+    "TITLE_1": "Construindo",
+    "TITLE_2": "sistemas backend escaláveis",
+    "DESCRIPTION": "Desenvolvedor Java e Spring Boot focado em criar APIs escaláveis, aplicações em nuvem e arquiteturas limpas.",
+    "RESUME": "Ver Currículo",
+    "VIEW_PROJECTS": "Ver Projetos"
+  }
+}

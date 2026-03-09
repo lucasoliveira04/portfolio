@@ -9,9 +9,10 @@
   "projects": {
     "portfolio": {
       "i18n": {
-        "sourceLocale": "pt-BR",
+        "sourceLocale": "en",
         "locales": {
-          "en-US": "src/locale/messages.en.xlf"
+          "en-US": "src/app/assets/i18n/en.json",
+          "pt-BR": "src/app/assets/i18n/pt.json"
         }
       },
       "projectType": "application",
