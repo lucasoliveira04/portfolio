@@ -51,6 +51,13 @@
         "company": "Another Company",
         "description": "Development of solutions for monitoring water consumption in reservoirs and condominiums. Creation of microservices in Python (Flask) for report generation using RabbitMQ and Redis, as well as the development of a web dashboard in React and TypeScript for data visualization. I also performed maintenance of queries in Oracle and developed bots for WhatsApp and Telegram.",
         "techs": ["Python", "Flask", "RabbitMQ", "React", "Typescript", "Oracle", "Redis"]
+      },
+      {
+        "period": "Jun 2024 — Fev 2025",
+        "role": "Game Developer",
+        "company": "Nosso mar salve os patinhos",
+        "description": "Game developed autonomously in Unity with C# using Unity, in this project I worked as a programmer and team leader, the goal of the game is to raise awareness about not polluting the environment",
+        "techs": ["C#", "Unity"]
       }
     ],
     "STATS": {

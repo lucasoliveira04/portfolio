@@ -51,6 +51,13 @@
         "company": "Otra Empresa",
         "description": "Desarrollo de soluciones para el monitoreo del consumo de agua en reservorios y condominios. Creación de microservicios en Python (Flask) para la generación de reportes utilizando RabbitMQ y Redis, así como el desarrollo de un panel web en React y TypeScript para la visualización de datos. También realicé mantenimiento de consultas en Oracle y desarrollé bots para WhatsApp y Telegram.",
         "techs": ["Python", "Flask", "RabbitMQ", "React", "Typescript", "Oracle", "Redis"]
+      },
+      {
+        "period": "Jun 2024 — Fev 2025",
+        "role": "Desarrollador de Juegos",
+        "company": "Nosso mar salve os patinhos",
+        "description": "Juego desarrollado de forma autónoma en Unity con C# utilizando Unity, en este proyecto trabajé como programador y líder del proyecto, el objetivo del juego es concienciar a las personas sobre no contaminar el medio ambiente",
+        "techs": ["C#", "Unity"]
       }
     ],
     "STATS": {

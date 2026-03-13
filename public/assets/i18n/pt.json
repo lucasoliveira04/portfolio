@@ -51,6 +51,20 @@
         "company": "Planet Eco Services",
         "description": "Desenvolvimento de soluções para monitoramento de consumo de água em reservatórios e condomínios. Criação de microserviços em Python (Flask) para geração de relatórios utilizando RabbitMQ e Redis, além do desenvolvimento de uma central web em React e TypeScript para visualização de dados. Também realizei manutenção de queries no Oracle e desenvolvi bots para WhatsApp e Telegram.",
         "techs": ["Python", "Flask", "RabbitMQ", "React", "Typescript", "Oracle", "Redis"]
+      },
+      {
+        "period": "Jun 2024 — Fev 2025",
+        "role": "Desenvolvedor Game",
+        "company": "Nosso mar salve os patinhos",
+        "description": "Jogo desenvolvido de forma autonoma na Unity com C# utilizando a Unity, neste projeto atuei programando e liderando o projeto, objetivo do jogo é conscientizar as pessoas a não poluir o meio ambiente",
+        "techs": ["C#", "Unity"],
+        "links": [
+          {
+            "type": "playstore",
+            "url": "https://play.google.com/store/apps/details?id=com.mtgroup.sop&pcampaignid=web_share"
+          },
+          { "type": "github", "url": "https://github.com/CC-SI/NossoMarTheOriginalGame.git" }
+        ]
       }
     ],
     "STATS": {

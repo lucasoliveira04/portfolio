@@ -10,6 +10,10 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { trigger, transition, style, animate } from '@angular/animations';
 
+interface Link {
+  type: 'playstore' | 'github' | 'website';
+  url: string;
+}
 interface Client {
   name: string;
   period: string;
@@ -24,6 +28,7 @@ interface Experience {
   company: string;
   description: string;
   techs: string[];
+  links?: Link[];
   clients?: Client[];
 }
 
@@ -87,12 +92,12 @@ export class SecondPage implements OnInit, AfterViewInit {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const index = Number((entry.target as HTMLElement).dataset['index']);
-            this.visibleCards = new Set(this.visibleCards).add(index); 
+            this.visibleCards = new Set(this.visibleCards).add(index);
             observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.15 },
+      { threshold: 0 },
     );
 
     this.cardRefs.forEach((ref) => observer.observe(ref.nativeElement));
