@@ -1,0 +1,28 @@
+name: Deploy Vercel
+
+on:
+  push:
+    branches:
+      - angular
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositório
+        uses: actions/checkout@v4
+
+      - name: Instalar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Instalar Vercel CLI
+        run: npm install --global vercel
+
+      - name: Deploy na Vercel
+        run: vercel deploy --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
