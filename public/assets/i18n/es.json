@@ -48,7 +48,7 @@
       {
         "period": "Abril 2025 — Ago 2025",
         "role": "Desarrollador Full Stack",
-        "company": "Otra Empresa",
+        "company": "Planet Eco Services",
         "description": "Desarrollo de soluciones para el monitoreo del consumo de agua en reservorios y condominios. Creación de microservicios en Python (Flask) para la generación de reportes utilizando RabbitMQ y Redis, así como el desarrollo de un panel web en React y TypeScript para la visualización de datos. También realicé mantenimiento de consultas en Oracle y desarrollé bots para WhatsApp y Telegram.",
         "techs": ["Python", "Flask", "RabbitMQ", "React", "Typescript", "Oracle", "Redis"]
       },
