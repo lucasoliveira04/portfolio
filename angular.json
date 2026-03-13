@@ -12,7 +12,8 @@
         "sourceLocale": "en",
         "locales": {
           "en-US": "src/app/assets/i18n/en.json",
-          "pt-BR": "src/app/assets/i18n/pt.json"
+          "pt-BR": "src/app/assets/i18n/pt.json",
+          "es": "src/app/assets/i18n/es.json"
         }
       },
       "projectType": "application",

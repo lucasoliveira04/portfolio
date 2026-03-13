@@ -1,10 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
-
-@import 'tailwindcss';
 @import '@fortawesome/fontawesome-free/css/all.min.css';
+@import 'tailwindcss';
 
-:root {
-  --color-primary: #2b818c;
-  --color-secondary: #ffc026;
-  --color-background: #ffffff;
+@theme {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f9fafb;
+  --color-text-primary: #111827;
+  --color-text-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-brand: #2563eb;
 }
+
+.dark {
+  --color-bg-primary: #0f172a;
+  --color-bg-secondary: #1e293b;
+  --color-text-primary: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --color-border: #334155;
+  --color-brand: #60a5fa;
+}
+
+@variant dark (&:where(.dark, .dark *));

@@ -27,21 +27,21 @@
         "role": "Backend Developer",
         "company": "SMIT - Innovative Mobile Technology Solutions",
         "description": "Working on projects for different clients, developing backend solutions with Java, Spring Boot e Postgres.",
-        "techs": ["Java", "Spring Boot", "PostgreSQL"],
+        "techs": ["Java", "Spring Boot", "Github Actions", "PostgreSQL"],
         "clients": [
           {
             "name": "Rede Compras",
             "period": "Aug 2025 — Present",
             "role": "Backend Developer",
-            "techs": ["Java", "Spring Boot", "Reactive Programming", "Postgres"],
-            "description": ""
+            "techs": ["Java", "Spring Framework", "Github Actions", "Postgres"],
+            "description": "Refactoring REST APIs and developing systems with TCP communication. Migrating applications from Java 17 to Java 21 and 25, participating in the virtual wallet project for LeCard cards, implementing observability in Java services, and creating a deployment pipeline with GitHub Actions."
           },
           {
             "name": "Top Doc",
             "period": "Jan 2026 — Present",
             "role": "Backend Developer",
             "techs": [".NET"],
-            "description": ""
+            "description": "I worked on migrating a legacy API from .NET 3 to .NET 9, leading refactoring efforts to improve architecture, separation of concerns, and adoption of best development practices."
           }
         ]
       },
@@ -49,8 +49,8 @@
         "period": "April 2025 — Aug 2025",
         "role": "Full Stack Developer",
         "company": "Another Company",
-        "description": "",
-        "techs": ["Python", "Flask", "Node.js", "Oracle"]
+        "description": "Development of solutions for monitoring water consumption in reservoirs and condominiums. Creation of microservices in Python (Flask) for report generation using RabbitMQ and Redis, as well as the development of a web dashboard in React and TypeScript for data visualization. I also performed maintenance of queries in Oracle and developed bots for WhatsApp and Telegram.",
+        "techs": ["Python", "Flask", "RabbitMQ", "React", "Typescript", "Oracle", "Redis"]
       }
     ],
     "STATS": {

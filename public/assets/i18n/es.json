@@ -1,0 +1,63 @@
+{
+  "SELECT_CHANGE_LANGUAGE": {
+    "PT": "Portugués (BR)",
+    "EN": "Inglés (US)"
+  },
+  "NAV": {
+    "HOME": "Inicio",
+    "ABOUT": "Sobre mí",
+    "PROJECTS": "Proyectos",
+    "CONTACT": "Contacto"
+  },
+  "PROFILE": {
+    "JOB_TITLE": "Desarrollador Backend",
+    "TITLE_1": "Construyendo",
+    "TITLE_2": "sistemas backend escalables",
+    "DESCRIPTION": "Desarrollador Java y Spring Boot enfocado en crear APIs escalables, aplicaciones en la nube y arquitecturas limpias.",
+    "RESUME": "Ver Currículum",
+    "VIEW_PROJECTS": "Ver Proyectos"
+  },
+  "EXPERIENCE": {
+    "LABEL": "Trayectoria",
+    "TITLE": "Experiencia Profesional",
+    "SUBTITLE": "Mi trayectoria en el desarrollo de software",
+    "LIST": [
+      {
+        "period": "Ago 2025 — Actual",
+        "role": "Desarrollador Backend",
+        "company": "SMIT - Soluciones Mobile Innovadoras Tecnológicas",
+        "description": "Participación en proyectos para diferentes clientes, desarrollando soluciones backend con Java, Spring Boot y Postgres.",
+        "techs": ["Java", "Spring Framework", "Github Actions", "PostgreSQL"],
+        "clients": [
+          {
+            "name": "Rede Compras",
+            "period": "Ago 2025 — Actual",
+            "role": "Desarrollador Backend",
+            "techs": ["Java", "Spring Framework", "Github Actions", "Postgres"],
+            "description": "Refactorización de APIs REST y desarrollo de sistemas con comunicación TCP. Migración de aplicaciones de Java 17 a Java 21 y 25, participación en el proyecto de billetera virtual para tarjetas LeCard, implementación de observabilidad en servicios Java y creación de pipeline de despliegue con GitHub Actions."
+          },
+          {
+            "name": "Top Doc",
+            "period": "Ene 2026 — Actual",
+            "role": "Desarrollador Backend",
+            "techs": [".Net"],
+            "description": "Trabajé en la migración de una API legada de .NET 3 a .NET 9, liderando esfuerzos de refactorización para mejorar la arquitectura, separación de responsabilidades y adopción de mejores prácticas de desarrollo."
+          }
+        ]
+      },
+      {
+        "period": "Abril 2025 — Ago 2025",
+        "role": "Desarrollador Full Stack",
+        "company": "Otra Empresa",
+        "description": "Desarrollo de soluciones para el monitoreo del consumo de agua en reservorios y condominios. Creación de microservicios en Python (Flask) para la generación de reportes utilizando RabbitMQ y Redis, así como el desarrollo de un panel web en React y TypeScript para la visualización de datos. También realicé mantenimiento de consultas en Oracle y desarrollé bots para WhatsApp y Telegram.",
+        "techs": ["Python", "Flask", "RabbitMQ", "React", "Typescript", "Oracle", "Redis"]
+      }
+    ],
+    "STATS": {
+      "YEARS": "Años de experiencia",
+      "PROJECTS": "Proyectos entregados",
+      "TECHNOLOGIES": "Tecnologías dominadas",
+      "COMMITMENT": "Compromiso"
+    }
+  }
+}
