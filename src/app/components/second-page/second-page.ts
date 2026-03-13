@@ -35,7 +35,7 @@ export class SecondPage implements OnInit {
   ngOnInit(): void {
     this.loadExperiences();
 
-    // Recarrega quando o idioma mudar
+
     this.translate.onLangChange.subscribe(() => {
       this.loadExperiences();
     });
