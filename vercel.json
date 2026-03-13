@@ -1,8 +1,9 @@
 {
+  "outputDirectory": "dist/portfolio/browser",
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/src/index.html"
+      "dest": "/index.html"
     }
   ]
 }
