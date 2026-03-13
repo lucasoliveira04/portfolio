@@ -3,9 +3,7 @@
     class="absolute right-0 top-0 w-[500px] h-[500px] bg-blue-200 rounded-full blur-3xl opacity-40"
   ></div>
 
-  @if (showHeader) {
-    <app-header></app-header>
-  }
+  <app-header></app-header>
 
   <div
     class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center px-8 md:px-20 py-24 gap-16"
@@ -46,13 +44,27 @@
 
       <!-- stack -->
       <div class="flex flex-wrap gap-3 pt-6 justify-center md:justify-start">
-        <app-stack-item name="Java" icon="devicon-java-plain"></app-stack-item>
+        <app-stack-item name="Java" icon="devicon-java-plain" color="#007396"> </app-stack-item>
 
-        <app-stack-item name="Spring Boot" icon="devicon-spring-plain"></app-stack-item>
+        <app-stack-item
+          name="Spring Boot"
+          icon="devicon-spring-plain"
+          color="#99d98c"
+        ></app-stack-item>
 
-        <app-stack-item name="TypeScript" icon="devicon-typescript-plain"></app-stack-item>
+        <app-stack-item
+          name="JavaScript"
+          icon="devicon-javascript-plain"
+          color="#F0DB4F"
+        ></app-stack-item>
 
-        <app-stack-item name="Docker" icon="devicon-docker-plain"></app-stack-item>
+        <app-stack-item
+          name="TypeScript"
+          icon="devicon-typescript-plain"
+          color="#3178C6"
+        ></app-stack-item>
+
+        <app-stack-item name="Docker" icon="devicon-docker-plain" color="#2496ED"></app-stack-item>
       </div>
 
       <!-- social -->

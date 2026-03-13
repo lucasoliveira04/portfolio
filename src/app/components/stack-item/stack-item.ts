@@ -7,4 +7,7 @@ import { Component, Input } from '@angular/core';
 export class StackItem {
   @Input() name!: string;
   @Input() icon!: string;
+  @Input() color: string = '';
+
+  hover: boolean = false;
 }

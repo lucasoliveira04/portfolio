@@ -11,10 +11,4 @@ import { StackItem } from '../stack-item/stack-item';
 })
 export class FirstPage {
   imgPerfil = 'img/eu/eu_pessoa_real.png';
-
-  showHeader = true;
-
-  toggleHeader() {
-    this.showHeader = !this.showHeader;
-  }
 }

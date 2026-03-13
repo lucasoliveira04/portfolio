@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { HeaderService } from '../../services/header/header.service';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,10 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrls: ['./header.css', '../../../styles.css'],
 })
 export class Header {
-  constructor(private translate: TranslateService) {}
+  constructor(
+    private translate: TranslateService,
+    protected headerService: HeaderService,
+  ) {}
 
   navItems = [
     { id: 1, label: 'Home', path: '/' },

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FirstPage } from '../../components/first_page/firstPage';
+import { HeaderService } from '../../services/header/header.service';
 
 @Component({
   selector: 'app-home',
@@ -8,4 +9,10 @@ import { FirstPage } from '../../components/first_page/firstPage';
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home {}
+export class Home implements OnInit {
+  constructor(private headerService: HeaderService) {}
+
+  ngOnInit(): void {
+    this.headerService.hide();
+  }
+}

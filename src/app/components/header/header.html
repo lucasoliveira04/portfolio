@@ -1,42 +1,44 @@
-<header
-  class="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-white/70 border-b border-gray-200"
->
-  <div class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
-    <!-- Logo -->
-    <div class="text-lg font-semibold tracking-tight">
-      <span class="text-gray-900">Lucas</span>
-      <span class="text-blue-600">.dev</span>
+@if (headerService.isVisible()) {
+  <header
+    class="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-white/70 border-b border-gray-200"
+  >
+    <div class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="text-lg font-semibold tracking-tight">
+        <span class="text-gray-900">Lucas</span>
+        <span class="text-blue-600">.dev</span>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex items-center gap-10 text-sm font-medium text-gray-600">
+        <a routerLink="/" class="hover:text-blue-600 transition-colors duration-200"> Home </a>
+
+        <a routerLink="/projects" class="hover:text-blue-600 transition-colors duration-200">
+          {{ 'NAV.PROJECTS' | translate }}
+        </a>
+
+        <a routerLink="/about" class="hover:text-blue-600 transition-colors duration-200">
+          {{ 'NAV.ABOUT' | translate }}
+        </a>
+
+        <a routerLink="/contact" class="hover:text-blue-600 transition-colors duration-200">
+          {{ 'NAV.CONTACT' | translate }}
+        </a>
+
+        <!-- Language -->
+        <select
+          (change)="changeLanguage($any($event.target).value)"
+          class="ml-4 bg-gray-100 border border-gray-200 rounded-md px-3 py-1.5 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          <option value="pt">
+            {{ 'SELECT_CHANGE_LANGUAGE.PT' | translate }}
+          </option>
+
+          <option value="en">
+            {{ 'SELECT_CHANGE_LANGUAGE.EN' | translate }}
+          </option>
+        </select>
+      </nav>
     </div>
-
-    <!-- Navigation -->
-    <nav class="hidden md:flex items-center gap-10 text-sm font-medium text-gray-600">
-      <a routerLink="/" class="hover:text-blue-600 transition-colors duration-200"> Home </a>
-
-      <a routerLink="/projects" class="hover:text-blue-600 transition-colors duration-200">
-        {{ 'NAV.PROJECTS' | translate }}
-      </a>
-
-      <a routerLink="/about" class="hover:text-blue-600 transition-colors duration-200">
-        {{ 'NAV.ABOUT' | translate }}
-      </a>
-
-      <a routerLink="/contact" class="hover:text-blue-600 transition-colors duration-200">
-        {{ 'NAV.CONTACT' | translate }}
-      </a>
-
-      <!-- Language -->
-      <select
-        (change)="changeLanguage($any($event.target).value)"
-        class="ml-4 bg-gray-100 border border-gray-200 rounded-md px-3 py-1.5 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      >
-        <option value="pt">
-          {{ 'SELECT_CHANGE_LANGUAGE.PT' | translate }}
-        </option>
-
-        <option value="en">
-          {{ 'SELECT_CHANGE_LANGUAGE.EN' | translate }}
-        </option>
-      </select>
-    </nav>
-  </div>
-</header>
+  </header>
+}
