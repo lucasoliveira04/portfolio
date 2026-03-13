@@ -26,4 +26,8 @@ export class Header {
   changeLanguage(lang: string) {
     this.translate.use(lang);
   }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

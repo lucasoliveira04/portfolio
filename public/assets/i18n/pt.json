@@ -16,5 +16,59 @@
     "DESCRIPTION": "Desenvolvedor Java e Spring Boot focado em criar APIs escaláveis, aplicações em nuvem e arquiteturas limpas.",
     "RESUME": "Ver Currículo",
     "VIEW_PROJECTS": "Ver Projetos"
+  },
+  "EXPERIENCE": {
+    "LABEL": "Trajetória",
+    "TITLE": "Experiência Profissional",
+    "SUBTITLE": "Minha jornada no desenvolvimento de software",
+    "STATS": {
+      "YEARS": "Anos de experiência",
+      "PROJECTS": "Projetos entregues",
+      "TECHNOLOGIES": "Tecnologias dominadas",
+      "COMMITMENT": "Comprometimento"
+    }
+  },
+  "EXPERIENCE": {
+    "LABEL": "Trajetória",
+    "TITLE": "Experiência Profissional",
+    "SUBTITLE": "Minha jornada no desenvolvimento de software",
+    "LIST": [
+      {
+        "period": "Ago 2025 — Atual",
+        "role": "Desenvolvedor Back End",
+        "company": "SMIT - Soluções Mobile Inovadoras Tecnológicas",
+        "description": "Atuação em projetos de diferentes clientes, desenvolvendo soluções backend com Java, Spring Boot e Postgres.",
+        "techs": ["Java", "Spring Boot", "PostgreSQL"],
+        "clients": [
+          {
+            "name": "Rede Compras",
+            "period": "Ago 2025 — Atual",
+            "role": "Desenvolvedor Back End",
+            "techs": ["Java", "Spring Boot", "Reatividade", "Postgres"],
+            "description": ""
+          },
+          {
+            "name": "Top Doc",
+            "period": "Jan 2026 — Atual",
+            "role": "Desenvolvedor Back End",
+            "techs": [".Net", "React Mobile"],
+            "description": ""
+          }
+        ]
+      },
+      {
+        "period": "Abril 2025 — Ago 2025",
+        "role": "Desenvolvedor Full Stack",
+        "company": "Outra Empresa",
+        "description": "",
+        "techs": ["Python", "Flask", "Node.js", "Oracle"]
+      }
+    ],
+    "STATS": {
+      "YEARS": "Anos de experiência",
+      "PROJECTS": "Projetos entregues",
+      "TECHNOLOGIES": "Tecnologias dominadas",
+      "COMMITMENT": "Comprometimento"
+    }
   }
 }

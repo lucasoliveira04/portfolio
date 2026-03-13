@@ -13,8 +13,51 @@
     "JOB_TITLE": "Backend Developer",
     "TITLE_1": "Building",
     "TITLE_2": "scalable backend systems",
-    "DESCRIPTION": "Java & Spring Boot developer focused on building scalable APIs, cloud-based applications and clean architectures.",
+    "DESCRIPTION": "Java and Spring Boot developer focused on building scalable APIs, cloud applications, and clean architectures.",
     "RESUME": "View Resume",
     "VIEW_PROJECTS": "View Projects"
+  },
+  "EXPERIENCE": {
+    "LABEL": "Journey",
+    "TITLE": "Professional Experience",
+    "SUBTITLE": "My journey in software development",
+    "LIST": [
+      {
+        "period": "Aug 2025 — Present",
+        "role": "Backend Developer",
+        "company": "SMIT - Innovative Mobile Technology Solutions",
+        "description": "Working on projects for different clients, developing backend solutions with Java, Spring Boot e Postgres.",
+        "techs": ["Java", "Spring Boot", "PostgreSQL"],
+        "clients": [
+          {
+            "name": "Rede Compras",
+            "period": "Aug 2025 — Present",
+            "role": "Backend Developer",
+            "techs": ["Java", "Spring Boot", "Reactive Programming", "Postgres"],
+            "description": ""
+          },
+          {
+            "name": "Top Doc",
+            "period": "Jan 2026 — Present",
+            "role": "Backend Developer",
+            "techs": [".NET"],
+            "description": ""
+          }
+        ]
+      },
+      {
+        "period": "April 2025 — Aug 2025",
+        "role": "Full Stack Developer",
+        "company": "Another Company",
+        "description": "",
+        "techs": ["Python", "Flask", "Node.js", "Oracle"]
+      }
+    ],
+    "STATS": {
+      "YEARS": "Years of experience",
+      "PROJECTS": "Delivered projects",
+      "TECHNOLOGIES": "Technologies mastered",
+      "COMMITMENT": "Commitment"
+    }
   }
 }
