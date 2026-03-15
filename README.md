@@ -21,7 +21,7 @@
 
 Esta é a versão **Angular** do portfólio — desenvolvida com Angular 19, TailwindCSS e `ngx-translate` para internacionalização.
 
-É **100% aberta para a comunidade**. Faz um fork, adapta para o teu perfil e usa como quiser. Só peço que dê uma ⭐ se te ajudou!
+É **100% aberta para a comunidade** e foi pensada para ser facilmente reutilizável. Todo o conteúdo pessoal está centralizado em arquivos de constantes e de tradução — quem fizer um fork só precisa editar esses arquivos para ter o portfólio com os seus dados. Só peço que dê uma ⭐ se te ajudou!
 
 > 💡 Este portfólio está disponível em **3 versões**, cada uma desenvolvida com uma tecnologia diferente:
 
@@ -42,6 +42,7 @@ Esta é a versão **Angular** do portfólio — desenvolvida com Angular 19, Tai
 - 📬 **Formulário de contato** — campos validados com feedback visual
 - 🔀 **Seletor de versão** — alterna entre as versões React, Angular e Thymeleaf
 - 🎞️ **Animações** — entrada de elementos com `@angular/animations`
+- ⚙️ **100% configurável** — todo o conteúdo centralizado em constants e arquivos i18n
 
 ---
 
@@ -51,6 +52,32 @@ Esta é a versão **Angular** do portfólio — desenvolvida com Angular 19, Tai
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-06B6D4?style=flat-square&logo=tailwindcss)
 ![ngx-translate](https://img.shields.io/badge/ngx--translate-Internacionalização-0077C8?style=flat-square)
+
+---
+
+## ⚙️ Arquivos de configuração
+
+Todo o conteúdo pessoal está centralizado — **você não precisa mexer nos componentes**. Basta editar os arquivos abaixo:
+
+### Constantes (`src/app/constants/`)
+
+| Arquivo | O que configura |
+|---------|----------------|
+| `social.constants.ts` | Email, LinkedIn, GitHub, WhatsApp e textos de exibição |
+| `profile.constants.ts` | Foto de perfil, link do currículo, stack de tecnologias e links sociais |
+| `header.constants.ts` | Logo, itens de navegação, versões do portfólio e idiomas disponíveis |
+| `footer.constants.ts` | Itens de navegação do footer e nome do autor |
+| `about.constants.ts` | Interesses, habilidades e timeline |
+
+### Traduções (`src/assets/i18n/`)
+
+| Arquivo | Idioma |
+|---------|--------|
+| `pt.json` | Português (BR) — textos, experiências, about, contato |
+| `en.json` | Inglês (US) |
+| `es.json` | Espanhol (ES) |
+
+> As experiências profissionais, timeline, habilidades e todos os textos da interface estão nos arquivos JSON — nenhum conteúdo fica hardcoded nos componentes.
 
 ---
 
@@ -75,19 +102,22 @@ npm install
 
 **4. Personaliza o conteúdo**
 
-Os principais arquivos para editar são:
+Edita apenas os arquivos de constantes e i18n — não precisa tocar nos componentes:
 
 ```
 src/
 ├── assets/
 │   └── i18n/
-│       ├── pt.json   # Textos em Português
-│       ├── en.json   # Textos em Inglês
-│       └── es.json   # Textos em Espanhol
+│       ├── pt.json        # Todos os textos em PT-BR
+│       ├── en.json        # Todos os textos em EN
+│       └── es.json        # Todos os textos em ES
 └── app/
-    └── components/
-        └── header/
-            └── header.ts   # Atualiza links de versão e redes sociais
+    └── constants/
+        ├── social.constants.ts    # Suas redes sociais
+        ├── profile.constants.ts   # Sua foto, currículo e stack
+        ├── header.constants.ts    # Logo e versões do portfólio
+        ├── footer.constants.ts    # Navegação do footer
+        └── about.constants.ts     # Interesses e habilidades
 ```
 
 **5. Roda localmente**
