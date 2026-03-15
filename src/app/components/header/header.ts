@@ -46,6 +46,16 @@ export class Header {
     { id: 4, label: 'NAV.CONTACT', fragment: 'contact' },
   ];
 
+  versions = [
+    { label: 'ReactJS', url: 'https://lucasoliveira04.com', current: false },
+    { label: 'Angular', url: 'https://angular.lucasoliveira04.com', current: true },
+    { label: 'Thymeleaf', url: '', current: false },
+  ];
+
+  changeVersion(url: string): void {
+    if (url) window.open(url, '_blank');
+  }
+
   scrollToSection(fragment: string): void {
     const el = document.getElementById(fragment);
     if (el) {
