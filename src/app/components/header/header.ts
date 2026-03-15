@@ -47,7 +47,7 @@ export class Header {
   ];
 
   versions = [
-    { label: 'ReactJS', url: 'https://lucasoliveira04.com', current: false },
+    { label: 'ReactJS', url: 'https://react.lucasoliveira04.com', current: false },
     { label: 'Angular', url: 'https://angular.lucasoliveira04.com', current: true },
     { label: 'Thymeleaf', url: '', current: false },
   ];
