@@ -40,11 +40,18 @@ export class Header {
   alwaysShowControls = input<boolean>(false);
 
   navItems = [
-    { id: 1, label: 'Home', path: '/' },
-    { id: 2, label: 'Sobre', path: '/about' },
-    { id: 3, label: 'Projetos', path: '/projects' },
-    { id: 4, label: 'Contato', path: '/contact' },
+    { id: 1, label: 'NAV.HOME', fragment: 'home' },
+    { id: 2, label: 'NAV.ABOUT', fragment: 'about' },
+    { id: 3, label: 'NAV.EXPERIENCE', fragment: 'experience' },
+    { id: 4, label: 'NAV.CONTACT', fragment: 'contact' },
   ];
+
+  scrollToSection(fragment: string): void {
+    const el = document.getElementById(fragment);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 
   changeLanguage(lang: string) {
     this.translate.use(lang);

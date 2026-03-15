@@ -6,7 +6,7 @@
   "NAV": {
     "HOME": "Home",
     "ABOUT": "About",
-    "PROJECTS": "Projects",
+    "EXPERIENCE": "Experience",
     "CONTACT": "Contact"
   },
   "PROFILE": {
@@ -26,7 +26,7 @@
         "period": "Aug 2025 — Present",
         "role": "Backend Developer",
         "company": "SMIT - Innovative Mobile Technology Solutions",
-        "description": "Working on projects for different clients, developing backend solutions with Java, Spring Boot e Postgres.",
+        "description": "Working on projects for different clients, developing backend solutions with Java, Spring Boot and Postgres.",
         "techs": ["Java", "Spring Boot", "Github Actions", "PostgreSQL"],
         "clients": [
           {
@@ -53,10 +53,10 @@
         "techs": ["Python", "Flask", "RabbitMQ", "React", "Typescript", "Oracle", "Redis"]
       },
       {
-        "period": "Jun 2024 — Fev 2025",
+        "period": "Jun 2024 — Feb 2025",
         "role": "Game Developer",
         "company": "Nosso mar salve os patinhos",
-        "description": "Game developed autonomously in Unity with C# using Unity, in this project I worked as a programmer and team leader, the goal of the game is to raise awareness about not polluting the environment",
+        "description": "Game developed autonomously in Unity with C#, in this project I worked as a programmer and team leader. The goal of the game is to raise awareness about not polluting the environment.",
         "techs": ["C#", "Unity"]
       }
     ],
@@ -66,5 +66,94 @@
       "TECHNOLOGIES": "Technologies mastered",
       "COMMITMENT": "Commitment"
     }
-  }
+  },
+  "ABOUT": {
+    "LABEL": "About Me",
+    "TITLE": "The person behind the code",
+    "SUBTITLE": "Passionate about building scalable solutions that make a real difference. Here's a bit about who I am.",
+    "BIO_1": "Hey! I'm Lucas Oliveira, a Back-End developer focused on Java and Spring Boot, with a growing passion for full-stack development. I love turning complex problems into clean, maintainable solutions.",
+    "BIO_2": "I'm constantly exploring new technologies, contributing to open-source projects, and sharpening my skills in cloud architecture and distributed systems. When I'm not coding, I'm reading about software design patterns or experimenting with side projects.",
+    "LOCATION_LABEL": "Location",
+    "LOCATION_VALUE": "Brazil 🇧🇷",
+    "EXPERIENCE_LABEL": "Experience",
+    "EXPERIENCE_VALUE": "1+ years",
+    "FOCUS_LABEL": "Focus",
+    "FOCUS_VALUE": "Back-End",
+    "STATUS_LABEL": "Status",
+    "STATUS_VALUE": "Employed",
+    "SKILLS_LABEL": "Core Skills",
+    "JOURNEY_LABEL": "Journey",
+    "INTERESTS": [
+      { "label": "System Design", "icon": "fas fa-microchip" },
+      { "label": "DevOps", "icon": "fab fa-docker" },
+      { "label": "Databases", "icon": "fas fa-database" },
+      { "label": "Cloud", "icon": "fas fa-cloud" },
+      { "label": "Clean Code", "icon": "fas fa-book" },
+      { "label": "Open Source", "icon": "fas fa-code-branch" }
+    ],
+    "SKILLS": [
+      { "name": "Java" },
+      { "name": "Spring Boot" },
+      { "name": "SQL / Bancos de dados" },
+      { "name": "TypeScript / JavaScript" },
+      { "name": "Docker & DevOps" }
+    ],
+    "TIMELINE": [
+      {
+        "year": "2026 — Present",
+        "title": "Back-End Developer @ SMIT",
+        "description": "Enterprise solutions with Java & Spring Boot"
+      },
+      {
+        "year": "2025",
+        "title": "Internship - Full Stack Developer @ Planet Eco Services",
+        "description": "Internship - Web Development, REST APIs, Databases and microservices"
+      },
+      {
+        "year": "2024",
+        "title": "Academic Project - Game Developer",
+        "description": "Development of a game in Unity for environmental awareness. Published on Play Store and available on GitHub."
+      },
+      {
+        "year": "2023",
+        "title": "Started college",
+        "description": "Computer Science - University of São Paulo"
+      },
+      {
+        "year": "2021",
+        "title": "Started coding journey",
+        "description": "Self-taught - Personal projects and online studies"
+      }
+    ]
+  },
+  "CONTACT": {
+    "LABEL": "Contact",
+    "TITLE": "Let's work together",
+    "SUBTITLE": "Have a project in mind or just want to say hi? My inbox is always open.",
+    "CARD_LABEL": "Get in touch",
+    "CARD_TITLE": "Let's talk",
+    "CARD_DESC": "I'm open to new opportunities, freelance projects, or just a good tech chat. Feel free to reach out through any channel below.",
+    "AVAILABLE": "Available for new projects",
+    "FORM_LABEL": "Send a message",
+    "FORM_TITLE": "Drop me a line",
+    "FIELD_NAME": "Name",
+    "FIELD_EMAIL": "Email",
+    "FIELD_SUBJECT": "Subject",
+    "FIELD_MESSAGE": "Message",
+    "SEND": "Send message",
+    "SENDING": "Sending...",
+    "SUCCESS": "Message sent! I'll get back to you soon.",
+    "PLACEHOLDER_EMAIL": "email@email.com",
+    "PLACEHOLDER_NAME": "Your name",
+    "PLACEHOLDER_SUBJECT": "Subject of the message",
+    "PLACEHOLDER_MESSAGE": "Write your message here..."
+  },
+  "FOOTER": {
+    "DESC": "Back-End developer focused on Java, Spring Boot, and scalable architectures. Open to new opportunities.",
+    "NAV_TITLE": "Navigation",
+    "CONTACT_TITLE": "Contact",
+    "RIGHTS": "All rights reserved.",
+    "STATUS": "Employed"
+  },
+  "WHATSAPP_MSG": "Hi Lucas, I found your portfolio and would like to talk about an opportunity!"
 }

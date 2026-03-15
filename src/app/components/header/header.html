@@ -36,10 +36,10 @@
         >
           @for (item of navItems; track item.id) {
             <a
-              [routerLink]="item.path"
+              (click)="scrollToSection(item.fragment)"
               class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 whitespace-nowrap"
             >
-              {{ item.label }}
+              {{ item.label | translate }}
             </a>
           }
         </nav>
@@ -134,14 +134,66 @@
       >
         @for (item of navItems; track item.id) {
           <a
-            [routerLink]="item.path"
-            (click)="toggleMobileMenu()"
+            (click)="scrollToSection(item.fragment); toggleMobileMenu()"
             class="text-sm font-medium text-gray-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 py-1.5 border-b border-gray-100 dark:border-slate-800 last:border-0 transition-colors duration-200"
           >
-            {{ item.label }}
+            {{ item.label | translate }}
           </a>
         }
       </div>
     }
   </header>
+}
+
+<!-- Always-visible floating controls -->
+@if (!headerService.isVisible()) {
+  <div class="fixed top-4 right-4 z-50 flex items-center gap-2 transition-all duration-300">
+    @if (showLangSelect()) {
+      <select
+        (change)="changeLanguage($any($event.target).value)"
+        class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border border-gray-200 dark:border-slate-600 rounded-md px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm text-gray-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm transition-colors duration-200"
+      >
+        <option value="pt">PT-BR</option>
+        <option value="en">EN</option>
+        <option value="es">ES</option>
+      </select>
+    }
+
+    @if (showDarkModeToggle()) {
+      <button
+        (click)="toggleDarkMode()"
+        class="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-gray-200 dark:border-slate-600 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md hover:bg-blue-50 dark:hover:bg-slate-700 shadow-sm transition-all duration-200"
+        title="Toggle dark mode"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-3.5 h-3.5 sm:w-4 sm:h-4 hidden dark:block text-yellow-400"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-3.5 h-3.5 sm:w-4 sm:h-4 block dark:hidden text-gray-500"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"
+          />
+        </svg>
+      </button>
+    }
+  </div>
 }
