@@ -21,7 +21,7 @@ Este repositório contém o código-fonte do meu portfólio pessoal, desenvolvid
 
 | Versão       | Tecnologia              | URL                                                                |
 | ------------ | ----------------------- | ------------------------------------------------------------------ |
-| ✅ **Esta**  | ReactJS                 | [lucasoliveira04.com](https://lucasoliveira04.com)                 |
+| ✅ **Esta**  | ReactJS                 | [react.lucasoliveira04.com](https://react.lucasoliveira04.com)                 |
 | 🔷 Angular   | Angular 19              | [angular.lucasoliveira04.com](https://angular.lucasoliveira04.com) |
 | 🍃 Thymeleaf | Spring Boot + Thymeleaf | Em breve                                                           |
 
