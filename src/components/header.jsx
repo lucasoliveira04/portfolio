@@ -3,16 +3,8 @@ import { HamburgerMenu } from "./hamburgerMenu.jsx";
 import { useEffect, useState } from "react";
 import { useLanguageToggle } from "../hook/useLanguageToggle.js";
 import { LanguageSelect } from "./languageSelect.jsx";
-
-const versions = [
-  { label: "ReactJS", url: "https://lucasoliveira04.com", current: true },
-  {
-    label: "Angular",
-    url: "https://angular.lucasoliveira04.com",
-    current: false,
-  },
-  { label: "Thymeleaf", url: "", current: false },
-];
+import { VERSIONS } from "../constants/versions.js";
+import { NAV_KEYS } from "../constants/nav.js";
 
 export function HeaderComponent() {
   const { t } = useTranslation();
@@ -21,11 +13,10 @@ export function HeaderComponent() {
   const [showBorder, setShowBorder] = useState(false);
   const [showScrollTopButton, setShowScrollTopButton] = useState(false);
 
-  const navOptions = [
-    { key: "aboutMe", label: t("header.navigation.aboutMe") },
-    { key: "experience", label: t("header.navigation.experience") },
-    { key: "contact", label: t("header.navigation.contact") },
-  ];
+  const navOptions = NAV_KEYS.map((item) => ({
+    key: item.key,
+    label: t(item.translationKey),
+  }));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -104,13 +95,13 @@ export function HeaderComponent() {
             value=""
             className="appearance-none bg-green-50 border border-green-300 rounded-md pl-2 pr-6 py-1 text-xs font-medium text-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 shadow-sm transition-colors duration-200 cursor-pointer"
           >
-            {versions.map((v) => (
+            {VERSIONS.map((v) => (
               <option
                 key={v.label}
                 value={v.current ? "" : v.url}
                 disabled={v.current}
               >
-                {v.current ? `${v.label}` : v.label}
+                {v.label}
               </option>
             ))}
           </select>
