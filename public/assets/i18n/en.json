@@ -21,6 +21,9 @@
     "LABEL": "Journey",
     "TITLE": "Professional Experience",
     "SUBTITLE": "My journey in software development",
+    "CLIENT_SINGULAR": "client",
+    "CLIENTS_PLURAL": "clients",
+    "CLIENTS_SUFFIX": "at this company",
     "LIST": [
       {
         "period": "Aug 2025 — Present",

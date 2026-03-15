@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { HeaderService } from '../../services/header/header.service';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { LOGO, NAV_ITEMS, VERSIONS, SUPPORTED_LANGUAGES } from '../../constants/header.constants';
 
 @Component({
   selector: 'app-header',
@@ -39,45 +40,40 @@ export class Header {
   showDarkModeToggle = input<boolean>(false);
   alwaysShowControls = input<boolean>(false);
 
-  navItems = [
-    { id: 1, label: 'NAV.HOME', fragment: 'home' },
-    { id: 2, label: 'NAV.ABOUT', fragment: 'about' },
-    { id: 3, label: 'NAV.EXPERIENCE', fragment: 'experience' },
-    { id: 4, label: 'NAV.CONTACT', fragment: 'contact' },
-  ];
+  readonly logo = LOGO;
+  readonly navItems = NAV_ITEMS;
+  readonly versions = VERSIONS;
+  readonly languages = SUPPORTED_LANGUAGES;
 
-  versions = [
-    { label: 'ReactJS', url: 'https://react.lucasoliveira04.com', current: false },
-    { label: 'Angular', url: 'https://angular.lucasoliveira04.com', current: true },
-    { label: 'Thymeleaf', url: '', current: false },
-  ];
+  mobileMenuOpen = false;
 
   changeVersion(url: string): void {
     if (url) window.open(url, '_blank');
   }
 
-  scrollToSection(fragment: string): void {
-    const el = document.getElementById(fragment);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }
-
-  changeLanguage(lang: string) {
+  changeLanguage(lang: string): void {
     this.translate.use(lang);
   }
+
+  scrollToSection(fragment: string): void {
+    const el = document.getElementById(fragment);
+    if (!el) return;
+    const headerHeight = 72;
+    const top = el.getBoundingClientRect().top + window.scrollY - headerHeight;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
   toggleDarkMode(): void {
     const html = document.documentElement;
     html.classList.toggle('dark');
     localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
   }
 
-  mobileMenuOpen = false;
-
-  toggleMobileMenu() {
+  toggleMobileMenu(): void {
     this.mobileMenuOpen = !this.mobileMenuOpen;
   }
 }

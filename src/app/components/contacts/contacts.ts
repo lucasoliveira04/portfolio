@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
+import { SOCIAL_LINKS } from '../../constants/social.constants';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, FormsModule],
   templateUrl: './contacts.html',
   animations: [
     trigger('fadeIn', [
@@ -27,22 +28,22 @@ export class ContactComponent {
   contactLinks = [
     {
       label: 'Email',
-      value: 'lucasolisocialmedia@gmail.com',
-      href: 'mailto:lucasolisocialmedia@gmail.com',
+      value: SOCIAL_LINKS.email,
+      href: `mailto:${SOCIAL_LINKS.email}`,
       icon: 'fas fa-envelope',
       external: false,
     },
     {
       label: 'LinkedIn',
-      value: 'linkedin.com/in/lucas-oliveira-campos',
-      href: 'https://www.linkedin.com/in/lucas-oliveira-campos/',
+      value: `linkedin.com/in/${SOCIAL_LINKS.user_linkedin}`,
+      href: `${SOCIAL_LINKS.linkedin}`,
       icon: 'fab fa-linkedin',
       external: true,
     },
     {
       label: 'GitHub',
-      value: 'github.com/lucasoliveira04',
-      href: 'https://github.com/lucasoliveira04',
+      value: `github.com/${SOCIAL_LINKS.user_github}`,
+      href: `${SOCIAL_LINKS.github}`,
       icon: 'fab fa-github',
       external: true,
     },

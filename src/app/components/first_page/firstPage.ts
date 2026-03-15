@@ -3,6 +3,8 @@ import { Header } from '../header/header';
 import { TranslateModule } from '@ngx-translate/core';
 import { StackItem } from '../stack-item/stack-item';
 import { HeaderService } from '../../services/header/header.service';
+import { PROFILE, SOCIAL_ITEMS, STACK_ITEMS } from '../../constants/profile.constants';
+
 @Component({
   selector: 'first-page',
   imports: [Header, TranslateModule, StackItem],
@@ -11,7 +13,10 @@ import { HeaderService } from '../../services/header/header.service';
   styleUrls: ['./firstPage.css', '../../../styles.css'],
 })
 export class FirstPage implements OnInit, OnDestroy {
-  imgPerfil = 'img/eu/eu_pessoa_real.png';
+  readonly imgPerfil = PROFILE.imgPerfil;
+  readonly resumeUrl = PROFILE.resumeUrl;
+  readonly socialItems = SOCIAL_ITEMS;
+  readonly stackItems = STACK_ITEMS;
 
   constructor(protected headerService: HeaderService) {}
 
@@ -24,7 +29,7 @@ export class FirstPage implements OnInit, OnDestroy {
   }
 
   @HostListener('window:scroll')
-  onScroll() {
+  onScroll(): void {
     const scrollY = window.scrollY;
     const firstPage = document.querySelector('first-page') as HTMLElement;
     const noventa = firstPage.offsetHeight * 0.9;

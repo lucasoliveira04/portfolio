@@ -21,6 +21,9 @@
     "LABEL": "Trajetória",
     "TITLE": "Experiência Profissional",
     "SUBTITLE": "Minha jornada no desenvolvimento de software",
+    "CLIENT_SINGULAR": "cliente",
+    "CLIENTS_PLURAL": "clientes",
+    "CLIENTS_SUFFIX": "nesta empresa",
     "LIST": [
       {
         "period": "Ago 2025 — Atual",

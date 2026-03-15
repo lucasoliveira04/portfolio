@@ -5,6 +5,7 @@ import {
   QueryList,
   ViewChildren,
   ElementRef,
+  ChangeDetectorRef,
 } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
@@ -14,6 +15,7 @@ interface Link {
   type: 'playstore' | 'github' | 'website';
   url: string;
 }
+
 interface Client {
   name: string;
   period: string;
@@ -72,13 +74,14 @@ export class SecondPage implements OnInit, AfterViewInit {
 
   @ViewChildren('cardRef') cardRefs!: QueryList<ElementRef>;
 
-  constructor(private translate: TranslateService) {}
+  constructor(
+    private translate: TranslateService,
+    private cdr: ChangeDetectorRef,
+  ) {}
 
   ngOnInit(): void {
     this.loadExperiences();
-    this.translate.onLangChange.subscribe(() => {
-      this.loadExperiences();
-    });
+    this.translate.onLangChange.subscribe(() => this.loadExperiences());
   }
 
   ngAfterViewInit(): void {
@@ -97,7 +100,7 @@ export class SecondPage implements OnInit, AfterViewInit {
           }
         });
       },
-      { threshold: 0 },
+      { threshold: 0.1 },
     );
 
     this.cardRefs.forEach((ref) => observer.observe(ref.nativeElement));
@@ -106,11 +109,21 @@ export class SecondPage implements OnInit, AfterViewInit {
   private loadExperiences(): void {
     this.translate.get('EXPERIENCE.LIST').subscribe((list: Experience[]) => {
       this.experiences = list;
+
+      const jaEstaVisivel = this.visibleCards.size > 0;
+
       this.visibleCards = new Set<number>();
+      this.cdr.detectChanges();
+
+      if (jaEstaVisivel) {
+        list.forEach((_, i) => this.visibleCards.add(i));
+        this.cdr.detectChanges();
+      } else {
+        this.observeCards();
+      }
     });
   }
-
-  toggleClients(index: number) {
+  toggleClients(index: number): void {
     this.expandedClients = this.expandedClients === index ? null : index;
   }
 }

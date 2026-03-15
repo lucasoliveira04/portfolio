@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: portfolio-prod
+server:
+  port: ${PORT:8080}

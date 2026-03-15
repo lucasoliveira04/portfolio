@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Lucas.dev — Em desenvolvimento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        * { font-family: 'Inter', sans-serif; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50%       { transform: translateY(-12px); }
+        }
+        @keyframes pulse-ring {
+            0%   { transform: scale(0.8); opacity: 1; }
+            100% { transform: scale(2);   opacity: 0; }
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50%       { opacity: 0; }
+        }
+        @keyframes slide-up {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0);    }
+        }
+        @keyframes spin-slow {
+            from { transform: rotate(0deg);   }
+            to   { transform: rotate(360deg); }
+        }
+
+        .float       { animation: float      3s ease-in-out infinite; }
+        .pulse-ring  { animation: pulse-ring 2s ease-out  infinite; }
+        .slide-up-1  { animation: slide-up 0.6s ease forwards 0.1s; opacity: 0; }
+        .slide-up-2  { animation: slide-up 0.6s ease forwards 0.3s; opacity: 0; }
+        .slide-up-3  { animation: slide-up 0.6s ease forwards 0.5s; opacity: 0; }
+        .slide-up-4  { animation: slide-up 0.6s ease forwards 0.7s; opacity: 0; }
+        .spin-slow   { animation: spin-slow 8s linear     infinite; }
+        .cursor-blink { animation: blink    1s step-end   infinite; }
+    </style>
+</head>
+<body class="min-h-screen bg-[#0f0a1e] flex items-center justify-center overflow-hidden relative px-4">
+
+<!-- Background blobs -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-violet-700/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+<!-- Spinning rings -->
+<div class="absolute w-[500px] h-[500px] rounded-full border border-violet-500/10 spin-slow pointer-events-none"></div>
+<div class="absolute w-[700px] h-[700px] rounded-full border border-violet-500/5 spin-slow pointer-events-none" style="animation-direction:reverse;animation-duration:14s"></div>
+
+<div class="relative z-10 text-center flex flex-col items-center gap-6 max-w-lg">
+
+    <!-- Ícone com pulse -->
+    <div class="relative float slide-up-1">
+        <div class="pulse-ring absolute inset-0 rounded-full bg-violet-500/30"></div>
+        <div class="relative w-20 h-20 rounded-full bg-violet-600/20 border border-violet-500/40 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Badge -->
+    <div class="slide-up-1 flex items-center gap-2 px-4 py-1.5 bg-violet-500/10 border border-violet-500/30 rounded-full">
+        <span class="w-2 h-2 rounded-full bg-violet-400 cursor-blink"></span>
+        <span class="text-violet-400 text-xs font-semibold uppercase tracking-widest">Em desenvolvimento</span>
+    </div>
+
+    <!-- Título -->
+    <div class="slide-up-2">
+        <h1 class="text-4xl sm:text-5xl font-bold text-white leading-tight">
+            Lucas<span class="text-violet-400">.dev</span>
+        </h1>
+        <p class="text-slate-400 text-base mt-3 leading-relaxed">
+            A versão <span class="text-violet-400 font-semibold">Thymeleaf</span> do portfólio está sendo construída.<br/>
+            Em breve por aqui. ☕
+        </p>
+    </div>
+
+    <!-- Barra de progresso -->
+    <div class="slide-up-3 w-full">
+        <div class="flex justify-between text-xs text-slate-500 mb-2">
+            <span>Progresso</span>
+            <span class="text-violet-400 font-medium" id="pct">0%</span>
+        </div>
+        <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+            <div id="bar" class="h-full bg-gradient-to-r from-violet-700 to-violet-400 rounded-full transition-all duration-300" style="width:0%"></div>
+        </div>
+    </div>
+
+    <!-- Links para outras versões -->
+    <div class="slide-up-4 flex flex-col sm:flex-row gap-3 w-full">
+<a
+        href="https://react.lucasoliveira04.com"
+        target="_blank"
+        class="flex-1 flex items-center justify-center gap-2 px-5 py-2.5 bg-white/5 hover:bg-emerald-900/20 border border-white/10 hover:border-emerald-500/40 text-slate-300 hover:text-emerald-300 rounded-xl text-sm font-medium transition-all duration-200 hover:-translate-y-0.5"
+        >
+        <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1 17.93V18a1 1 0 0 0-2 0v1.93A8.001 8.001 0 0 1 4.07 13H6a1 1 0 0 0 0-2H4.07A8.001 8.001 0 0 1 11 4.07V6a1 1 0 0 0 2 0V4.07A8.001 8.001 0 0 1 19.93 11H18a1 1 0 0 0 0 2h1.93A8.001 8.001 0 0 1 11 19.93z"/>
+        </svg>
+        Versão ReactJS
+        </a>
+<a
+        href="https://lucasoliveira04.com"
+        target="_blank"
+        class="flex-1 flex items-center justify-center gap-2 px-5 py-2.5 bg-white/5 hover:bg-blue-900/20 border border-white/10 hover:border-blue-500/40 text-slate-300 hover:text-blue-300 rounded-xl text-sm font-medium transition-all duration-200 hover:-translate-y-0.5"
+        >
+        <svg class="w-4 h-4 text-blue-400" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L2 6.5l1.5 13L12 22l8.5-2.5L22 6.5 12 2zm0 2.2l7.1 3.7-1.3 11.1L12 20l-5.8-1-1.3-11.1L12 4.2z"/>
+        </svg>
+        Versão Angular
+        </a>
+    </div>
+
+</div>
+
+<script>
+    const target = 10;
+    let current = 0;
+    const bar = document.getElementById('bar');
+    const pct = document.getElementById('pct');
+    const interval = setInterval(() => {
+        if (current >= target) { clearInterval(interval); return; }
+        current++;
+        bar.style.width = current + '%';
+        pct.textContent  = current + '%';
+    }, 30);
+</script>
+
+</body>
+</html>
