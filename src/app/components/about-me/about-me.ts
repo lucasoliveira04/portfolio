@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { INTERESTS, SKILLS, TIMELINE } from '../../constants/about.constants';
-// comentatios de teste
 @Component({
   selector: 'app-about-me',
   imports: [TranslateModule],

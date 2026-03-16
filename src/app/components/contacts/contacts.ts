@@ -22,6 +22,7 @@ import { FormsModule } from '@angular/forms';
 export class ContactComponent {
   sending = false;
   sent = false;
+  emailInvalid = false;
 
   form = { name: '', email: '', subject: '', message: '' };
 
@@ -49,15 +50,27 @@ export class ContactComponent {
     },
   ];
 
+  // RFC 5322-inspired pattern used by Angular's own email validator
+  private readonly EMAIL_PATTERN =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*\.[a-zA-Z]{2,}$/;
+
+  private isValidEmail(email: string): boolean {
+    return this.EMAIL_PATTERN.test(email);
+  }
+
   sendMessage(): void {
     const { name, email, message } = this.form;
     if (!name.trim() || !email.trim() || !message.trim()) return;
+
+    this.emailInvalid = !this.isValidEmail(email);
+    if (this.emailInvalid) return;
 
     this.sending = true;
 
     setTimeout(() => {
       this.sending = false;
       this.sent = true;
+      this.emailInvalid = false;
       this.form = { name: '', email: '', subject: '', message: '' };
       setTimeout(() => (this.sent = false), 5000);
     }, 1200);

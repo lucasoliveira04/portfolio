@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DestroyRef, inject, OnInit } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SOCIAL_LINKS } from '../../constants/social.constants';
 import { FOOTER_NAV_ITEMS, FOOTER_OWNER } from '../../constants/footer.constants';
@@ -17,15 +18,18 @@ export class FooterComponent implements OnInit {
 
   whatsappUrl = '';
 
-  constructor(private translate: TranslateService) {}
+  private readonly translate = inject(TranslateService);
+  private readonly destroyRef = inject(DestroyRef);
 
   ngOnInit(): void {
     this.buildWhatsappUrl();
-    this.translate.onLangChange.subscribe(() => this.buildWhatsappUrl());
+    this.translate.onLangChange
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe(() => this.buildWhatsappUrl());
   }
 
   private buildWhatsappUrl(): void {
-    this.translate.get('WHATSAPP_MSG').subscribe((msg: any) => {
+    this.translate.get('WHATSAPP_MSG').subscribe((msg: string) => {
       this.whatsappUrl = `https://wa.me/${SOCIAL_LINKS.whatsapp}?text=${encodeURIComponent(msg)}`;
     });
   }
