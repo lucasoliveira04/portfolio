@@ -1,18 +1,26 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideHttpClient } from '@angular/common/http';
+import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
+import { of } from 'rxjs';
 
-import { Contacts } from './contacts';
+import { ContactComponent } from './contacts';
 
 describe('Contacts', () => {
-  let component: Contacts;
-  let fixture: ComponentFixture<Contacts>;
+  let component: ContactComponent;
+  let fixture: ComponentFixture<ContactComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Contacts]
-    })
-    .compileComponents();
+      imports: [ContactComponent],
+      providers: [
+        provideHttpClient(),
+        provideTranslateService({
+          loader: { provide: TranslateLoader, useValue: { getTranslation: () => of({}) } },
+        }),
+      ],
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(Contacts);
+    fixture = TestBed.createComponent(ContactComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
