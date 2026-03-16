@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Location } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -9,10 +8,4 @@ import { RouterModule } from '@angular/router';
   templateUrl: './notfound.html',
   styleUrls: ['./notfound.css', '../../../styles.css'],
 })
-export class Notfound {
-  constructor(private location: Location) {}
-
-  goBack(): void {
-    this.location.back();
-  }
-}
+export class Notfound {}

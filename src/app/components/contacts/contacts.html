@@ -120,19 +120,8 @@
               type="email"
               [(ngModel)]="form.email"
               [placeholder]="'CONTACT.PLACEHOLDER_EMAIL' | translate"
-              class="w-full px-4 py-2.5 text-sm bg-gray-50 dark:bg-slate-700 border rounded-xl text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-slate-500 outline-none focus:bg-blue-50 dark:focus:bg-blue-900/20 transition-all duration-200"
-              [class.border-red-400]="emailInvalid"
-              [class.dark:border-red-500]="emailInvalid"
-              [class.border-gray-200]="!emailInvalid"
-              [class.dark:border-slate-600]="!emailInvalid"
-              [class.focus:border-blue-500]="!emailInvalid"
-              [class.dark:focus:border-blue-400]="!emailInvalid"
+              class="w-full px-4 py-2.5 text-sm bg-gray-50 dark:bg-slate-700 border border-gray-200 dark:border-slate-600 rounded-xl text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-slate-500 outline-none focus:border-blue-500 dark:focus:border-blue-400 focus:bg-blue-50 dark:focus:bg-blue-900/20 transition-all duration-200"
             />
-            @if (emailInvalid) {
-              <p class="text-xs text-red-500 dark:text-red-400 mt-1">
-                {{ 'CONTACT.INVALID_EMAIL' | translate }}
-              </p>
-            }
           </div>
         </div>
 

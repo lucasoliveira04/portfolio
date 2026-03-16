@@ -31,11 +31,10 @@ export class FirstPage implements OnInit, OnDestroy {
   @HostListener('window:scroll')
   onScroll(): void {
     const scrollY = window.scrollY;
-    const firstPage = document.querySelector('first-page') as HTMLElement | null;
-    if (!firstPage) return;
-    const threshold = firstPage.offsetHeight * 0.9;
+    const firstPage = document.querySelector('first-page') as HTMLElement;
+    const noventa = firstPage.offsetHeight * 0.9;
 
-    if (scrollY >= threshold) {
+    if (scrollY >= noventa) {
       this.headerService.show();
     } else {
       this.headerService.hide();

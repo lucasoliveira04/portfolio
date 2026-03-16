@@ -30,32 +30,20 @@
         "role": "Desarrollador Backend",
         "company": "SMIT - Soluciones Mobile Innovadoras Tecnológicas",
         "description": "Participación en proyectos para diferentes clientes, desarrollando soluciones backend con Java, Spring Boot y Postgres.",
-        "techs": [
-          "Java",
-          "Spring Framework",
-          "Github Actions",
-          "PostgreSQL"
-        ],
+        "techs": ["Java", "Spring Framework", "Github Actions", "PostgreSQL"],
         "clients": [
           {
             "name": "Rede Compras",
             "period": "Ago 2025 — Actual",
             "role": "Desarrollador Backend",
-            "techs": [
-              "Java",
-              "Spring Framework",
-              "Github Actions",
-              "Postgres"
-            ],
+            "techs": ["Java", "Spring Framework", "Github Actions", "Postgres"],
             "description": "Refactorización de APIs REST y desarrollo de sistemas con comunicación TCP. Migración de aplicaciones de Java 17 a Java 21 y 25, participación en el proyecto de billetera virtual para tarjetas LeCard, implementación de observabilidad en servicios Java y creación de pipeline de despliegue con GitHub Actions."
           },
           {
             "name": "Top Doc",
             "period": "Ene 2026 — Actual",
             "role": "Desarrollador Backend",
-            "techs": [
-              ".Net"
-            ],
+            "techs": [".Net"],
             "description": "Trabajé en la migración de una API legada de .NET 3 a .NET 9, liderando esfuerzos de refactorización para mejorar la arquitectura, separación de responsabilidades y adopción de mejores prácticas de desarrollo."
           }
         ]
@@ -65,25 +53,14 @@
         "role": "Desarrollador Full Stack",
         "company": "Planet Eco Services",
         "description": "Desarrollo de soluciones para el monitoreo del consumo de agua en reservorios y condominios. Creación de microservicios en Python (Flask) para la generación de reportes utilizando RabbitMQ y Redis, así como el desarrollo de un panel web en React y TypeScript para la visualización de datos. También realicé mantenimiento de consultas en Oracle y desarrollé bots para WhatsApp y Telegram.",
-        "techs": [
-          "Python",
-          "Flask",
-          "RabbitMQ",
-          "React",
-          "Typescript",
-          "Oracle",
-          "Redis"
-        ]
+        "techs": ["Python", "Flask", "RabbitMQ", "React", "Typescript", "Oracle", "Redis"]
       },
       {
         "period": "Jun 2024 — Feb 2025",
         "role": "Desarrollador de Juegos",
         "company": "Nosso mar salve os patinhos",
         "description": "Juego desarrollado de forma autónoma en Unity con C#, en este proyecto trabajé como programador y líder del proyecto. El objetivo del juego es concienciar a las personas sobre no contaminar el medio ambiente.",
-        "techs": [
-          "C#",
-          "Unity"
-        ]
+        "techs": ["C#", "Unity"]
       }
     ],
     "STATS": {
@@ -110,47 +87,19 @@
     "SKILLS_LABEL": "Habilidades principales",
     "JOURNEY_LABEL": "Trayectoria",
     "INTERESTS": [
-      {
-        "label": "Diseño de sistemas",
-        "icon": "fas fa-microchip"
-      },
-      {
-        "label": "DevOps",
-        "icon": "fab fa-docker"
-      },
-      {
-        "label": "Bases de datos",
-        "icon": "fas fa-database"
-      },
-      {
-        "label": "Cloud",
-        "icon": "fas fa-cloud"
-      },
-      {
-        "label": "Código limpio",
-        "icon": "fas fa-book"
-      },
-      {
-        "label": "Open Source",
-        "icon": "fas fa-code-branch"
-      }
+      { "label": "Diseño de sistemas", "icon": "fas fa-microchip" },
+      { "label": "DevOps", "icon": "fab fa-docker" },
+      { "label": "Bases de datos", "icon": "fas fa-database" },
+      { "label": "Cloud", "icon": "fas fa-cloud" },
+      { "label": "Código limpio", "icon": "fas fa-book" },
+      { "label": "Open Source", "icon": "fas fa-code-branch" }
     ],
     "SKILLS": [
-      {
-        "name": "Java"
-      },
-      {
-        "name": "Spring Boot"
-      },
-      {
-        "name": "SQL / Bancos de dados"
-      },
-      {
-        "name": "TypeScript / JavaScript"
-      },
-      {
-        "name": "Docker & DevOps"
-      }
+      { "name": "Java" },
+      { "name": "Spring Boot" },
+      { "name": "SQL / Bancos de dados" },
+      { "name": "TypeScript / JavaScript" },
+      { "name": "Docker & DevOps" }
     ],
     "TIMELINE": [
       {
@@ -200,8 +149,7 @@
     "PLACEHOLDER_EMAIL": "email@email.com",
     "PLACEHOLDER_NAME": "Tu nombre",
     "PLACEHOLDER_SUBJECT": "Asunto del mensaje",
-    "PLACEHOLDER_MESSAGE": "Escribe tu mensaje aquí...",
-    "INVALID_EMAIL": "Por favor, ingresa una dirección de correo electrónico válida."
+    "PLACEHOLDER_MESSAGE": "Escribe tu mensaje aquí..."
   },
   "FOOTER": {
     "DESC": "Desarrollador Back-End enfocado en Java, Spring Boot y arquitecturas escalables. Abierto a nuevas oportunidades.",

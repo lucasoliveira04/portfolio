@@ -6,10 +6,7 @@ import {
   ViewChildren,
   ElementRef,
   ChangeDetectorRef,
-  DestroyRef,
-  inject,
 } from '@angular/core';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { trigger, transition, style, animate } from '@angular/animations';
@@ -77,53 +74,48 @@ export class SecondPage implements OnInit, AfterViewInit {
 
   @ViewChildren('cardRef') cardRefs!: QueryList<ElementRef>;
 
-  private cardObserver: IntersectionObserver | null = null;
-  private readonly translate = inject(TranslateService);
-  private readonly cdr = inject(ChangeDetectorRef);
-  private readonly destroyRef = inject(DestroyRef);
+  constructor(
+    private translate: TranslateService,
+    private cdr: ChangeDetectorRef,
+  ) {}
 
   ngOnInit(): void {
     this.loadExperiences();
-    this.translate.onLangChange
-      .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe(() => this.loadExperiences());
+    this.translate.onLangChange.subscribe(() => this.loadExperiences());
   }
 
   ngAfterViewInit(): void {
     this.observeCards();
-    this.cardRefs.changes.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(() => this.observeCards());
+    this.cardRefs.changes.subscribe(() => this.observeCards());
   }
 
   private observeCards(): void {
-    this.cardObserver?.disconnect();
-
-    this.cardObserver = new IntersectionObserver(
+    const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const index = Number((entry.target as HTMLElement).dataset['index']);
-            this.visibleCards.add(index);
-            this.cdr.detectChanges();
-            this.cardObserver?.unobserve(entry.target);
+            this.visibleCards = new Set(this.visibleCards).add(index);
+            observer.unobserve(entry.target);
           }
         });
       },
       { threshold: 0.1 },
     );
 
-    this.cardRefs.forEach((ref) => this.cardObserver!.observe(ref.nativeElement));
+    this.cardRefs.forEach((ref) => observer.observe(ref.nativeElement));
   }
 
   private loadExperiences(): void {
     this.translate.get('EXPERIENCE.LIST').subscribe((list: Experience[]) => {
       this.experiences = list;
 
-      const wasAlreadyVisible = this.visibleCards.size > 0;
+      const jaEstaVisivel = this.visibleCards.size > 0;
 
       this.visibleCards = new Set<number>();
       this.cdr.detectChanges();
 
-      if (wasAlreadyVisible) {
+      if (jaEstaVisivel) {
         list.forEach((_, i) => this.visibleCards.add(i));
         this.cdr.detectChanges();
       } else {
@@ -131,7 +123,6 @@ export class SecondPage implements OnInit, AfterViewInit {
       }
     });
   }
-
   toggleClients(index: number): void {
     this.expandedClients = this.expandedClients === index ? null : index;
   }
