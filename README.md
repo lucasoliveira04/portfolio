@@ -144,14 +144,6 @@ Recomendo a [Vercel](https://vercel.com) — conecta o repositório, seleciona a
 
 ---
 
-## 👥 Contributors
-
-<a href="https://github.com/lucasoliveira04/portfolio/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=lucasoliveira04/portfolio" />
-</a>
-
----
-
 ## 📄 Licença
 
 Distribuído sob a licença **MIT**. Você pode usar, copiar, modificar e distribuir esse projeto livremente — inclusive para fins comerciais — desde que mantenha os créditos.
