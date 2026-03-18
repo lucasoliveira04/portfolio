@@ -1,5 +1,9 @@
 import { SOCIAL_LINKS } from './social.constants';
 
+export const RESUME_URLS: Record<string, string> = {
+  en: 'https://github.com/lucasoliveira04/portfolio/releases/download/v2.0.0/Curriculum.pdf',
+  pt: 'https://github.com/lucasoliveira04/portfolio/releases/download/v2.0.0/Curriculo.pdf',
+};
 export const PROFILE = {
   imgPerfil: 'img/eu/eu_pessoa_real.png',
   resumeUrl: 'https://example.com/resume',

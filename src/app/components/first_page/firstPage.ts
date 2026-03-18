@@ -1,9 +1,10 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { Header } from '../header/header';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { StackItem } from '../stack-item/stack-item';
 import { HeaderService } from '../../services/header/header.service';
-import { PROFILE, SOCIAL_ITEMS, STACK_ITEMS } from '../../constants/profile.constants';
+import { PROFILE, SOCIAL_ITEMS, STACK_ITEMS, RESUME_URLS } from '../../constants/profile.constants';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'first-page',
@@ -14,18 +15,35 @@ import { PROFILE, SOCIAL_ITEMS, STACK_ITEMS } from '../../constants/profile.cons
 })
 export class FirstPage implements OnInit, OnDestroy {
   readonly imgPerfil = PROFILE.imgPerfil;
-  readonly resumeUrl = PROFILE.resumeUrl;
   readonly socialItems = SOCIAL_ITEMS;
   readonly stackItems = STACK_ITEMS;
 
-  constructor(protected headerService: HeaderService) {}
+  resumeUrl!: string;
+
+  private langSub!: Subscription;
+
+  constructor(
+    protected headerService: HeaderService,
+    private translate: TranslateService,
+  ) {}
 
   ngOnInit(): void {
     this.headerService.hide();
+
+    this.resumeUrl = this.getResumeUrl(this.translate.currentLang);
+
+    this.langSub = this.translate.onLangChange.subscribe(({ lang }) => {
+      this.resumeUrl = this.getResumeUrl(lang);
+    });
   }
 
   ngOnDestroy(): void {
     this.headerService.show();
+    this.langSub?.unsubscribe();
+  }
+
+  private getResumeUrl(lang: string): string {
+    return RESUME_URLS[lang] ?? RESUME_URLS['en'];
   }
 
   @HostListener('window:scroll')

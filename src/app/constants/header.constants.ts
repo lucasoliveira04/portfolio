@@ -19,5 +19,5 @@ export const VERSIONS = [
 export const SUPPORTED_LANGUAGES = [
   { value: 'pt', label: 'PT-BR' },
   { value: 'en', label: 'EN' },
-  { value: 'es', label: 'ES' },
+  // { value: 'es', label: 'ES' },
 ] as const;
