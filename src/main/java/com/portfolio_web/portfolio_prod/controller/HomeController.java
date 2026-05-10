@@ -11,6 +11,11 @@ public class HomeController {
         return "home";
     }
 
+    @GetMapping("/notFound")
+    public String notFound() {
+        return "not-found";
+    }
+
     @GetMapping("/home")
     public String home() {
         return "home-page";

@@ -1,0 +1,42 @@
+:root {
+
+    --color-background: #050816;
+
+    --color-primary: #8b5cf6;
+    --color-primary-dark: #7c3aed;
+    --color-secondary: #2563eb;
+
+    --color-white: #ffffff;
+
+    --color-text: #e4e4e7;
+    --color-text-light: #a1a1aa;
+    --color-text-muted: #71717a;
+
+    --color-card: rgba(255, 255, 255, 0.03);
+
+    --color-border: rgba(139, 92, 246, 0.15);
+
+    --shadow-primary:
+            0 0 20px rgba(139, 92, 246, 0.5);
+
+    --shadow-hover:
+            0 0 40px rgba(139, 92, 246, 0.8);
+
+    --gradient-primary:
+            linear-gradient(
+                    90deg,
+                    #7c3aed,
+                    #2563eb
+            );
+
+    --font-primary: 'Poppins', sans-serif;
+
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+
+    --transition-default: 0.3s ease;
+
+    --container-width: 1200px;
+
+}
