@@ -1,0 +1,167 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--color-background);
+
+    color: var(--color-text);
+
+    font-family: var(--font-primary);
+
+    min-height: 100vh;
+
+    transition:
+            background var(--transition-default),
+            color var(--transition-default);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-white);
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+p {
+    color: var(--color-text-light);
+
+    line-height: 1.7;
+}
+
+span {
+    color: inherit;
+}
+
+strong {
+    color: var(--color-white);
+}
+
+small {
+    color: var(--color-text-muted);
+}
+
+a {
+    color: var(--color-primary);
+
+    text-decoration: none;
+
+    transition: var(--transition-default);
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+button {
+    border: none;
+
+    outline: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    transition: var(--transition-default);
+}
+
+button:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+}
+
+input,
+textarea,
+select {
+    background: var(--color-card);
+
+    border: 1px solid var(--color-border);
+
+    color: var(--color-white);
+
+    font-family: inherit;
+
+    outline: none;
+
+    transition: var(--transition-default);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--color-text-muted);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--color-primary);
+
+    box-shadow:
+            0 0 10px rgba(139, 92, 246, 0.3);
+}
+
+img {
+    max-width: 100%;
+
+    display: block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+header {
+    background: rgba(5, 8, 22, 0.7);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid var(--color-border);
+
+    color: var(--color-white);
+}
+
+section {
+    padding:
+            80px
+            20px;
+}
+
+.container {
+    width: 100%;
+
+    max-width: var(--container-width);
+
+    margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-dark);
+}
+
+::selection {
+    background: var(--color-primary);
+
+    color: var(--color-white);
+}

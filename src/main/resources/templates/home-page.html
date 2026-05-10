@@ -1,10 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Lucas Oliveira - Dev</title>
+    <link rel="stylesheet" href="/css/main.css">
 </head>
-<body>
-    <p>Init</p>
+<body th:attr="data-theme=${theme}">
+<header class="home-header">
+
+    <nav class="home-navbar">
+
+        <a href="/home" class="home-logo">
+            Lucas Oliveira
+        </a>
+
+        <ul class="home-nav-links">
+
+            <li><a href="/home">Home</a></li>
+
+            <li><a href="/projects">Projects</a></li>
+
+            <li><a href="/contact">Contact</a></li>
+
+        </ul>
+
+        <div class="home-header-actions">
+
+            <section class="theme-switcher">
+
+                <span>Theme</span>
+
+                <a href="/theme/toggle"
+                   class="theme-button">
+
+                    🌙
+
+                </a>
+
+            </section>
+
+        </div>
+
+    </nav>
+
+</header>
 </body>
 </html>

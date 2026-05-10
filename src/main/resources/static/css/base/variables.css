@@ -1,0 +1,191 @@
+:root {
+
+    --color-header: rgba(13, 17, 23, 0.82);
+
+    --header-height: 80px;
+
+    --container-width: 1200px;
+
+    --z-header: 999;
+    --z-modal: 1000;
+    --z-overlay: 998;
+
+    --font-primary: 'Poppins', sans-serif;
+
+    --radius-xs: 6px;
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+    --radius-full: 999px;
+
+    --transition-fast: 0.2s ease;
+
+    --transition-default: 0.3s ease;
+
+    --transition-slow: 0.5s ease;
+
+    --java-orange: #f89820;
+
+    --java-orange-dark: #e76f00;
+
+    --thymeleaf-green: #005f0f;
+
+    --thymeleaf-green-light: #0b8f1f;
+
+    --spring-green: #6db33f;
+
+    --spring-green-dark: #4f8f2b;
+
+    /* =========================
+       DARK THEME
+    ========================= */
+
+    --color-background: #0d1117;
+
+    --color-surface: #161b22;
+
+    --color-primary: var(--thymeleaf-green);
+
+    --color-primary-dark: var(--thymeleaf-green-light);
+
+    --color-secondary: var(--java-orange);
+
+    --color-accent: var(--spring-green);
+
+    --color-white: #ffffff;
+
+    --color-text: #e6edf3;
+
+    --color-text-light: #9da7b3;
+
+    --color-text-muted: #6e7681;
+
+    --color-card:
+            rgba(255, 255, 255, 0.03);
+
+    --color-card-hover:
+            rgba(255, 255, 255, 0.06);
+
+    --color-border:
+            rgba(109, 179, 63, 0.18);
+
+    --color-overlay:
+            rgba(0, 0, 0, 0.55);
+
+    --shadow-sm:
+            0 2px 10px rgba(0, 0, 0, 0.18);
+
+    --shadow-md:
+            0 6px 20px rgba(0, 0, 0, 0.28);
+
+    --shadow-lg:
+            0 10px 40px rgba(0, 0, 0, 0.4);
+
+    --shadow-primary:
+            0 0 20px rgba(109, 179, 63, 0.35);
+
+    --shadow-hover:
+            0 0 40px rgba(109, 179, 63, 0.5);
+
+    --shadow-orange:
+            0 0 30px rgba(248, 152, 32, 0.4);
+
+    --gradient-primary:
+            linear-gradient(
+                    135deg,
+                    var(--thymeleaf-green),
+                    var(--spring-green)
+            );
+
+    --gradient-secondary:
+            linear-gradient(
+                    135deg,
+                    var(--java-orange),
+                    #ffb347
+            );
+
+    --gradient-background:
+            linear-gradient(
+                    180deg,
+                    #0d1117,
+                    #161b22
+            );
+}
+
+/* =========================
+   LIGHT THEME
+========================= */
+
+[data-theme="light"] {
+
+    --color-header: rgb(78 203 98 / 0.82);
+    --color-background: #ffffff;
+
+    --color-surface: #d55b5b;
+
+    --color-primary: #0f6b1d;
+
+    --color-primary-dark: #0b5717;
+
+    --color-secondary: #f89820;
+
+    --color-accent: #6db33f;
+
+    --color-white: #18181b;
+
+    --color-text: #27272a;
+
+    --color-text-light: #52525b;
+
+    --color-text-muted: #71717a;
+
+    --color-card:
+            rgba(255, 255, 255, 0.92);
+
+    --color-card-hover:
+            rgba(255, 255, 255, 1);
+
+    --color-border:
+            rgba(15, 107, 29, 0.12);
+
+    --shadow-sm:
+            0 2px 10px rgba(0, 0, 0, 0.05);
+
+    --shadow-md:
+            0 8px 24px rgba(0, 0, 0, 0.08);
+
+    --shadow-lg:
+            0 14px 40px rgba(0, 0, 0, 0.12);
+
+    --shadow-primary:
+            0 0 18px rgba(109, 179, 63, 0.18);
+
+    --shadow-hover:
+            0 0 36px rgba(109, 179, 63, 0.28);
+
+    --shadow-orange:
+            0 0 24px rgba(248, 152, 32, 0.18);
+
+    --gradient-primary:
+            linear-gradient(
+                    135deg,
+                    #0f6b1d,
+                    #6db33f
+            );
+
+    --gradient-secondary:
+            linear-gradient(
+                    135deg,
+                    #f89820,
+                    #ffb347
+            );
+
+    --gradient-background:
+            linear-gradient(
+                    180deg,
+                    #ffffff 0%,
+                    #f7fff8 35%,
+                    #edf9ef 100%
+            );
+}

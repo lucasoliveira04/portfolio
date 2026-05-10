@@ -33,17 +33,6 @@ body {
     animation: moveStars 30s linear infinite;
 }
 
-@keyframes moveStars {
-
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(-100px);
-    }
-}
-
 .container {
     position: relative;
     z-index: 2;
@@ -118,20 +107,7 @@ h1 span {
     animation: pulse 3s infinite ease-in-out;
 }
 
-@keyframes pulse {
 
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.03);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
 
 .robot {
     font-size: clamp(40px, 5vw, 80px);
@@ -139,21 +115,6 @@ h1 span {
     margin-top: -25px;
 
     animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-
-    0% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-12px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
 }
 
 .orbit {
@@ -190,17 +151,6 @@ h1 span {
     background: var(--color-primary);
 
     box-shadow: 0 0 20px var(--color-primary);
-}
-
-@keyframes rotate {
-
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
 }
 
 .card {
@@ -266,28 +216,6 @@ h1 span {
 .loading span:nth-child(3) {
     animation-delay: 0.4s;
 }
-
-@keyframes loading {
-
-    0% {
-        transform: scale(1);
-        opacity: 0.5;
-    }
-
-    50% {
-        transform: scale(1.6);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 0.5;
-    }
-}
-
-/* =========================
-   BUTTON
-========================= */
 
 .btn {
     display: inline-flex;
