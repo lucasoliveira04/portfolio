@@ -47,10 +47,6 @@ export class Header {
 
   mobileMenuOpen = false;
 
-  changeVersion(url: string): void {
-    if (url) window.open(url, '_blank');
-  }
-
   changeLanguage(lang: string): void {
     this.translate.use(lang);
   }
