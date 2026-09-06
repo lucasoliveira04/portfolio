@@ -160,11 +160,13 @@
                             <p class="font-semibold text-gray-800 dark:text-slate-100 text-sm">
                               {{ client.name }}
                             </p>
-                            <span
-                              class="text-xs text-blue-500 dark:text-blue-400 bg-white dark:bg-slate-800 border border-blue-100 dark:border-slate-600 px-2 py-0.5 rounded-full"
-                            >
-                              {{ client.period }}
-                            </span>
+                            @if (client.period) {
+                              <span
+                                class="text-xs text-blue-500 dark:text-blue-400 bg-white dark:bg-slate-800 border border-blue-100 dark:border-slate-600 px-2 py-0.5 rounded-full"
+                              >
+                                {{ client.period }}
+                              </span>
+                            }
                           </div>
 
                           <p class="text-xs text-gray-500 dark:text-slate-400 mt-1">

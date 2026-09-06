@@ -30,37 +30,79 @@
         "role": "Backend Developer",
         "company": "SMIT - Innovative Mobile Technology Solutions",
         "description": "Working on projects for different clients, developing backend solutions with Java, Spring Boot and Postgres.",
-        "techs": ["Java", "Spring Boot", "Github Actions", "PostgreSQL"],
+        "techs": [
+          "Java",
+          "Spring Boot",
+          "Github Actions",
+          "PostgreSQL"
+        ],
         "clients": [
           {
             "name": "Rede Compras",
             "period": "Aug 2025 — Present",
             "role": "Backend Developer",
-            "techs": ["Java", "Spring Framework", "Github Actions", "Postgres"],
-            "description": "Refactoring REST APIs and developing systems with TCP communication. Migrating applications from Java 17 to Java 21 and 25, participating in the virtual wallet project for LeCard cards, implementing observability in Java services, and creating a deployment pipeline with GitHub Actions."
+            "techs": [
+              "Java",
+              "Spring Framework",
+              "Github Actions",
+              "Postgres"
+            ],
+            "description": "Refactoring REST APIs and developing systems with TCP communication. Migrating applications from Java 17 to Java 21 and 25, participating in the virtual wallet project for LeCard cards, implementing observability in Java services, and creating a deployment pipeline with GitHub Actions.",
+            "visible": true
+          },
+          {
+            "name": "Bow-e",
+            "visible": true,
+            "role": "Backend Developer",
+            "techs": [
+              "Kotlin",
+              "Spring Boot",
+              "MySQL",
+              "JPA/Hibernate",
+              "Angular",
+              "TypeScript"
+            ],
+            "description": "Developed features with Kotlin, Spring Boot and MySQL for high volumes of credit, debit and billing requests in energy management. Optimized SQL queries through indexing and eliminated N+1 issues in JPA/Hibernate. Built interfaces and forms with Angular and TypeScript integrated with REST APIs and participated in code reviews and architecture discussions."
           },
           {
             "name": "Top Doc",
             "period": "Jan 2026 — Present",
             "role": "Backend Developer",
-            "techs": [".NET"],
-            "description": "I worked on migrating a legacy API from .NET 3 to .NET 9, leading refactoring efforts to improve architecture, separation of concerns, and adoption of best development practices."
+            "techs": [
+              ".NET"
+            ],
+            "description": "I worked on migrating a legacy API from .NET 3 to .NET 9, leading refactoring efforts to improve architecture, separation of concerns, and adoption of best development practices.",
+            "visible": false
           }
-        ]
+        ],
+        "visible": true
       },
       {
         "period": "April 2025 — Aug 2025",
         "role": "Full Stack Developer",
         "company": "Planet Eco Services",
         "description": "Development of solutions for monitoring water consumption in reservoirs and condominiums. Creation of microservices in Python (Flask) for report generation using RabbitMQ and Redis, as well as the development of a web dashboard in React and TypeScript for data visualization. I also performed maintenance of queries in Oracle and developed bots for WhatsApp and Telegram.",
-        "techs": ["Python", "Flask", "RabbitMQ", "React", "Typescript", "Oracle", "Redis"]
+        "techs": [
+          "Python",
+          "Flask",
+          "RabbitMQ",
+          "React",
+          "Typescript",
+          "Oracle",
+          "Redis"
+        ],
+        "visible": true
       },
       {
         "period": "Jun 2024 — Feb 2025",
         "role": "Game Developer",
         "company": "Nosso mar salve os patinhos",
         "description": "Game developed autonomously in Unity with C#, in this project I worked as a programmer and team leader. The goal of the game is to raise awareness about not polluting the environment.",
-        "techs": ["C#", "Unity"]
+        "techs": [
+          "C#",
+          "Unity"
+        ],
+        "visible": false
       }
     ],
     "STATS": {

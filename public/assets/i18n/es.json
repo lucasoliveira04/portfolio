@@ -30,37 +30,79 @@
         "role": "Desarrollador Backend",
         "company": "SMIT - Soluciones Mobile Innovadoras Tecnológicas",
         "description": "Participación en proyectos para diferentes clientes, desarrollando soluciones backend con Java, Spring Boot y Postgres.",
-        "techs": ["Java", "Spring Framework", "Github Actions", "PostgreSQL"],
+        "techs": [
+          "Java",
+          "Spring Framework",
+          "Github Actions",
+          "PostgreSQL"
+        ],
         "clients": [
           {
             "name": "Rede Compras",
             "period": "Ago 2025 — Actual",
             "role": "Desarrollador Backend",
-            "techs": ["Java", "Spring Framework", "Github Actions", "Postgres"],
-            "description": "Refactorización de APIs REST y desarrollo de sistemas con comunicación TCP. Migración de aplicaciones de Java 17 a Java 21 y 25, participación en el proyecto de billetera virtual para tarjetas LeCard, implementación de observabilidad en servicios Java y creación de pipeline de despliegue con GitHub Actions."
+            "techs": [
+              "Java",
+              "Spring Framework",
+              "Github Actions",
+              "Postgres"
+            ],
+            "description": "Refactorización de APIs REST y desarrollo de sistemas con comunicación TCP. Migración de aplicaciones de Java 17 a Java 21 y 25, participación en el proyecto de billetera virtual para tarjetas LeCard, implementación de observabilidad en servicios Java y creación de pipeline de despliegue con GitHub Actions.",
+            "visible": true
+          },
+          {
+            "name": "Bow-e",
+            "visible": true,
+            "role": "Desarrollador Backend",
+            "techs": [
+              "Kotlin",
+              "Spring Boot",
+              "MySQL",
+              "JPA/Hibernate",
+              "Angular",
+              "TypeScript"
+            ],
+            "description": "Desarrollo de funcionalidades con Kotlin, Spring Boot y MySQL para grandes volúmenes de solicitudes de créditos, débitos y facturación en gestión de energía. Optimización de consultas SQL mediante índices y eliminación de problemas de N+1 en JPA/Hibernate. Creación de interfaces y formularios con Angular y TypeScript integrados con APIs REST y participación en revisiones de código y discusiones de arquitectura."
           },
           {
             "name": "Top Doc",
             "period": "Ene 2026 — Actual",
             "role": "Desarrollador Backend",
-            "techs": [".Net"],
-            "description": "Trabajé en la migración de una API legada de .NET 3 a .NET 9, liderando esfuerzos de refactorización para mejorar la arquitectura, separación de responsabilidades y adopción de mejores prácticas de desarrollo."
+            "techs": [
+              ".Net"
+            ],
+            "description": "Trabajé en la migración de una API legada de .NET 3 a .NET 9, liderando esfuerzos de refactorización para mejorar la arquitectura, separación de responsabilidades y adopción de mejores prácticas de desarrollo.",
+            "visible": false
           }
-        ]
+        ],
+        "visible": true
       },
       {
         "period": "Abril 2025 — Ago 2025",
         "role": "Desarrollador Full Stack",
         "company": "Planet Eco Services",
         "description": "Desarrollo de soluciones para el monitoreo del consumo de agua en reservorios y condominios. Creación de microservicios en Python (Flask) para la generación de reportes utilizando RabbitMQ y Redis, así como el desarrollo de un panel web en React y TypeScript para la visualización de datos. También realicé mantenimiento de consultas en Oracle y desarrollé bots para WhatsApp y Telegram.",
-        "techs": ["Python", "Flask", "RabbitMQ", "React", "Typescript", "Oracle", "Redis"]
+        "techs": [
+          "Python",
+          "Flask",
+          "RabbitMQ",
+          "React",
+          "Typescript",
+          "Oracle",
+          "Redis"
+        ],
+        "visible": true
       },
       {
         "period": "Jun 2024 — Feb 2025",
         "role": "Desarrollador de Juegos",
         "company": "Nosso mar salve os patinhos",
         "description": "Juego desarrollado de forma autónoma en Unity con C#, en este proyecto trabajé como programador y líder del proyecto. El objetivo del juego es concienciar a las personas sobre no contaminar el medio ambiente.",
-        "techs": ["C#", "Unity"]
+        "techs": [
+          "C#",
+          "Unity"
+        ],
+        "visible": false
       }
     ],
     "STATS": {

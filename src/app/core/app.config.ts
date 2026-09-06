@@ -2,7 +2,8 @@ import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/
 import { provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
-import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
+import { provideTranslateService, TranslateLoader, TranslateParser } from '@ngx-translate/core';
+import { PortfolioTranslateParser } from './portfolio-translate-parser';
 import { TranslateHttpLoader, TRANSLATE_HTTP_LOADER_CONFIG } from '@ngx-translate/http-loader';
 
 import { routes } from './app.routes';
@@ -23,6 +24,7 @@ export const appConfig: ApplicationConfig = {
     },
     provideTranslateService({
       defaultLanguage: 'pt',
+      parser: { provide: TranslateParser, useClass: PortfolioTranslateParser },
       loader: {
         provide: TranslateLoader,
         useFactory: httpLoaderFactory,
