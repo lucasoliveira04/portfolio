@@ -17,14 +17,16 @@ interface Link {
 }
 
 interface Client {
+  visible?: boolean;
   name: string;
-  period: string;
+  period?: string;
   role: string;
   techs: string[];
   description: string;
 }
 
 interface Experience {
+  visible?: boolean;
   period: string;
   role: string;
   company: string;
@@ -108,7 +110,13 @@ export class SecondPage implements OnInit, AfterViewInit {
 
   private loadExperiences(): void {
     this.translate.get('EXPERIENCE.LIST').subscribe((list: Experience[]) => {
-      this.experiences = list;
+      this.experiences = list
+        .filter((experience) => experience.visible !== false)
+        .map((experience) => ({
+          ...experience,
+          clients: experience.clients?.filter((client) => client.visible !== false),
+        }));
+      this.expandedClients = null;
 
       const jaEstaVisivel = this.visibleCards.size > 0;
 
@@ -116,7 +124,7 @@ export class SecondPage implements OnInit, AfterViewInit {
       this.cdr.detectChanges();
 
       if (jaEstaVisivel) {
-        list.forEach((_, i) => this.visibleCards.add(i));
+        this.experiences.forEach((_, i) => this.visibleCards.add(i));
         this.cdr.detectChanges();
       } else {
         this.observeCards();
