@@ -39,7 +39,9 @@ export const SOCIAL_ITEMS = [
 export const STACK_ITEMS = [
   { name: 'Java', icon: 'devicon-java-plain', color: '#007396' },
   { name: 'Spring Boot', icon: 'devicon-spring-plain', color: '#99d98c' },
-  { name: 'JavaScript', icon: 'devicon-javascript-plain', color: '#F0DB4F' },
-  { name: 'TypeScript', icon: 'devicon-typescript-plain', color: '#3178C6' },
-  { name: 'Docker', icon: 'devicon-docker-plain', color: '#2496ED' },
+  { name: 'Kotlin', icon: 'devicon-kotlin-plain', color: '#0095D5' },
+  { name: 'Angular', icon: 'devicon-angularjs-plain', color: '#DD0031' },
+  // { name: 'JavaScript', icon: 'devicon-javascript-plain', color: '#F0DB4F' },
+  // { name: 'TypeScript', icon: 'devicon-typescript-plain', color: '#3178C6' },
+  //{ name: 'Docker', icon: 'devicon-docker-plain', color: '#2496ED' },
 ] as const;
