@@ -31,6 +31,26 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "github-profile-readmes/assets",
+                "output": "readme-lab/assets"
+              },
+              {
+                "glob": "**/*.html",
+                "input": "github-profile-readmes/previews",
+                "output": "readme-lab/previews"
+              },
+              {
+                "glob": "**/*.md",
+                "input": "github-profile-readmes/themes",
+                "output": "readme-lab/themes"
+              },
+              {
+                "glob": "**/*",
+                "input": "github-profile-readmes/downloads",
+                "output": "readme-lab/downloads"
               }
             ],
             "styles": ["src/styles.css"],

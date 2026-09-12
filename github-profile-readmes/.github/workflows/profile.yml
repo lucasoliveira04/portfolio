@@ -1,0 +1,94 @@
+name: Profile README
+
+on:
+  push:
+    paths: ['scripts/**', 'themes/**', 'assets/**', 'data/**', 'README.md', 'profile.config.json', '.github/workflows/profile.yml']
+  pull_request:
+    paths: ['scripts/**', 'themes/**', 'assets/**', 'data/**', 'README.md', 'profile.config.json', '.github/workflows/profile.yml']
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+    inputs:
+      theme:
+        description: Tema do perfil
+        type: choice
+        default: manter
+        options: [manter, retro, futurama, windows-xp, intellij, minimalista, terminal, blueprint, jornal, rpg, animado]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-readme-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - run: node --test scripts/profile.test.mjs
+      - name: Verify reproducible assets and README
+        run: |
+          node scripts/build-art.mjs
+          node scripts/update-profile.mjs --offline
+          git diff --exit-code -- README.md assets themes data
+      - name: Verify real contribution snake generation
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b
+        with:
+          github_user_name: lucasoliveira04
+          outputs: .preview/verified-snake.svg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  refresh:
+    needs: validate
+    if: >-
+      (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') &&
+      github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - name: Select theme
+        env:
+          REQUESTED_THEME: ${{ inputs.theme }}
+        run: |
+          if [ -n "$REQUESTED_THEME" ] && [ "$REQUESTED_THEME" != "manter" ]; then
+            node scripts/activate-theme.mjs "$REQUESTED_THEME"
+          fi
+      - name: Generate contribution snake
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b
+        with:
+          github_user_name: lucasoliveira04
+          outputs: |
+            assets/animado/snake.svg
+            assets/animado/snake-dark.svg?palette=github-dark
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: node scripts/finish-snake.mjs
+      - name: Refresh public GitHub data
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/update-profile.mjs
+      - run: node --test scripts/profile.test.mjs
+      - name: Commit refreshed profile
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md themes assets data/github.json profile.config.json
+          if git diff --cached --quiet; then
+            echo 'No profile changes.'
+            exit 0
+          fi
+          git commit -m 'chore: refresh public profile data'
+          git push

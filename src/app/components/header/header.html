@@ -43,6 +43,7 @@
               {{ item.label | translate }}
             </a>
           }
+          <a routerLink="/readmes" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 whitespace-nowrap">README Lab ↗</a>
         </nav>
       }
 
@@ -147,6 +148,7 @@
             {{ item.label | translate }}
           </a>
         }
+        <a routerLink="/readmes" (click)="toggleMobileMenu()" class="text-sm font-medium text-blue-600 dark:text-blue-400 py-1.5">README Lab ↗</a>
       </div>
     }
   </header>

@@ -7,6 +7,11 @@ export const routes: Routes = [
     path: '',
     component: Home,
   },
+  {
+    path: 'readmes',
+    title: 'README Lab | Lucas Oliveira',
+    loadComponent: () => import('../pages/readme-gallery/readme-gallery').then(module => module.ReadmeGallery),
+  },
   { path: '404', component: Notfound },
   { path: '**', redirectTo: '404' },
 ];

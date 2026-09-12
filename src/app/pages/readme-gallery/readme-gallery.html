@@ -1,0 +1,75 @@
+<div class="readme-lab">
+  <header class="lab-header">
+    <a routerLink="/" class="brand" aria-label="Voltar ao portfólio de Lucas">Lucas<span>.dev</span></a>
+    <span class="header-divider" aria-hidden="true"></span>
+    <span class="lab-label">README LAB</span>
+    <a routerLink="/" class="back-link">← Voltar ao portfólio</a>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="gallery-title">
+      <div>
+        <p class="eyebrow"><span aria-hidden="true"></span> UM POUCO DE CÓDIGO. MUITA PERSONALIDADE.</p>
+        <h1 id="gallery-title">Um perfil.<br><em>Dez universos.</em></h1>
+        <p class="intro-text">O mesmo Lucas, em dez direções visuais. Explore as versões, veja os detalhes e leve sua favorita para o GitHub.</p>
+      </div>
+      <div class="kit-callout">
+        <span class="kit-symbol" aria-hidden="true">&#123; 10 &#125;</span>
+        <p>Dez READMEs completos.<br>Imagens, projetos e dados dinâmicos.</p>
+        <a class="primary-button" href="/readme-lab/downloads/lucas-oliveira-readmes.zip" download>Baixar kit completo <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="workspace" aria-label="Explorar os temas">
+      <aside class="theme-rail">
+        <div class="rail-heading"><h2>Escolha seu universo</h2><span>01—10</span></div>
+        <div class="theme-list" aria-label="Temas disponíveis">
+          @for (theme of themes; track theme.id; let index = $index) {
+            <button class="theme-option" [class.selected]="selected().id === theme.id" [attr.aria-pressed]="selected().id === theme.id" (click)="selectTheme(theme.id)" [style.--theme-accent]="theme.color">
+              <span class="theme-number">{{ index < 9 ? '0' : '' }}{{ index + 1 }}</span>
+              <span class="theme-copy"><b>{{ theme.name }}</b><small>{{ theme.label }}</small></span>
+              <span class="theme-swatch" aria-hidden="true"></span>
+            </button>
+          }
+        </div>
+        <p class="rail-note">Cada visual tem sua própria composição. Todos contam a mesma história.</p>
+      </aside>
+
+      <div class="viewer">
+        <div class="viewer-heading">
+          <div><p class="eyebrow">EM EXIBIÇÃO</p><h2>{{ selected().name }}</h2><p>{{ selected().description }}</p></div>
+          <span class="file-tag">README.md</span>
+        </div>
+        <div class="viewer-toolbar">
+          <div class="view-switch" aria-label="Modo de visualização">
+            <button [attr.aria-pressed]="view() === 'preview'" (click)="view.set('preview')">Prévia</button>
+            <button [attr.aria-pressed]="view() === 'markdown'" (click)="view.set('markdown')">Markdown</button>
+          </div>
+          <div class="viewer-actions">
+            @if (view() === 'preview') {
+              <button class="text-button" (click)="surface.set(surface() === 'dark' ? 'light' : 'dark')">{{ surface() === 'dark' ? '☀ Fundo claro' : '◐ Fundo escuro' }}</button>
+            }
+            <button class="copy-button" [disabled]="content().loading || content().error" (click)="copyMarkdown()">Copiar Markdown</button>
+          </div>
+        </div>
+        <div class="readme-content">
+          @if (view() === 'preview') {
+            <iframe [src]="previewUrl()" [title]="'Prévia completa do tema ' + selected().name" sandbox="allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>
+          } @else if (content().loading) {
+            <p class="content-message" role="status">Carregando Markdown…</p>
+          } @else if (content().error) {
+            <p class="content-message" role="alert">Não foi possível carregar o Markdown. <a [href]="'/readme-lab/downloads/' + selected().id + '.md'" download>Baixar o arquivo</a></p>
+          } @else {
+            <pre class="source-code" tabindex="0" aria-label="Código Markdown do tema selecionado"><code>{{ content().markdown }}</code></pre>
+          }
+        </div>
+        <div class="viewer-footer">
+          <p role="status" aria-live="polite">{{ copyStatus() || 'O kit inclui as imagens usadas no README.' }}</p>
+          <a [href]="'/readme-lab/downloads/' + selected().id + '.md'" [download]="'README-' + selected().id + '.md'">Baixar .md ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="lab-footer"><span>Feito para quem gosta de entender por dentro.</span><a href="https://github.com/lucasoliveira04" target="_blank" rel="noopener noreferrer">Lucas Oliveira no GitHub ↗</a></footer>
+  </main>
+</div>

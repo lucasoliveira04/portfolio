@@ -35,6 +35,8 @@ Esta é a versão **Angular** do portfólio — desenvolvida com Angular 19, Tai
 
 ## ✨ Funcionalidades
 
+- 🎨 **README Lab** — galeria em `/readmes` com dez estilos, fundo claro/escuro, código Markdown, cópia e download do kit completo. [Explorar os dez READMEs](github-profile-readmes/GALLERY.md) · [Guia do kit](github-profile-readmes/SETUP.md).
+
 - 🌍 **Internacionalização** — suporte a PT-BR, EN e ES via `ngx-translate`
 - 🌙 **Tema escuro/claro** — alternância com persistência no `localStorage`
 - 📱 **Responsivo** — adaptado para mobile, tablet e desktop

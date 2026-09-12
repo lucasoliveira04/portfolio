@@ -1,0 +1,67 @@
+{
+  "updatedAt": "2026-09-12T02:21:28.792Z",
+  "publicOriginalRepos": 57,
+  "stars": 5,
+  "languages": [
+    [
+      "Java",
+      25
+    ],
+    [
+      "JavaScript",
+      7
+    ],
+    [
+      "Python",
+      6
+    ],
+    [
+      "TypeScript",
+      6
+    ],
+    [
+      "C",
+      3
+    ],
+    [
+      "Kotlin",
+      3
+    ],
+    [
+      "Batchfile",
+      1
+    ],
+    [
+      "HTML",
+      1
+    ],
+    [
+      "Jupyter Notebook",
+      1
+    ],
+    [
+      "PHP",
+      1
+    ]
+  ],
+  "recent": [
+    {
+      "name": "api_share_file",
+      "url": "https://github.com/lucasoliveira04/api_share_file",
+      "language": "Java",
+      "pushedAt": "2026-09-12T02:09:41Z"
+    },
+    {
+      "name": "garbage_collector",
+      "url": "https://github.com/lucasoliveira04/garbage_collector",
+      "language": "C",
+      "pushedAt": "2026-09-12T01:13:16Z"
+    },
+    {
+      "name": "dsa",
+      "url": "https://github.com/lucasoliveira04/dsa",
+      "language": "Java",
+      "pushedAt": "2026-09-12T00:31:53Z"
+    }
+  ]
+}

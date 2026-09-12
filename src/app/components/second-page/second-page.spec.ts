@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideHttpClient } from '@angular/common/http';
-import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
+import { provideTranslateService, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { of } from 'rxjs';
 
@@ -34,6 +34,9 @@ describe('SecondPage', () => {
       ],
     }).compileComponents();
 
+    const translate = TestBed.inject(TranslateService);
+    translate.setTranslation('pt', { EXPERIENCE: { LIST: [] } });
+    translate.use('pt');
     fixture = TestBed.createComponent(SecondPage);
     component = fixture.componentInstance;
     await fixture.whenStable();
